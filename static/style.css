@@ -628,4 +628,8 @@ pre {
 @media (max-width: 720px) {
   body { padding: 20px 16px 48px; }
   h1 { font-size: 36px; }
+  .result-grid.priority-grid {
+    grid-template-columns: repeat(auto-fit, minmax(220px, 1fr));
+    overflow-x: visible;
+  }
 }
