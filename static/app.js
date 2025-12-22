@@ -89,20 +89,8 @@ const advancedGrid = document.getElementById('advanced-grid');
 const setModeUI = () => {
   const val = document.querySelector('input[name="encodeMode"]:checked').value;
   const advanced = val === 'advanced';
-  if (simplePlaneField) simplePlaneField.style.display = advanced ? 'none' : '';
+  if (simplePlaneField) simplePlaneField.style.display = advanced ? 'none' : 'flex';
   if (advancedGrid) advancedGrid.style.display = advanced ? 'grid' : 'none';
-  if (advanced && rgbEnabled) {
-    // auto-select text radios and enable all channels
-    const rgbRadio = document.querySelector('input[name="ch-RGB-type"][value="text"]');
-    if (rgbRadio) rgbRadio.checked = true;
-    document.querySelectorAll('#advanced-grid .channel-card').forEach((card) => {
-      const toggle = card.querySelector('.ch-enabled') || card.querySelector('.rgb-enabled');
-      if (toggle) toggle.checked = true;
-      const textRadio = card.querySelector('input[type="radio"][value="text"]');
-      if (textRadio) textRadio.checked = true;
-    });
-    toggleChannelBodies();
-  }
 };
 modeRadios.forEach((radio) => {
   radio.addEventListener('change', () => {
