@@ -105,11 +105,6 @@ if (savedMode === 'advanced') {
   document.querySelector('input[name="encodeMode"][value="advanced"]').checked = true;
 }
 
-const rgbCard = document.querySelector('#advanced-grid .channel-card[data-channel="RGB"]');
-const rgbEnabled = rgbCard ? rgbCard.querySelector('.rgb-enabled') : null;
-const rgbText = rgbCard ? rgbCard.querySelector('.rgb-text') : null;
-const rgbFileInput = rgbCard ? rgbCard.querySelector('.rgb-file') : null;
-const rgbFileName = document.querySelector('.rgb-file-name');
 const carrierInput = document.getElementById('carrier-image');
 const carrierFilename = document.getElementById('carrier-filename');
 
@@ -137,7 +132,7 @@ if (analyzeInput && analyzeFilename) {
 
 function toggleChannelBodies() {
   document.querySelectorAll('#advanced-grid .channel-card').forEach((card) => {
-    const enabledToggle = card.querySelector('.ch-enabled') || card.querySelector('.rgb-enabled');
+    const enabledToggle = card.querySelector('.ch-enabled');
     if (!enabledToggle) return;
     const enabled = enabledToggle.checked;
     card.classList.toggle('channel-collapsed', !enabled);
@@ -146,8 +141,6 @@ function toggleChannelBodies() {
 
 // Channel controls persistence
 document.querySelectorAll('#advanced-grid .channel-card').forEach((card) => {
-  const ch = card.dataset.channel;
-  if (ch === "RGB") return;
   const enabled = card.querySelector('.ch-enabled');
   const textArea = card.querySelector('.ch-text');
   const fileInput = card.querySelector('.ch-file');
@@ -170,36 +163,11 @@ document.querySelectorAll('#advanced-grid .channel-card').forEach((card) => {
     if (nameEl) nameEl.textContent = name;
   }
 });
-if (rgbEnabled) {
-  rgbEnabled.addEventListener('change', () => {
-    toggleChannelBodies();
-    saveChannelState();
-  });
-}
-if (rgbText) {
-  rgbText.addEventListener('input', saveChannelState);
-}
-if (rgbCard) {
-  const rf = rgbCard.querySelector('.rgb-file');
-  if (rf) {
-    rf.addEventListener('change', () => {
-      const name = rf.files && rf.files[0] ? rf.files[0].name : 'no file';
-      if (rgbFileName) rgbFileName.textContent = name;
-      saveChannelState();
-    });
-    const name = rf.files && rf.files[0] ? rf.files[0].name : 'no file';
-    if (rgbFileName) rgbFileName.textContent = name;
-  }
-}
 
 function saveChannelState() {
   const state = {};
-  if (rgbEnabled && rgbText) {
-    state["RGB"] = { enabled: rgbEnabled.checked, text: rgbText.value };
-  }
   document.querySelectorAll('#advanced-grid .channel-card').forEach((card) => {
     const ch = card.dataset.channel;
-    if (ch === "RGB") return;
     const enabledToggle = card.querySelector('.ch-enabled');
     const textField = card.querySelector('.ch-text');
     if (!enabledToggle || !textField) return;
@@ -215,15 +183,8 @@ function loadChannelState() {
   if (!saved) return;
   try {
     const state = JSON.parse(saved);
-    const rgbEnabled = document.querySelector('.rgb-enabled');
-    const rgbText = document.querySelector('.rgb-text');
-    if (state.RGB && rgbEnabled && rgbText) {
-      rgbEnabled.checked = !!state.RGB.enabled;
-      rgbText.value = state.RGB.text || '';
-    }
     document.querySelectorAll('#advanced-grid .channel-card').forEach((card) => {
       const ch = card.dataset.channel;
-      if (ch === "RGB") return;
       const cfg = state[ch];
       if (!cfg) return;
       const enabledToggle = card.querySelector('.ch-enabled');
@@ -258,30 +219,17 @@ encodeForm.addEventListener('submit', async (e) => {
   try {
     if (encodeMode === 'advanced') {
       const channels = {};
-      const rgbEnabled = document.querySelector('.rgb-enabled');
-      const rgbText = document.querySelector('.rgb-text');
-      const rgbFile = document.querySelector('.rgb-file');
-      const rgbActive = rgbEnabled && rgbEnabled.checked;
-      const rgbVal = rgbText ? rgbText.value : '';
-      const rgbFileObj = rgbFile && rgbFile.files.length ? rgbFile.files[0] : null;
       document.querySelectorAll('#advanced-grid .channel-card').forEach((card) => {
         const ch = card.dataset.channel;
-        if (ch === "RGB") return;
         const enabledToggle = card.querySelector('.ch-enabled');
         const textField = card.querySelector('.ch-text');
         const fileInput = card.querySelector('.ch-file');
         if (!enabledToggle || !textField) return;
         const enabled = enabledToggle.checked;
-        let text = textField.value;
-        let fileObj = fileInput && fileInput.files.length ? fileInput.files[0] : null;
-        let effectiveEnabled = enabled;
-        if (rgbActive && (ch === "R" || ch === "G" || ch === "B")) {
-          effectiveEnabled = true;
-          text = rgbVal;
-          fileObj = rgbFileObj || fileObj;
-        }
+        const text = textField.value;
+        const fileObj = fileInput && fileInput.files.length ? fileInput.files[0] : null;
         const type = fileObj ? 'file' : 'text';
-        channels[ch] = { enabled: effectiveEnabled, type, text };
+        channels[ch] = { enabled, type, text };
         if (fileObj) {
           fd.append(`file_${ch}`, fileObj);
         }
@@ -369,9 +317,9 @@ decodeForm.addEventListener('submit', async (e) => {
 
 function renderDecodeResult(data) {
   const { results = {}, artifacts = { images: [], archives: [] } } = data;
-  const priority = ["simple_rgb", "simple_lsb", "simple_zlib"];
+  const priority = ["simple_rgb", "red_plane", "green_plane", "blue_plane", "alpha_plane"];
   const stringsKey = "strings";
-  const restOrder = ["binwalk", "foremost", "exiftool", "steghide", "outguess", "zsteg", "decomposer"];
+  const restOrder = ["simple_zlib", "binwalk", "foremost", "exiftool", "steghide", "outguess", "zsteg", "decomposer"];
 
   const cardsPriority = priority
     .filter((k) => results[k])
@@ -394,7 +342,7 @@ function renderDecodeResult(data) {
     .join('');
 
   decodeOutput.innerHTML = `
-    <div class="result-grid">${cardsPriority || ''}</div>
+    <div class="result-grid priority-grid">${cardsPriority || ''}</div>
     ${gallery ? `<h3 class="gallery-title">Bit-plane gallery</h3><div class="gallery">${gallery}</div>` : ''}
     <div class="result-grid">${cardsRest || ''}</div>
     ${downloads ? `<div class="downloads" style="margin-top:12px;">${downloads}</div>` : ''}
@@ -408,7 +356,10 @@ function renderTool(tool, payload, wide = false) {
   }
   const status = payload.status || 'unknown';
   const tagClass = status === 'ok' ? 'ok' : status === 'error' ? 'error' : '';
-  const content = formatPayload(payload.output || payload.error || payload.reason || payload);
+  const hasOutput = Object.prototype.hasOwnProperty.call(payload, 'output');
+  const content = formatPayload(
+    hasOutput ? payload.output : (payload.error || payload.reason || payload)
+  );
   const style = wide ? 'style="grid-column: 1 / -1;"' : '';
 
   return `

@@ -9,6 +9,8 @@ from typing import Dict, Optional, Tuple
 
 from PIL import Image
 
+TWITTER_MAX_BYTES = 900 * 1024
+
 def convert_to_png(image_path: Path) -> Path:
     """Convert the image to PNG format if needed."""
     try:
@@ -53,7 +55,7 @@ def compress_image_before_encoding(image_path: Path, output_image_path: Path) ->
     max_iterations = 20
     iteration = 0
 
-    while os.path.getsize(output_image_path) > 900 * 1024:
+    while os.path.getsize(output_image_path) > TWITTER_MAX_BYTES:
         if iteration >= max_iterations:
             raise ValueError(
                 f"Unable to compress image below 900KB after {max_iterations} iterations. "
@@ -358,29 +360,36 @@ def encode_multi_channel(
             raise ValueError(f"Failed to preprocess image: {str(e)}")
 
         try:
-            img = Image.open(output_path).convert("RGBA")
+            base_img = Image.open(output_path).convert("RGBA")
         except Exception as e:
             raise ValueError(f"Failed to open and convert image to RGBA: {str(e)}")
 
-        width, height = img.size
-        if width <= 0 or height <= 0:
-            raise ValueError(f"Invalid image dimensions: {width}x{height}")
+        bits_by_channel: Dict[str, str] = {}
+        for ch in ["R", "G", "B", "A"]:
+            cfg = channel_payloads.get(ch) or {}
+            if not cfg.get("enabled"):
+                continue
 
-        capacity = width * height  # bits per channel
+            payload_type = cfg.get("type")
+            try:
+                if payload_type == "text":
+                    text = cfg.get("text") or ""
+                    bits_by_channel[ch] = _bits_from_text(text)
+                elif payload_type == "file":
+                    file_data = cfg.get("file_data")
+                    if file_data is None:
+                        raise ValueError(f"Missing file payload for channel {ch}")
+                    try:
+                        compressed = zlib.compress(file_data)
+                    except Exception as e:
+                        raise ValueError(f"Failed to compress file data for channel {ch}: {str(e)}")
+                    bits_by_channel[ch] = _bits_from_zlib(compressed)
+                else:
+                    raise ValueError(f"Unknown payload type '{payload_type}' for channel {ch}")
+            except Exception as e:
+                raise ValueError(f"Failed to encode channel {ch}: {str(e)}")
 
-        try:
-            pixels = img.load()
-        except Exception as e:
-            raise ValueError(f"Failed to load image pixels: {str(e)}")
-
-        def embed_channel(channel: str, bits: str) -> None:
-            if len(bits) > capacity:
-                raise ValueError(
-                    f"Payload too large for {channel} channel. "
-                    f"Requires {len(bits)} bits but channel capacity is {capacity} bits. "
-                    f"Try using a larger image."
-                )
-
+        def embed_channel(pixels, width: int, height: int, channel: str, bits: str) -> None:
             try:
                 idx = 0
                 if channel == "R":
@@ -413,36 +422,65 @@ def encode_multi_channel(
             except Exception as e:
                 raise IOError(f"Failed to embed data into {channel} channel: {str(e)}")
 
-        for ch in ["R", "G", "B", "A"]:
-            cfg = channel_payloads.get(ch) or {}
-            if not cfg.get("enabled"):
-                continue
+        max_iterations = 20
+        iteration = 0
 
-            payload_type = cfg.get("type")
+        while True:
+            width, height = base_img.size
+            if width <= 0 or height <= 0:
+                raise ValueError(f"Invalid image dimensions: {width}x{height}")
+
+            capacity = width * height  # bits per channel
+            for ch, bits in bits_by_channel.items():
+                if len(bits) > capacity:
+                    raise ValueError(
+                        f"Payload too large for {ch} channel. "
+                        f"Requires {len(bits)} bits but channel capacity is {capacity} bits. "
+                        f"Try using a larger image."
+                    )
+
+            working = base_img.copy()
             try:
-                if payload_type == "text":
-                    text = cfg.get("text") or ""
-                    bits = _bits_from_text(text)
-                elif payload_type == "file":
-                    file_data = cfg.get("file_data")
-                    if file_data is None:
-                        raise ValueError(f"Missing file payload for channel {ch}")
-                    try:
-                        compressed = zlib.compress(file_data)
-                    except Exception as e:
-                        raise ValueError(f"Failed to compress file data for channel {ch}: {str(e)}")
-                    bits = _bits_from_zlib(compressed)
-                else:
-                    raise ValueError(f"Unknown payload type '{payload_type}' for channel {ch}")
-
-                embed_channel(ch, bits)
+                pixels = working.load()
             except Exception as e:
-                raise ValueError(f"Failed to encode channel {ch}: {str(e)}")
+                raise ValueError(f"Failed to load image pixels: {str(e)}")
 
-        try:
-            img.save(output_path, format="PNG")
-        except Exception as e:
-            raise IOError(f"Failed to save encoded image: {str(e)}")
+            for ch, bits in bits_by_channel.items():
+                if bits:
+                    embed_channel(pixels, width, height, ch, bits)
+
+            try:
+                working.save(output_path, format="PNG", optimize=True)
+            except Exception as e:
+                raise IOError(f"Failed to save encoded image: {str(e)}")
+
+            if not twitter_safe_preprocess:
+                break
+
+            if output_path.stat().st_size <= TWITTER_MAX_BYTES:
+                break
+
+            iteration += 1
+            if iteration >= max_iterations:
+                raise ValueError(
+                    f"Unable to keep encoded image below {TWITTER_MAX_BYTES // 1024}KB after "
+                    f"{max_iterations} iterations. Try a smaller payload or larger image."
+                )
+
+            new_width = max(1, int(width * 0.9))
+            new_height = max(1, int(height * 0.9))
+            if new_width >= width and width > 1:
+                new_width = width - 1
+            if new_height >= height and height > 1:
+                new_height = height - 1
+
+            if new_width < 2 or new_height < 2:
+                raise ValueError(
+                    f"Image too small to compress further (size: {new_width}x{new_height}). "
+                    f"Current file size: {output_path.stat().st_size} bytes exceeds limit."
+                )
+
+            base_img = base_img.resize((new_width, new_height), resample=Image.LANCZOS)
 
         try:
             return output_path.name, output_path.read_bytes()

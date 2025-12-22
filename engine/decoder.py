@@ -102,6 +102,25 @@ def _collect_artifacts(output_dir: Path) -> Dict[str, List[Dict[str, str]]]:
         raise IOError(f"Failed to collect artifacts from {output_dir}: {str(e)}")
 
 
+def _decode_bits_to_text(bits: np.ndarray) -> str:
+    """Decode a flat LSB bitstream into text until a NULL byte."""
+    try:
+        usable = (bits.size // 8) * 8
+        if usable == 0:
+            return ""
+        bits = bits[:usable]
+        packed = np.packbits(bits, bitorder="big")
+        if packed.size == 0:
+            return ""
+        zero_idx = np.where(packed == 0)[0]
+        end = int(zero_idx[0]) if zero_idx.size else packed.size
+        if end <= 0:
+            return ""
+        return bytes(packed[:end]).decode("latin-1")
+    except Exception as e:
+        raise ValueError(f"Failed to decode LSB text: {str(e)}")
+
+
 def run_analysis(
     image_bytes: bytes,
     filename: str,
@@ -143,37 +162,38 @@ def run_analysis(
         except Exception as e:
             raise IOError(f"Failed to write image to temporary file: {str(e)}")
 
-        # simple RGB decode (sequential RGB bits)
-        def decode_simple_rgb(img_path: Path) -> str:
-            try:
-                img_local = Image.open(img_path).convert("RGBA")
-            except Exception as e:
-                raise ValueError(f"Failed to open image for RGB decoding: {str(e)}")
-
-            try:
-                arr = np.array(img_local)
-                bits = (arr[..., :3] & 1).reshape(-1)
-                usable = (bits.size // 8) * 8
-                if usable == 0:
-                    return ""
-                bits = bits[:usable]
-                packed = np.packbits(bits, bitorder="big")
-                if packed.size == 0:
-                    return ""
-                zero_idx = np.where(packed == 0)[0]
-                end = int(zero_idx[0]) if zero_idx.size else packed.size
-                if end <= 0:
-                    return ""
-                return bytes(packed[:end]).decode("latin-1")
-            except Exception as e:
-                raise ValueError(f"Failed to decode RGB data: {str(e)}")
+        channel_map = [
+            ("red_plane", 0),
+            ("green_plane", 1),
+            ("blue_plane", 2),
+            ("alpha_plane", 3),
+        ]
+        simple_rgb_text = ""
+        channel_texts = {key: "" for key, _ in channel_map}
 
         try:
-            simple_rgb_text = decode_simple_rgb(image_path)
+            img_local = Image.open(image_path).convert("RGBA")
+            arr = np.array(img_local)
         except Exception as e:
-            # Non-fatal: continue analysis even if simple RGB decode fails
-            print(f"Warning: Simple RGB decode failed: {str(e)}")
-            simple_rgb_text = ""
+            print(f"Warning: Failed to open image for channel decoding: {str(e)}")
+            arr = None
+
+        if arr is not None:
+            try:
+                simple_rgb_text = _decode_bits_to_text((arr[..., :3] & 1).reshape(-1))
+            except Exception as e:
+                # Non-fatal: continue analysis even if simple RGB decode fails
+                print(f"Warning: Simple RGB decode failed: {str(e)}")
+                simple_rgb_text = ""
+
+            for key, idx in channel_map:
+                try:
+                    channel_texts[key] = _decode_bits_to_text(
+                        (arr[..., idx] & 1).reshape(-1)
+                    )
+                except Exception as e:
+                    print(f"Warning: {key} decode failed: {str(e)}")
+                    channel_texts[key] = ""
 
         analyzers: List[Tuple[Any, Tuple[Any, ...]]] = [
             (analyze_binwalk, (image_path, output_dir, binwalk_extract)),
@@ -222,6 +242,22 @@ def run_analysis(
             "simple_rgb": {
                 "status": "ok" if simple_rgb_text else "empty",
                 "output": simple_rgb_text,
+            },
+            "red_plane": {
+                "status": "ok" if channel_texts["red_plane"] else "empty",
+                "output": channel_texts["red_plane"],
+            },
+            "green_plane": {
+                "status": "ok" if channel_texts["green_plane"] else "empty",
+                "output": channel_texts["green_plane"],
+            },
+            "blue_plane": {
+                "status": "ok" if channel_texts["blue_plane"] else "empty",
+                "output": channel_texts["blue_plane"],
+            },
+            "alpha_plane": {
+                "status": "ok" if channel_texts["alpha_plane"] else "empty",
+                "output": channel_texts["alpha_plane"],
             },
             **results,
         }

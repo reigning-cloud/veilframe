@@ -542,6 +542,10 @@ textarea { resize: vertical; }
   grid-template-columns: repeat(auto-fit, minmax(260px, 1fr));
   gap: 12px;
 }
+.result-grid.priority-grid {
+  grid-template-columns: repeat(5, minmax(200px, 1fr));
+  overflow-x: auto;
+}
 .strings-block {
   grid-template-columns: 1fr;
 }
