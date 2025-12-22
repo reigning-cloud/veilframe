@@ -281,6 +281,10 @@ h3 {
   grid-column: 1 / -1;
   width: 100%;
 }
+.form-grid .match-height {
+  align-self: stretch;
+  height: 100%;
+}
 
 .field {
   display: flex;

@@ -31,7 +31,7 @@
         <div class="note">vectors carried within smaller pngs drift through the eclipse more quietly. ☾★</div>
       </div>
       <form id="encode-form" class="form-grid">
-        <label class="field">
+        <label class="field match-height">
           <span>carrier image</span>
           <div class="file-control">
             <input type="file" id="carrier-image" name="image" accept="image/png, image/jpeg" required aria-label="choose photo">
@@ -41,7 +41,7 @@
           </div>
         </label>
 
-        <div class="field">
+        <div class="field mode-field match-height">
           <span>mode</span>
           <label class="inline"><input type="radio" name="encodeMode" value="simple" checked> simple</label>
           <label class="inline"><input type="radio" name="encodeMode" value="advanced"> advanced (per-channel)</label>
@@ -137,7 +137,7 @@
       </div>
 
       <form id="decode-form" class="form-grid">
-        <label class="field">
+        <label class="field match-height">
           <span>image to analyze</span>
           <div class="file-control">
             <input type="file" id="analyze-image" name="image" accept="image/png, image/jpeg" required>
@@ -146,7 +146,7 @@
             <span class="input-hint">png or jpg recommended. render is happiest under 8 mb; resize if uploads fail.</span>
           </div>
         </label>
-        <div class="field inline-group">
+        <div class="field inline-group match-height">
           <span>options</span>
           <label class="inline">
             <input type="checkbox" name="deep"> enable ✦ outguess ✦ analyzer

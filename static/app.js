@@ -116,9 +116,6 @@ const savedMode = localStorage.getItem('encodeMode');
 if (savedMode === 'advanced') {
   document.querySelector('input[name="encodeMode"][value="advanced"]').checked = true;
 }
-setModeUI();
-const initialPanel = savedPanel === 'decode-panel' || savedPanel === 'encode-panel' ? savedPanel : 'encode-panel';
-showPanel(initialPanel, false);
 
 const rgbCard = document.querySelector('#advanced-grid .channel-card[data-channel="RGB"]');
 const rgbEnabled = rgbCard ? rgbCard.querySelector('.rgb-enabled') : null;
@@ -127,6 +124,10 @@ const rgbFileInput = rgbCard ? rgbCard.querySelector('.rgb-file') : null;
 const rgbFileName = document.querySelector('.rgb-file-name');
 const carrierInput = document.getElementById('carrier-image');
 const carrierFilename = document.getElementById('carrier-filename');
+
+setModeUI();
+const initialPanel = savedPanel === 'decode-panel' || savedPanel === 'encode-panel' ? savedPanel : 'encode-panel';
+showPanel(initialPanel, false);
 
 if (carrierInput && carrierFilename) {
   carrierInput.addEventListener('change', () => {
