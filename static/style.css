@@ -277,6 +277,10 @@ h3 {
   margin-top: 16px;
   align-items: flex-start;
 }
+.form-grid .tooling-status {
+  grid-column: 1 / -1;
+  width: 100%;
+}
 
 .field {
   display: flex;
