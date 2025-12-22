@@ -5,6 +5,7 @@ import zlib
 from pathlib import Path
 from typing import Dict, List, Tuple
 
+import numpy as np
 from PIL import Image
 
 from .utils import update_data
@@ -23,7 +24,6 @@ def _read_bytes(img: Image.Image, plane: str, max_bytes: int = MAX_BYTES) -> byt
     if max_bytes <= 0:
         raise ValueError(f"max_bytes must be positive, got {max_bytes}")
 
-    bits: List[int] = []
     channels = [ch for ch in plane if ch in "RGBA"]
     channel_map = {"R": 0, "G": 1, "B": 2, "A": 3}
 
@@ -31,34 +31,24 @@ def _read_bytes(img: Image.Image, plane: str, max_bytes: int = MAX_BYTES) -> byt
         return b""
 
     try:
-        for y in range(img.height):
-            for x in range(img.width):
-                pixel = img.getpixel((x, y))
-                for ch in channels:
-                    idx = channel_map[ch]
-                    if idx >= len(pixel):
-                        continue
-                    bits.append(pixel[idx] & 1)
-                    if len(bits) >= max_bytes * 8:
-                        break
-                if len(bits) >= max_bytes * 8:
-                    break
-            if len(bits) >= max_bytes * 8:
-                break
+        arr = np.array(img)
+        indices = [channel_map[ch] for ch in channels]
+        bits = (arr[..., indices] & 1).reshape(-1)
     except Exception as e:
         raise ValueError(f"Failed to extract bits from image: {str(e)}")
 
     try:
-        # convert to bytes
-        data = bytearray()
-        for i in range(0, len(bits), 8):
-            byte_bits = bits[i : i + 8]
-            if len(byte_bits) < 8:
-                break
-            data.append(int("".join(str(b) for b in byte_bits), 2))
-            if len(data) >= max_bytes:
-                break
-        return bytes(data)
+        max_bits = max_bytes * 8
+        if bits.size > max_bits:
+            bits = bits[:max_bits]
+        usable = (bits.size // 8) * 8
+        if usable == 0:
+            return b""
+        bits = bits[:usable]
+        data = np.packbits(bits, bitorder="big").tobytes()
+        if len(data) > max_bytes:
+            return data[:max_bytes]
+        return data
     except Exception as e:
         raise ValueError(f"Failed to convert bits to bytes: {str(e)}")
 
@@ -178,4 +168,3 @@ def analyze_simple_zlib(input_img: Path, output_dir: Path) -> None:
             output_dir,
             {"simple_zlib": {"status": "error", "error": f"Zlib analysis failed: {str(exc)}"}}
         )
-

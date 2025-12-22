@@ -3,6 +3,7 @@
 from pathlib import Path
 from typing import Dict, List
 
+import numpy as np
 from PIL import Image
 
 from .utils import update_data
@@ -16,7 +17,6 @@ def _decode_plane(img: Image.Image, plane: str) -> str:
     if not plane:
         raise ValueError("Plane string cannot be empty")
 
-    bits: List[int] = []
     channels = {
         "R": 0,
         "G": 1,
@@ -25,29 +25,30 @@ def _decode_plane(img: Image.Image, plane: str) -> str:
     }
 
     try:
-        for y in range(img.height):
-            for x in range(img.width):
-                pixel = img.getpixel((x, y))
-                for ch in plane:
-                    idx = channels.get(ch)
-                    if idx is None or idx >= len(pixel):
-                        continue
-                    bits.append(pixel[idx] & 1)
+        arr = np.array(img)
+        indices = [channels[ch] for ch in plane if ch in channels]
+        if not indices:
+            return ""
+        bits = (arr[..., indices] & 1).reshape(-1)
     except Exception as e:
         raise ValueError(f"Failed to extract LSB bits from image: {str(e)}")
 
     try:
+        usable = (bits.size // 8) * 8
+        if usable == 0:
+            return ""
+        bits = bits[:usable]
+        packed = np.packbits(bits, bitorder="big")
+        if packed.size == 0:
+            return ""
+        zero_idx = np.where(packed == 0)[0]
+        end = int(zero_idx[0]) if zero_idx.size else packed.size
         chars: List[str] = []
-        for i in range(0, len(bits), 8):
-            byte_bits = bits[i : i + 8]
-            if len(byte_bits) < 8:
-                break
-            val = int("".join(str(b) for b in byte_bits), 2)
-            if val == 0:  # NULL terminator
-                break
+        for val in packed[:end]:
+            val_int = int(val)
             # Skip non-printable characters to avoid errors
-            if 32 <= val < 127 or val in (9, 10, 13):  # Printable ASCII + tab, newline, return
-                chars.append(chr(val))
+            if 32 <= val_int < 127 or val_int in (9, 10, 13):  # Printable ASCII + tab, newline, return
+                chars.append(chr(val_int))
         return "".join(chars)
     except Exception as e:
         raise ValueError(f"Failed to decode bits to text: {str(e)}")
@@ -114,4 +115,3 @@ def analyze_simple_lsb(input_img: Path, output_dir: Path) -> None:
             output_dir,
             {"simple_lsb": {"status": "error", "error": f"LSB analysis failed: {str(exc)}"}}
         )
-

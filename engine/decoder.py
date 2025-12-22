@@ -6,6 +6,9 @@ from pathlib import Path
 from tempfile import TemporaryDirectory
 from typing import Any, Dict, List, Optional, Tuple
 
+import numpy as np
+from PIL import Image
+
 from .analyzers import (
     analyze_binwalk,
     analyze_decomposer,
@@ -18,9 +21,8 @@ from .analyzers import (
     analyze_strings,
     analyze_zsteg,
 )
-from .tooling import get_tool_status
 from .analyzers.utils import update_data
-from PIL import Image
+from .tooling import get_tool_status
 
 
 def _file_to_data_url(path: Path, mime: str) -> str:
@@ -149,21 +151,20 @@ def run_analysis(
                 raise ValueError(f"Failed to open image for RGB decoding: {str(e)}")
 
             try:
-                bits: List[int] = []
-                for y in range(img_local.height):
-                    for x in range(img_local.width):
-                        r, g, b, _ = img_local.getpixel((x, y))
-                        bits.extend([r & 1, g & 1, b & 1])
-                chars: List[str] = []
-                for i in range(0, len(bits), 8):
-                    byte_bits = bits[i : i + 8]
-                    if len(byte_bits) < 8:
-                        break
-                    val = int("".join(str(bit) for bit in byte_bits), 2)
-                    if val == 0:
-                        break
-                    chars.append(chr(val))
-                return "".join(chars)
+                arr = np.array(img_local)
+                bits = (arr[..., :3] & 1).reshape(-1)
+                usable = (bits.size // 8) * 8
+                if usable == 0:
+                    return ""
+                bits = bits[:usable]
+                packed = np.packbits(bits, bitorder="big")
+                if packed.size == 0:
+                    return ""
+                zero_idx = np.where(packed == 0)[0]
+                end = int(zero_idx[0]) if zero_idx.size else packed.size
+                if end <= 0:
+                    return ""
+                return bytes(packed[:end]).decode("latin-1")
             except Exception as e:
                 raise ValueError(f"Failed to decode RGB data: {str(e)}")
 
