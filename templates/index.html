@@ -1,0 +1,177 @@
+<!doctype html>
+<html lang="en">
+<head>
+  <meta charset="utf-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1" />
+  <title>🌑 v̴̺͌ȅ̶̝ï̶͉l̡͉̃̉̏͂̈̾͠f̵̨̍r̴̨͛ả̶̢m̸̯͒e̷̙̊ ✧彡 🌒</title>
+  <link rel="stylesheet" href="{{ url_for('static', filename='style.css') }}">
+</head>
+<body>
+  <div class="bg-accent"></div>
+  <header class="site-header">
+    <div>
+      <p class="eyebrow"><span class="glow-word" data-glow="veilframe">v̴̺͌ȅ̶̝ï̶͉l̡͉̃̉̏͂̈̾͠f̵̨̍r̴̨͛ả̶̢m̸̯͒e̷̙̊</span> studio</p>
+      <h1>🌑 <span class="glow-word" data-glow="veilframe">v̴̺͌ȅ̶̝ï̶͉l̡͉̃̉̏͂̈̾͠f̵̨̍r̴̨͛ả̶̢m̸̯͒e̷̙̊</span> ✧彡 🌒</h1>
+      <p class="lede"><em>illuminating the darkest solstice &amp; inscribing constellations</em> 🌌✨<br><span class="lede-mini">⋆ lsb ⋆ ✧ bit planes ✧ ☾ metadata ☽ ✦ zsteg ✦</span></p>
+    </div>
+  </header>
+
+  <main>
+    <section class="mode-switch">
+      <button class="mode-btn active" type="button" data-target="encode-panel">Encoder</button>
+      <button class="mode-btn" type="button" data-target="decode-panel">Decoder</button>
+    </section>
+
+    <section id="encode-panel" class="panel active">
+      <div class="panel-head">
+        <div>
+          <p class="eyebrow">encode</p>
+          <h2>slip secrets̱ into moonlit pixels (☾☆彡)</h2>
+        </div>
+        <div class="note">bring your own carrier image; smaller pngs drift through the eclipse quieter ☾★</div>
+      </div>
+      <form id="encode-form" class="form-grid">
+        <label class="field">
+          <span>carrier image</span>
+          <div class="file-control">
+            <input type="file" id="carrier-image" name="image" accept="image/png, image/jpeg" required aria-label="choose photo">
+            <label for="carrier-image" class="file-button">choose photo</label>
+            <span class="file-name" id="carrier-filename">no photo chosen</span>
+            <span class="input-hint">png or jpg recommended. render is happiest under 8 mb; resize if uploads fail.</span>
+          </div>
+        </label>
+
+        <div class="field">
+          <span>mode</span>
+          <label class="inline"><input type="radio" name="encodeMode" value="simple" checked> simple</label>
+          <label class="inline"><input type="radio" name="encodeMode" value="advanced"> advanced (per-channel)</label>
+        </div>
+
+        <div id="simple-plane-field" class="simple-plane-field" style="grid-column: 1 / 2;">
+          <span class="simple-mode-label">simple mode</span>
+          <div class="channel-grid simple-plane-grid">
+            <div class="simple-card">
+              <div class="channel-head">hidden text</div>
+              <textarea name="text" rows="4" placeholder="your message here"></textarea>
+            </div>
+          </div>
+        </div>
+
+        <div class="advanced-field" id="advanced-grid" style="display:none; grid-column: 1 / -1;">
+          <span>advanced channel payloads</span>
+          <div class="channel-grid">
+            <div class="channel-card" data-channel="RGB">
+              <div class="channel-head"><input type="checkbox" class="rgb-enabled" checked> rgb spread</div>
+              <div class="channel-body">
+                <textarea class="rgb-text" placeholder="hidden text (rgb spread)"></textarea>
+                <div class="file-control slim">
+                  <input type="file" class="rgb-file" id="rgb-file" style="display:none;">
+                  <label for="rgb-file" class="file-button file-mini">file (zlib)</label>
+                  <span class="file-name file-name-mini rgb-file-name">no file</span>
+                </div>
+              </div>
+            </div>
+            <div class="channel-card" data-channel="R">
+              <div class="channel-head"><input type="checkbox" class="ch-enabled" checked> R</div>
+              <div class="channel-body">
+                <textarea class="ch-text" placeholder="hidden text (red plane)"></textarea>
+                <div class="file-control slim">
+                  <input type="file" class="ch-file" id="file-R" style="display:none;">
+                  <label for="file-R" class="file-button file-mini">file (zlib)</label>
+                  <span class="file-name file-name-mini ch-file-name">no file</span>
+                </div>
+              </div>
+            </div>
+            <div class="channel-card" data-channel="G">
+              <div class="channel-head"><input type="checkbox" class="ch-enabled" checked> G</div>
+              <div class="channel-body">
+                <textarea class="ch-text" placeholder="hidden text (green plane)"></textarea>
+                <div class="file-control slim">
+                  <input type="file" class="ch-file" id="file-G" style="display:none;">
+                  <label for="file-G" class="file-button file-mini">file (zlib)</label>
+                  <span class="file-name file-name-mini ch-file-name">no file</span>
+                </div>
+              </div>
+            </div>
+            <div class="channel-card" data-channel="B">
+              <div class="channel-head"><input type="checkbox" class="ch-enabled" checked> B</div>
+              <div class="channel-body">
+                <textarea class="ch-text" placeholder="hidden text (blue plane)"></textarea>
+                <div class="file-control slim">
+                  <input type="file" class="ch-file" id="file-B" style="display:none;">
+                  <label for="file-B" class="file-button file-mini">file (zlib)</label>
+                  <span class="file-name file-name-mini ch-file-name">no file</span>
+                </div>
+              </div>
+            </div>
+            <div class="channel-card" data-channel="A">
+              <div class="channel-head"><input type="checkbox" class="ch-enabled"> A</div>
+              <div class="channel-body">
+                <textarea class="ch-text" placeholder="hidden text (alpha plane)"></textarea>
+                <div class="file-control slim">
+                  <input type="file" class="ch-file" id="file-A" style="display:none;">
+                  <label for="file-A" class="file-button file-mini">file (zlib)</label>
+                  <span class="file-name file-name-mini ch-file-name">no file</span>
+                </div>
+                <div class="note">alpha only works on png.</div>
+              </div>
+            </div>
+          </div>
+        </div>
+
+        <div class="action-cell">
+          <button type="submit" class="primary left-align">encode</button>
+        </div>
+      </form>
+
+      <div id="encode-output" class="output"></div>
+    </section>
+
+    <section id="decode-panel" class="panel">
+      <div class="panel-head">
+        <div>
+          <p class="eyebrow">decode</p>
+          <h2>inspect every layer under starlight (☆ミ)</h2>
+        </div>
+        <div class="note single-line wide">missing tools? run via docker/dev container to get everything preinstalled.</div>
+      </div>
+      <div style="height:8px;"></div>
+        <div class="tooling-status">
+          <div class="status-line tooling-title">tooling status</div>
+          <div id="tool-status-list" class="tool-status-list"></div>
+        </div>
+
+      <form id="decode-form" class="form-grid">
+        <label class="field">
+          <span>image to analyze</span>
+          <div class="file-control">
+            <input type="file" id="analyze-image" name="image" accept="image/png, image/jpeg" required>
+            <label for="analyze-image" class="file-button">choose photo</label>
+            <span class="file-name" id="analyze-filename">no photo chosen</span>
+            <span class="input-hint">png or jpg recommended. render is happiest under 8 mb; resize if uploads fail.</span>
+          </div>
+        </label>
+        <div class="field inline-group">
+          <label class="inline">
+            <input type="checkbox" name="deep"> enable ✦ outguess ✦ analyzer
+          </label>
+          <label class="inline" title="Runs binwalk -e to carve and unpack embedded files. Slower and may need helper tools.">
+            <input type="checkbox" name="binwalkExtract"> binwalk: extract carved files (slower)
+          </label>
+          <div class="inline password-row" id="outguess-password-field">
+            <span>✦ outguess password (optional) ✦</span>
+            <input type="text" name="password" placeholder="Leave blank if none">
+          </div>
+        </div>
+        <div class="action-cell">
+          <button type="submit" class="primary left-align">run analyzers</button>
+        </div>
+      </form>
+
+      <div id="decode-output" class="output"></div>
+    </section>
+  </main>
+
+  <script src="{{ url_for('static', filename='app.js') }}" type="module"></script>
+</body>
+</html>

@@ -1,0 +1,11 @@
+{
+  "name": "veilframe dev",
+  "dockerComposeFile": "../docker-compose.yml",
+  "service": "web",
+  "workspaceFolder": "/workspace",
+  "settings": {
+    "terminal.integrated.shell.linux": "/bin/bash"
+  },
+  "extensions": ["ms-python.python", "ms-python.vscode-pylance"],
+  "postCreateCommand": "pip install --no-cache-dir -r requirements.txt"
+}

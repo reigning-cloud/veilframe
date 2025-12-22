@@ -1,0 +1,17 @@
+.DS_Store
+.env
+.venv/
+__pycache__/
+*.pyc
+instance/
+*.sqlite3
+.pytest_cache/
+.coverage
+
+# Temporary test files
+tmp_smoke_*.png
+
+# Python package metadata
+*.egg-info/
+dist/
+build/
