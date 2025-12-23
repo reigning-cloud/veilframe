@@ -6,7 +6,13 @@ from typing import Optional
 from flask import Flask, jsonify, render_template, request
 
 from engine.decoder import run_analysis
-from engine.encoder import as_data_url, encode_multi_channel, encode_payload
+from engine.encoder import (
+    as_data_url,
+    encode_multi_channel,
+    encode_payload,
+    normalize_output_format,
+    output_format_mime,
+)
 from engine.tooling import get_tool_status
 
 app = Flask(__name__, static_folder="static", template_folder="templates")
@@ -58,6 +64,13 @@ def api_encode():
         filename = image_file.filename or "input.png"
     except Exception as e:
         return jsonify({"error": f"Failed to process request: {str(e)}"}), 400
+
+    try:
+        output_format = normalize_output_format(request.form.get("outputFormat", "png"))
+    except ValueError as e:
+        return jsonify({"error": str(e)}), 400
+
+    output_mime = output_format_mime(output_format)
 
     # Advanced multi-channel
     if channels_json:
@@ -115,8 +128,11 @@ def api_encode():
                 image_bytes,
                 channel_payloads,
                 filename=filename,
+                output_format=output_format,
             )
-            return jsonify({"filename": encoded_name, "data_url": as_data_url(encoded_bytes)})
+            return jsonify(
+                {"filename": encoded_name, "data_url": as_data_url(encoded_bytes, mime=output_mime)}
+            )
         except ValueError as exc:
             return jsonify({"error": f"Encoding failed: {str(exc)}"}), 400
         except Exception as exc:
@@ -150,11 +166,12 @@ def api_encode():
             plane=plane,
             text=text,
             file_data=file_data,
+            output_format=output_format,
         )
         return jsonify(
             {
                 "filename": encoded_name,
-                "data_url": as_data_url(encoded_bytes),
+                "data_url": as_data_url(encoded_bytes, mime=output_mime),
             }
         )
     except ValueError as exc:

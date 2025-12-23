@@ -10,6 +10,38 @@ from typing import Dict, Optional, Tuple
 from PIL import Image
 
 TWITTER_MAX_BYTES = 900 * 1024
+OUTPUT_FORMATS = {
+    "png": {"ext": ".png", "mime": "image/png"},
+    "jpeg": {"ext": ".jpeg", "mime": "image/jpeg"},
+}
+
+
+def normalize_output_format(output_format: Optional[str]) -> str:
+    if not output_format:
+        return "png"
+    fmt = output_format.strip().lower()
+    if fmt.startswith("."):
+        fmt = fmt[1:]
+    if fmt == "jpg":
+        fmt = "jpeg"
+    if fmt not in OUTPUT_FORMATS:
+        raise ValueError(f"Unsupported output format '{output_format}'. Use png or jpeg.")
+    return fmt
+
+
+def output_format_extension(output_format: Optional[str]) -> str:
+    fmt = normalize_output_format(output_format)
+    return OUTPUT_FORMATS[fmt]["ext"]
+
+
+def output_format_mime(output_format: Optional[str]) -> str:
+    fmt = normalize_output_format(output_format)
+    return OUTPUT_FORMATS[fmt]["mime"]
+
+
+def _save_png(img: Image.Image, output_path: Path) -> None:
+    img.save(output_path, format="PNG", optimize=True)
+
 
 def convert_to_png(image_path: Path) -> Path:
     """Convert the image to PNG format if needed."""
@@ -46,7 +78,7 @@ def compress_image_before_encoding(image_path: Path, output_image_path: Path) ->
 
     try:
         img = Image.open(png_path)
-        img.save(output_image_path, format="PNG")
+        _save_png(img, output_image_path)
     except Exception as e:
         raise IOError(f"Failed to save initial compressed image: {str(e)}")
 
@@ -74,7 +106,7 @@ def compress_image_before_encoding(image_path: Path, output_image_path: Path) ->
                 )
 
             img = img.resize((new_width, new_height))
-            img.save(output_image_path, format="PNG")
+            _save_png(img, output_image_path)
             iteration += 1
         except ValueError:
             raise
@@ -144,7 +176,7 @@ def encode_text_into_plane(
             if index >= len(binary_text):
                 break
 
-        img.save(output_path, format="PNG")
+        _save_png(img, output_path)
     except Exception as e:
         raise IOError(f"Failed to encode text into image: {str(e)}")
 
@@ -217,7 +249,7 @@ def encode_zlib_into_image(
             if index >= len(binary_data):
                 break
 
-        img.save(output_path, format="PNG")
+        _save_png(img, output_path)
     except Exception as e:
         raise IOError(f"Failed to encode compressed data into image: {str(e)}")
 
@@ -230,6 +262,7 @@ def encode_payload(
     plane: str = "RGB",
     text: Optional[str] = None,
     file_data: Optional[bytes] = None,
+    output_format: str = "png",
 ) -> Tuple[str, bytes]:
     """
     Encode either text or binary data into an image and return the encoded image bytes.
@@ -243,6 +276,10 @@ def encode_payload(
 
     if mode not in {"text", "zlib"}:
         raise ValueError(f"mode must be 'text' or 'zlib', got '{mode}'")
+
+    output_format = normalize_output_format(output_format)
+    if output_format == "jpeg" and "A" in plane.upper():
+        raise ValueError("Alpha plane requires PNG output. Choose .png for A channel payloads.")
 
     with TemporaryDirectory() as tmp:
         tmp_dir = Path(tmp)
@@ -281,12 +318,22 @@ def encode_payload(
             except Exception as e:
                 raise ValueError(f"Failed to encode file payload: {str(e)}")
 
-        try:
-            encoded_bytes = output_path.read_bytes()
-        except Exception as e:
-            raise IOError(f"Failed to read encoded image file: {str(e)}")
+        output_name = f"encoded{output_format_extension(output_format)}"
+        if output_format == "png":
+            try:
+                encoded_bytes = output_path.read_bytes()
+            except Exception as e:
+                raise IOError(f"Failed to read encoded image file: {str(e)}")
+            return output_name, encoded_bytes
 
-        return output_path.name, encoded_bytes
+        converted_path = tmp_dir / output_name
+        try:
+            _convert_output_image(output_path, output_format, converted_path)
+            encoded_bytes = converted_path.read_bytes()
+        except Exception as e:
+            raise IOError(f"Failed to convert encoded image to {output_format}: {str(e)}")
+
+        return output_name, encoded_bytes
 
 
 def as_data_url(img_bytes: bytes, mime: str = "image/png") -> str:
@@ -316,12 +363,39 @@ def _bits_from_zlib(data: bytes) -> str:
     return "".join(format(b, "08b") for b in payload)
 
 
+def _convert_output_image(source_path: Path, output_format: str, output_path: Path) -> None:
+    fmt = normalize_output_format(output_format)
+    if fmt == "png":
+        output_path.write_bytes(source_path.read_bytes())
+        return
+
+    try:
+        img = Image.open(source_path)
+    except Exception as e:
+        raise ValueError(f"Failed to open encoded image for conversion: {str(e)}")
+
+    if img.mode not in {"RGB", "L"}:
+        img = img.convert("RGB")
+
+    try:
+        img.save(
+            output_path,
+            format="JPEG",
+            quality=95,
+            optimize=True,
+            subsampling=0,
+        )
+    except Exception as e:
+        raise IOError(f"Failed to save JPEG output: {str(e)}")
+
+
 def encode_multi_channel(
     image_bytes: bytes,
     channel_payloads: Dict[str, Dict[str, Optional[bytes | str]]],
     *,
     filename: str = "input.png",
     twitter_safe_preprocess: bool = True,
+    output_format: str = "png",
 ) -> Tuple[str, bytes]:
     """
     Encode independent payloads per channel (R/G/B/A) into one image.
@@ -339,6 +413,10 @@ def encode_multi_channel(
     if not isinstance(channel_payloads, dict):
         raise TypeError(f"channel_payloads must be a dict, got {type(channel_payloads).__name__}")
 
+    output_format = normalize_output_format(output_format)
+    if output_format == "jpeg" and (channel_payloads.get("A") or {}).get("enabled"):
+        raise ValueError("Alpha plane requires PNG output. Choose .png for A channel payloads.")
+
     with TemporaryDirectory() as tmp:
         tmp_dir = Path(tmp)
         input_path = tmp_dir / filename
@@ -355,7 +433,7 @@ def encode_multi_channel(
             if twitter_safe_preprocess:
                 compress_image_before_encoding(input_path, output_path)
             else:
-                Image.open(input_path).save(output_path, "PNG")
+                _save_png(Image.open(input_path), output_path)
         except Exception as e:
             raise ValueError(f"Failed to preprocess image: {str(e)}")
 
@@ -450,7 +528,7 @@ def encode_multi_channel(
                     embed_channel(pixels, width, height, ch, bits)
 
             try:
-                working.save(output_path, format="PNG", optimize=True)
+                _save_png(working, output_path)
             except Exception as e:
                 raise IOError(f"Failed to save encoded image: {str(e)}")
 
@@ -482,7 +560,16 @@ def encode_multi_channel(
 
             base_img = base_img.resize((new_width, new_height), resample=Image.LANCZOS)
 
+        output_name = f"encoded{output_format_extension(output_format)}"
+        if output_format == "png":
+            try:
+                return output_name, output_path.read_bytes()
+            except Exception as e:
+                raise IOError(f"Failed to read encoded image file: {str(e)}")
+
+        converted_path = tmp_dir / output_name
         try:
-            return output_path.name, output_path.read_bytes()
+            _convert_output_image(output_path, output_format, converted_path)
+            return output_name, converted_path.read_bytes()
         except Exception as e:
-            raise IOError(f"Failed to read encoded image file: {str(e)}")
+            raise IOError(f"Failed to convert encoded image to {output_format}: {str(e)}")
