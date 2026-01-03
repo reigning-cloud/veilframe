@@ -1,0 +1,15 @@
+[build-system]
+requires = ["setuptools>=61"]
+build-backend = "setuptools.build_meta"
+
+[project]
+name = "veilframe"
+version = "0.1.0"
+description = "LSB encoder/decoder web app"
+readme = "README.md"
+requires-python = ">=3.11"
+dependencies = []
+
+[tool.setuptools.packages.find]
+include = ["engine*"]
+exclude = ["static*", "templates*"]
