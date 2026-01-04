@@ -2,3 +2,6 @@ Flask>=2.3
 Pillow>=10.3
 numpy>=1.26
 gunicorn>=21.2
+stegoveritas>=1.10
+stegcracker>=2.0.9
+volatility3>=2.5.2

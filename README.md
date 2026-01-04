@@ -1,87 +1,87 @@
-# veilframe
+# 𝗏𝐞𝐢𝗅𝖿𝗋𝐚𝗆𝐞
 
-veilframe is a unified Flask web app for LSB encoding (Twitter-compatible) and decoding with a multi-tool analyzer suite. Ships with Docker/Dev Container so all stego tools are preinstalled.
+𝗏𝐞𝐢𝗅𝖿𝗋𝐚𝗆𝐞 𝐢𝗌 𝐚 𝐮𝗇𝐢𝖿𝐢𝐞𝖽 𝖥𝗅𝐚𝗌𝗄 𝗐𝐞𝖻 𝐚𝗉𝗉 𝖿𝐨𝗋 𝖫𝖲𝖡 𝐞𝗇𝖼𝐨𝖽𝐢𝗇𝗀 (𝖳𝗐𝐢𝗍𝗍𝐞𝗋-𝖼𝐨𝗆𝗉𝐚𝗍𝐢𝖻𝗅𝐞) 𝐚𝗇𝖽 𝖽𝐞𝖼𝐨𝖽𝐢𝗇𝗀 𝗐𝐢𝗍𝗁 𝐚 𝗆𝐮𝗅𝗍𝐢-𝗍𝐨𝐨𝗅 𝐚𝗇𝐚𝗅𝗒𝗓𝐞𝗋 𝗌𝐮𝐢𝗍𝐞. 𝖲𝗁𝐢𝗉𝗌 𝗐𝐢𝗍𝗁 𝖣𝐨𝖼𝗄𝐞𝗋/𝖣𝐞𝗏 𝖢𝐨𝗇𝗍𝐚𝐢𝗇𝐞𝗋 𝗌𝐨 𝐚𝗅𝗅 𝗌𝗍𝐞𝗀𝐨 𝗍𝐨𝐨𝗅𝗌 𝐚𝗋𝐞 𝗉𝗋𝐞𝐢𝗇𝗌𝗍𝐚𝗅𝗅𝐞𝖽.
 
-## Features
-- Encoder: text or zlib-compressed file payloads embedded into chosen planes (RGB/R/G/B/A) with pre-encoding compression to stay under Twitter's recompression threshold.
-- Decoder: binwalk, foremost, strings, exiftool, steghide, zsteg, bit-plane decomposition, optional outguess (deep mode), plus built-in simple LSB and simple zlib extractors. Artifacts are returned as data URLs for inline preview/download.
-- UI: encoder/decoder toggle, tooling status panel, bit-plane gallery, downloads, and graceful skip of outguess if it isn't installed.
+## 𝖥𝐞𝐚𝗍𝐮𝗋𝐞𝗌
+- 𝐄𝗇𝖼𝐨𝖽𝐞𝗋: 𝗍𝐞𝗑𝗍 𝐨𝗋 𝗓𝗅𝐢𝖻-𝖼𝐨𝗆𝗉𝗋𝐞𝗌𝗌𝐞𝖽 𝖿𝐢𝗅𝐞 𝗉𝐚𝗒𝗅𝐨𝐚𝖽𝗌 𝐞𝗆𝖻𝐞𝖽𝖽𝐞𝖽 𝐢𝗇𝗍𝐨 𝖼𝗁𝐨𝗌𝐞𝗇 𝗉𝗅𝐚𝗇𝐞𝗌 (𝖱𝖦𝖡/𝖱/𝖦/𝖡/𝐀) 𝗐𝐢𝗍𝗁 𝗉𝗋𝐞-𝐞𝗇𝖼𝐨𝖽𝐢𝗇𝗀 𝖼𝐨𝗆𝗉𝗋𝐞𝗌𝗌𝐢𝐨𝗇 𝗍𝐨 𝗌𝗍𝐚𝗒 𝐮𝗇𝖽𝐞𝗋 𝖳𝗐𝐢𝗍𝗍𝐞𝗋'𝗌 𝗋𝐞𝖼𝐨𝗆𝗉𝗋𝐞𝗌𝗌𝐢𝐨𝗇 𝗍𝗁𝗋𝐞𝗌𝗁𝐨𝗅𝖽.
+- 𝖣𝐞𝖼𝐨𝖽𝐞𝗋: 𝖻𝐢𝗇𝗐𝐚𝗅𝗄, 𝖿𝐨𝗋𝐞𝗆𝐨𝗌𝗍, 𝗌𝗍𝗋𝐢𝗇𝗀𝗌, 𝐞𝗑𝐢𝖿𝗍𝐨𝐨𝗅, 𝗌𝗍𝐞𝗀𝗁𝐢𝖽𝐞, 𝗓𝗌𝗍𝐞𝗀, 𝖻𝐢𝗍-𝗉𝗅𝐚𝗇𝐞 𝖽𝐞𝖼𝐨𝗆𝗉𝐨𝗌𝐢𝗍𝐢𝐨𝗇, 𝐨𝗉𝗍𝐢𝐨𝗇𝐚𝗅 𝐨𝐮𝗍𝗀𝐮𝐞𝗌𝗌 (𝖽𝐞𝐞𝗉 𝗆𝐨𝖽𝐞), 𝗉𝗅𝐮𝗌 𝖻𝐮𝐢𝗅𝗍-𝐢𝗇 𝗌𝐢𝗆𝗉𝗅𝐞 𝖫𝖲𝖡 𝐚𝗇𝖽 𝗌𝐢𝗆𝗉𝗅𝐞 𝗓𝗅𝐢𝖻 𝐞𝗑𝗍𝗋𝐚𝖼𝗍𝐨𝗋𝗌. 𝐀𝗋𝗍𝐢𝖿𝐚𝖼𝗍𝗌 𝐚𝗋𝐞 𝗋𝐞𝗍𝐮𝗋𝗇𝐞𝖽 𝐚𝗌 𝖽𝐚𝗍𝐚 𝐔𝖱𝖫𝗌 𝖿𝐨𝗋 𝐢𝗇𝗅𝐢𝗇𝐞 𝗉𝗋𝐞𝗏𝐢𝐞𝗐/𝖽𝐨𝗐𝗇𝗅𝐨𝐚𝖽.
+- 𝐔𝐈: 𝐞𝗇𝖼𝐨𝖽𝐞𝗋/𝖽𝐞𝖼𝐨𝖽𝐞𝗋 𝗍𝐨𝗀𝗀𝗅𝐞, 𝗍𝐨𝐨𝗅𝐢𝗇𝗀 𝗌𝗍𝐚𝗍𝐮𝗌 𝗉𝐚𝗇𝐞𝗅, 𝖻𝐢𝗍-𝗉𝗅𝐚𝗇𝐞 𝗀𝐚𝗅𝗅𝐞𝗋𝗒, 𝖽𝐨𝗐𝗇𝗅𝐨𝐚𝖽𝗌, 𝐚𝗇𝖽 𝗀𝗋𝐚𝖼𝐞𝖿𝐮𝗅 𝗌𝗄𝐢𝗉 𝐨𝖿 𝐨𝐮𝗍𝗀𝐮𝐞𝗌𝗌 𝐢𝖿 𝐢𝗍 𝐢𝗌𝗇'𝗍 𝐢𝗇𝗌𝗍𝐚𝗅𝗅𝐞𝖽.
 
-## Run the app (recommended: Docker Compose)
+## 𝖱𝐮𝗇 𝗍𝗁𝐞 𝐚𝗉𝗉 (𝗋𝐞𝖼𝐨𝗆𝗆𝐞𝗇𝖽𝐞𝖽: 𝖣𝐨𝖼𝗄𝐞𝗋 𝖢𝐨𝗆𝗉𝐨𝗌𝐞)
 ```bash
 cd veilframe_repo
 docker compose up --build
 ```
-Then open http://127.0.0.1:5050.
+𝖳𝗁𝐞𝗇 𝐨𝗉𝐞𝗇 http://127.0.0.1:5050.
 
-Notes:
-- Port 5000 in the container is published to host 5050.
-- The repo is bind-mounted into the container for fast iteration.
-- Environment: `FLASK_ENV=development`, `FLASK_DEBUG=1`.
+𝖭𝐨𝗍𝐞𝗌:
+- 𝖯𝐨𝗋𝗍 5000 𝐢𝗇 𝗍𝗁𝐞 𝖼𝐨𝗇𝗍𝐚𝐢𝗇𝐞𝗋 𝐢𝗌 𝗉𝐮𝖻𝗅𝐢𝗌𝗁𝐞𝖽 𝗍𝐨 𝗁𝐨𝗌𝗍 5050.
+- 𝖳𝗁𝐞 𝗋𝐞𝗉𝐨 𝐢𝗌 𝖻𝐢𝗇𝖽-𝗆𝐨𝐮𝗇𝗍𝐞𝖽 𝐢𝗇𝗍𝐨 𝗍𝗁𝐞 𝖼𝐨𝗇𝗍𝐚𝐢𝗇𝐞𝗋 𝖿𝐨𝗋 𝖿𝐚𝗌𝗍 𝐢𝗍𝐞𝗋𝐚𝗍𝐢𝐨𝗇.
+- 𝐄𝗇𝗏𝐢𝗋𝐨𝗇𝗆𝐞𝗇𝗍: `FLASK_ENV=development`, `FLASK_DEBUG=1`.
 
-## VS Code Dev Container
-1. Open the folder in VS Code.
-2. Run “Reopen in Container”.
-3. The devcontainer uses the same Docker setup; terminals run inside the container with all tools available.
+## 𝖵𝖲 𝖢𝐨𝖽𝐞 𝖣𝐞𝗏 𝖢𝐨𝗇𝗍𝐚𝐢𝗇𝐞𝗋
+1. 𝐎𝗉𝐞𝗇 𝗍𝗁𝐞 𝖿𝐨𝗅𝖽𝐞𝗋 𝐢𝗇 𝖵𝖲 𝖢𝐨𝖽𝐞.
+2. 𝖱𝐮𝗇 “𝖱𝐞𝐨𝗉𝐞𝗇 𝐢𝗇 𝖢𝐨𝗇𝗍𝐚𝐢𝗇𝐞𝗋”.
+3. 𝖳𝗁𝐞 𝖽𝐞𝗏𝖼𝐨𝗇𝗍𝐚𝐢𝗇𝐞𝗋 𝐮𝗌𝐞𝗌 𝗍𝗁𝐞 𝗌𝐚𝗆𝐞 𝖣𝐨𝖼𝗄𝐞𝗋 𝗌𝐞𝗍𝐮𝗉; 𝗍𝐞𝗋𝗆𝐢𝗇𝐚𝗅𝗌 𝗋𝐮𝗇 𝐢𝗇𝗌𝐢𝖽𝐞 𝗍𝗁𝐞 𝖼𝐨𝗇𝗍𝐚𝐢𝗇𝐞𝗋 𝗐𝐢𝗍𝗁 𝐚𝗅𝗅 𝗍𝐨𝐨𝗅𝗌 𝐚𝗏𝐚𝐢𝗅𝐚𝖻𝗅𝐞.
 
-## Local setup/run (no Docker)
-Install the stego tools yourself (binwalk, steghide, foremost, outguess, zsteg via Ruby gem, exiftool, strings/binutils, 7z) and Python 3.11+, then:
+## 𝖫𝐨𝖼𝐚𝗅 𝗌𝐞𝗍𝐮𝗉/𝗋𝐮𝗇 (𝗇𝐨 𝖣𝐨𝖼𝗄𝐞𝗋)
+𝐈𝗇𝗌𝗍𝐚𝗅𝗅 𝗍𝗁𝐞 𝗌𝗍𝐞𝗀𝐨 𝗍𝐨𝐨𝗅𝗌 𝗒𝐨𝐮𝗋𝗌𝐞𝗅𝖿 (𝖻𝐢𝗇𝗐𝐚𝗅𝗄, 𝗌𝗍𝐞𝗀𝗁𝐢𝖽𝐞, 𝖿𝐨𝗋𝐞𝗆𝐨𝗌𝗍, 𝐨𝐮𝗍𝗀𝐮𝐞𝗌𝗌, 𝗓𝗌𝗍𝐞𝗀 𝗏𝐢𝐚 𝖱𝐮𝖻𝗒 𝗀𝐞𝗆, 𝐞𝗑𝐢𝖿𝗍𝐨𝐨𝗅, 𝗌𝗍𝗋𝐢𝗇𝗀𝗌/𝖻𝐢𝗇𝐮𝗍𝐢𝗅𝗌, 7𝗓) 𝐚𝗇𝖽 𝖯𝗒𝗍𝗁𝐨𝗇 3.11+, 𝗍𝗁𝐞𝗇:
 ```bash
 cd veilframe_repo
 python -m venv .venv && source .venv/bin/activate
 pip install -r requirements.txt
 flask --app app run --debug
 ```
-Then open http://127.0.0.1:5000.
+𝖳𝗁𝐞𝗇 𝐨𝗉𝐞𝗇 http://127.0.0.1:5000.
 
-## Production run (gunicorn)
+## 𝖯𝗋𝐨𝖽𝐮𝖼𝗍𝐢𝐨𝗇 𝗋𝐮𝗇 (𝗀𝐮𝗇𝐢𝖼𝐨𝗋𝗇)
 ```bash
 pip install -r requirements.txt
 gunicorn wsgi:app --bind 0.0.0.0:8000
 ```
-For platforms like Render, bind to `$PORT` instead:
+𝖥𝐨𝗋 𝗉𝗅𝐚𝗍𝖿𝐨𝗋𝗆𝗌 𝗅𝐢𝗄𝐞 𝖱𝐞𝗇𝖽𝐞𝗋, 𝖻𝐢𝗇𝖽 𝗍𝐨 `$PORT` 𝐢𝗇𝗌𝗍𝐞𝐚𝖽:
 ```bash
 gunicorn wsgi:app --bind 0.0.0.0:$PORT
 ```
 
-## Deploy to Render (Docker)
-- Create a new Render Web Service, choose “Docker” as the environment.
-- Point it at this repo; Render will build the Dockerfile.
-- Render expects the app to listen on `0.0.0.0` and `$PORT` (defaults to 10000 in the CMD). No debug mode in production.
-- After deploy, visit the provided Render URL.
+## 𝖣𝐞𝗉𝗅𝐨𝗒 𝗍𝐨 𝖱𝐞𝗇𝖽𝐞𝗋 (𝖣𝐨𝖼𝗄𝐞𝗋)
+- 𝖢𝗋𝐞𝐚𝗍𝐞 𝐚 𝗇𝐞𝗐 𝖱𝐞𝗇𝖽𝐞𝗋 𝖶𝐞𝖻 𝖲𝐞𝗋𝗏𝐢𝖼𝐞, 𝖼𝗁𝐨𝐨𝗌𝐞 “𝖣𝐨𝖼𝗄𝐞𝗋” 𝐚𝗌 𝗍𝗁𝐞 𝐞𝗇𝗏𝐢𝗋𝐨𝗇𝗆𝐞𝗇𝗍.
+- 𝖯𝐨𝐢𝗇𝗍 𝐢𝗍 𝐚𝗍 𝗍𝗁𝐢𝗌 𝗋𝐞𝗉𝐨; 𝖱𝐞𝗇𝖽𝐞𝗋 𝗐𝐢𝗅𝗅 𝖻𝐮𝐢𝗅𝖽 𝗍𝗁𝐞 𝖣𝐨𝖼𝗄𝐞𝗋𝖿𝐢𝗅𝐞.
+- 𝖱𝐞𝗇𝖽𝐞𝗋 𝐞𝗑𝗉𝐞𝖼𝗍𝗌 𝗍𝗁𝐞 𝐚𝗉𝗉 𝗍𝐨 𝗅𝐢𝗌𝗍𝐞𝗇 𝐨𝗇 `0.0.0.0` 𝐚𝗇𝖽 `$PORT` (𝖽𝐞𝖿𝐚𝐮𝗅𝗍𝗌 𝗍𝐨 10000 𝐢𝗇 𝗍𝗁𝐞 𝖢𝖬𝖣). 𝖭𝐨 𝖽𝐞𝖻𝐮𝗀 𝗆𝐨𝖽𝐞 𝐢𝗇 𝗉𝗋𝐨𝖽𝐮𝖼𝗍𝐢𝐨𝗇.
+- 𝐀𝖿𝗍𝐞𝗋 𝖽𝐞𝗉𝗅𝐨𝗒, 𝗏𝐢𝗌𝐢𝗍 𝗍𝗁𝐞 𝗉𝗋𝐨𝗏𝐢𝖽𝐞𝖽 𝖱𝐞𝗇𝖽𝐞𝗋 𝐔𝖱𝖫.
 
-## Deploy to Render (render.yaml)
-- Push this repo to GitHub and create a new Render Blueprint.
-- Render will read `render.yaml` and build using the provided `Dockerfile`, which installs all stego tooling.
+## 𝖣𝐞𝗉𝗅𝐨𝗒 𝗍𝐨 𝖱𝐞𝗇𝖽𝐞𝗋 (𝗋𝐞𝗇𝖽𝐞𝗋.𝗒𝐚𝗆𝗅)
+- 𝖯𝐮𝗌𝗁 𝗍𝗁𝐢𝗌 𝗋𝐞𝗉𝐨 𝗍𝐨 𝖦𝐢𝗍𝖧𝐮𝖻 𝐚𝗇𝖽 𝖼𝗋𝐞𝐚𝗍𝐞 𝐚 𝗇𝐞𝗐 𝖱𝐞𝗇𝖽𝐞𝗋 𝖡𝗅𝐮𝐞𝗉𝗋𝐢𝗇𝗍.
+- 𝖱𝐞𝗇𝖽𝐞𝗋 𝗐𝐢𝗅𝗅 𝗋𝐞𝐚𝖽 `render.yaml` 𝐚𝗇𝖽 𝖻𝐮𝐢𝗅𝖽 𝐮𝗌𝐢𝗇𝗀 𝗍𝗁𝐞 𝗉𝗋𝐨𝗏𝐢𝖽𝐞𝖽 `Dockerfile`, 𝗐𝗁𝐢𝖼𝗁 𝐢𝗇𝗌𝗍𝐚𝗅𝗅𝗌 𝐚𝗅𝗅 𝗌𝗍𝐞𝗀𝐨 𝗍𝐨𝐨𝗅𝐢𝗇𝗀.
 
-## Quick verification (inside container)
+## 𝖰𝐮𝐢𝖼𝗄 𝗏𝐞𝗋𝐢𝖿𝐢𝖼𝐚𝗍𝐢𝐨𝗇 (𝐢𝗇𝗌𝐢𝖽𝐞 𝖼𝐨𝗇𝗍𝐚𝐢𝗇𝐞𝗋)
 ```bash
 docker compose exec web bash -lc "which binwalk; which foremost; which steghide; which outguess; which zsteg; which exiftool; which strings; which 7z; which file; which unzip; which unsquashfs"
 docker compose exec web make smoke
 ```
 
-If you're running the smoke test in an environment without the stego tools (e.g., restricted CI runners), set `ALLOW_MISSING_TOOLS=1 make smoke` to skip the hard failure while still exercising the encoder.
+𝐈𝖿 𝗒𝐨𝐮'𝗋𝐞 𝗋𝐮𝗇𝗇𝐢𝗇𝗀 𝗍𝗁𝐞 𝗌𝗆𝐨𝗄𝐞 𝗍𝐞𝗌𝗍 𝐢𝗇 𝐚𝗇 𝐞𝗇𝗏𝐢𝗋𝐨𝗇𝗆𝐞𝗇𝗍 𝗐𝐢𝗍𝗁𝐨𝐮𝗍 𝗍𝗁𝐞 𝗌𝗍𝐞𝗀𝐨 𝗍𝐨𝐨𝗅𝗌 (𝐞.𝗀., 𝗋𝐞𝗌𝗍𝗋𝐢𝖼𝗍𝐞𝖽 𝖢𝐈 𝗋𝐮𝗇𝗇𝐞𝗋𝗌), 𝗌𝐞𝗍 `ALLOW_MISSING_TOOLS=1 make smoke` 𝗍𝐨 𝗌𝗄𝐢𝗉 𝗍𝗁𝐞 𝗁𝐚𝗋𝖽 𝖿𝐚𝐢𝗅𝐮𝗋𝐞 𝗐𝗁𝐢𝗅𝐞 𝗌𝗍𝐢𝗅𝗅 𝐞𝗑𝐞𝗋𝖼𝐢𝗌𝐢𝗇𝗀 𝗍𝗁𝐞 𝐞𝗇𝖼𝐨𝖽𝐞𝗋.
 
-Smoke test notes: the image installs the app editable (`pip install -e .`) so `import engine` succeeds inside the container.
+𝖲𝗆𝐨𝗄𝐞 𝗍𝐞𝗌𝗍 𝗇𝐨𝗍𝐞𝗌: 𝗍𝗁𝐞 𝐢𝗆𝐚𝗀𝐞 𝐢𝗇𝗌𝗍𝐚𝗅𝗅𝗌 𝗍𝗁𝐞 𝐚𝗉𝗉 𝐞𝖽𝐢𝗍𝐚𝖻𝗅𝐞 (`pip install -e .`) 𝗌𝐨 `import engine` 𝗌𝐮𝖼𝖼𝐞𝐞𝖽𝗌 𝐢𝗇𝗌𝐢𝖽𝐞 𝗍𝗁𝐞 𝖼𝐨𝗇𝗍𝐚𝐢𝗇𝐞𝗋.
 
-## Encoder modes
-- Simple: one payload (text or file/zlib) into a chosen plane with the classic dropdown.
-- Advanced: per-channel payloads (R/G/B/A) encoded in one pass; each channel carries its own text or zlib-compressed file. Enable the advanced toggle, fill per-channel cards, and encode.
+## 𝐄𝗇𝖼𝐨𝖽𝐞𝗋 𝗆𝐨𝖽𝐞𝗌
+- 𝖲𝐢𝗆𝗉𝗅𝐞: 𝐨𝗇𝐞 𝗉𝐚𝗒𝗅𝐨𝐚𝖽 (𝗍𝐞𝗑𝗍 𝐨𝗋 𝖿𝐢𝗅𝐞/𝗓𝗅𝐢𝖻) 𝐢𝗇𝗍𝐨 𝐚 𝖼𝗁𝐨𝗌𝐞𝗇 𝗉𝗅𝐚𝗇𝐞 𝗐𝐢𝗍𝗁 𝗍𝗁𝐞 𝖼𝗅𝐚𝗌𝗌𝐢𝖼 𝖽𝗋𝐨𝗉𝖽𝐨𝗐𝗇.
+- 𝐀𝖽𝗏𝐚𝗇𝖼𝐞𝖽: 𝗉𝐞𝗋-𝖼𝗁𝐚𝗇𝗇𝐞𝗅 𝗉𝐚𝗒𝗅𝐨𝐚𝖽𝗌 (𝖱/𝖦/𝖡/𝐀) 𝐞𝗇𝖼𝐨𝖽𝐞𝖽 𝐢𝗇 𝐨𝗇𝐞 𝗉𝐚𝗌𝗌; 𝐞𝐚𝖼𝗁 𝖼𝗁𝐚𝗇𝗇𝐞𝗅 𝖼𝐚𝗋𝗋𝐢𝐞𝗌 𝐢𝗍𝗌 𝐨𝗐𝗇 𝗍𝐞𝗑𝗍 𝐨𝗋 𝗓𝗅𝐢𝖻-𝖼𝐨𝗆𝗉𝗋𝐞𝗌𝗌𝐞𝖽 𝖿𝐢𝗅𝐞. 𝐄𝗇𝐚𝖻𝗅𝐞 𝗍𝗁𝐞 𝐚𝖽𝗏𝐚𝗇𝖼𝐞𝖽 𝗍𝐨𝗀𝗀𝗅𝐞, 𝖿𝐢𝗅𝗅 𝗉𝐞𝗋-𝖼𝗁𝐚𝗇𝗇𝐞𝗅 𝖼𝐚𝗋𝖽𝗌, 𝐚𝗇𝖽 𝐞𝗇𝖼𝐨𝖽𝐞.
 
-## API
-- `POST /api/encode` – form-data: `image` (file, required), `payloadMode` (text|zlib), `text` (for text mode), `payload` (file for zlib mode), `plane` (RGB/R/G/B/A). Returns `{ filename, data_url }`.
-- `POST /api/decode` – form-data: `image` (file), `password` (optional, used by steghide/outguess), `deep` (true|false to enable outguess if available). Returns `{ results, artifacts }` where artifacts include base64 data URLs for generated bit-plane PNGs and any 7z archives.
-- `GET /api/tools` – returns tooling availability used by the UI.
+## 𝐀𝖯𝐈
+- `POST /api/encode` – 𝖿𝐨𝗋𝗆-𝖽𝐚𝗍𝐚: `image` (𝖿𝐢𝗅𝐞, 𝗋𝐞𝗊𝐮𝐢𝗋𝐞𝖽), `payloadMode` (𝗍𝐞𝗑𝗍|𝗓𝗅𝐢𝖻), `text` (𝖿𝐨𝗋 𝗍𝐞𝗑𝗍 𝗆𝐨𝖽𝐞), `payload` (𝖿𝐢𝗅𝐞 𝖿𝐨𝗋 𝗓𝗅𝐢𝖻 𝗆𝐨𝖽𝐞), `plane` (𝖱𝖦𝖡/𝖱/𝖦/𝖡/𝐀). 𝖱𝐞𝗍𝐮𝗋𝗇𝗌 `{ filename, data_url }`.
+- `POST /api/decode` – 𝖿𝐨𝗋𝗆-𝖽𝐚𝗍𝐚: `image` (𝖿𝐢𝗅𝐞), `password` (𝐨𝗉𝗍𝐢𝐨𝗇𝐚𝗅, 𝐮𝗌𝐞𝖽 𝖻𝗒 𝗌𝗍𝗁𝐞𝗀𝗁𝐢𝖽𝐞/𝐨𝐮𝗍𝗀𝐮𝐞𝗌𝗌), `deep` (𝗍𝗋𝐮𝐞|𝖿𝐚𝗅𝗌𝐞 𝗍𝐨 𝐞𝗇𝐚𝖻𝗅𝐞 𝖽𝐞𝐞𝗉 𝐚𝗇𝐚𝗅𝗒𝗓𝗂𝗌 + 𝐨𝐮𝗍𝗀𝐮𝐞𝗌𝗌), `manual` (𝗍𝗋𝐮𝐞|𝖿𝐚𝗅𝗌𝐞 𝗍𝐨 𝐞𝗇𝐚𝖻𝗅𝐞 𝗆𝐚𝗇𝐮𝐚𝗅 𝗍𝐨𝐨𝗅𝗌). 𝖱𝐞𝗍𝐮𝗋𝗇𝗌 `{ results, artifacts }` 𝗐𝗁𝐞𝗋𝐞 𝐚𝗋𝗍𝐢𝖿𝐚𝖼𝗍𝗌 𝐢𝗇𝖼𝗅𝐮𝖽𝐞 𝖻𝐚𝗌𝐞64 𝖽𝐚𝗍𝐚 𝐔𝖱𝖫𝗌 𝖿𝐨𝗋 𝗀𝐞𝗇𝐞𝗋𝐚𝗍𝐞𝖽 𝖻𝐢𝗍-𝗉𝗅𝐚𝗇𝐞 𝖯𝖭𝖦𝗌 𝐚𝗇𝖽 𝐚𝗇𝗒 7𝗓 𝐚𝗋𝖼𝗁𝐢𝗏𝐞𝗌.
+- `GET /api/tools` – 𝗋𝐞𝗍𝐮𝗋𝗇𝗌 𝗍𝐨𝐨𝗅𝐢𝗇𝗀 𝐚𝗏𝐚𝐢𝗅𝐚𝖻𝐢𝗅𝐢𝗍𝗒 𝐮𝗌𝐞𝖽 𝖻𝗒 𝗍𝗁𝐞 𝐔𝐈.
 
-## Troubleshooting
-- Port already in use: container binds to host 5050; change the mapped port in `docker-compose.yml` if needed.
-- Docker not running: start Docker Desktop/daemon before `docker compose up`.
-- Outguess unavailable in your distro: the app will skip it gracefully and mark it missing in the UI; use the Docker image provided here for a working install.
-- zsteg depends on the `file` utility; the Docker image installs `file` along with `unzip` and `unsquashfs` (from `squashfs-tools`) so the tooling grid should show them as ✅.
-- Slow build: first-time Docker build installs Ruby/gems and stego packages; subsequent runs are faster.
+## 𝖳𝗋𝐨𝐮𝖻𝗅𝐞𝗌𝗁𝐨𝐨𝗍𝐢𝗇𝗀
+- 𝖯𝐨𝗋𝗍 𝐚𝗅𝗋𝐞𝐚𝖽𝗒 𝐢𝗇 𝐮𝗌𝐞: 𝖼𝐨𝗇𝗍𝐚𝐢𝗇𝐞𝗋 𝖻𝐢𝗇𝖽𝗌 𝗍𝐨 𝗁𝐨𝗌𝗍 5050; 𝖼𝗁𝐚𝗇𝗀𝐞 𝗍𝗁𝐞 𝗆𝐚𝗉𝗉𝐞𝖽 𝗉𝐨𝗋𝗍 𝐢𝗇 `docker-compose.yml` 𝐢𝖿 𝗇𝐞𝐞𝖽𝐞𝖽.
+- 𝖣𝐨𝖼𝗄𝐞𝗋 𝗇𝐨𝗍 𝗋𝐮𝗇𝗇𝐢𝗇𝗀: 𝗌𝗍𝐚𝗋𝗍 𝖣𝐨𝖼𝗄𝐞𝗋 𝖣𝐞𝗌𝗄𝗍𝐨𝗉/𝖽𝐚𝐞𝗆𝐨𝗇 𝖻𝐞𝖿𝐨𝗋𝐞 `docker compose up`.
+- 𝐎𝐮𝗍𝗀𝐮𝐞𝗌𝗌 𝐮𝗇𝐚𝗏𝐚𝐢𝗅𝐚𝖻𝗅𝐞 𝐢𝗇 𝗒𝐨𝐮𝗋 𝖽𝐢𝗌𝗍𝗋𝐨: 𝗍𝗁𝐞 𝐚𝗉𝗉 𝗐𝐢𝗅𝗅 𝗌𝗄𝐢𝗉 𝐢𝗍 𝗀𝗋𝐚𝖼𝐞𝖿𝐮𝗅𝗅𝗒 𝐚𝗇𝖽 𝗆𝐚𝗋𝗄 𝐢𝗍 𝗆𝐢𝗌𝗌𝐢𝗇𝗀 𝐢𝗇 𝗍𝗁𝐞 𝐔𝐈; 𝐮𝗌𝐞 𝗍𝗁𝐞 𝖣𝐨𝖼𝗄𝐞𝗋 𝐢𝗆𝐚𝗀𝐞 𝗉𝗋𝐨𝗏𝐢𝖽𝐞𝖽 𝗁𝐞𝗋𝐞 𝖿𝐨𝗋 𝐚 𝗐𝐨𝗋𝗄𝐢𝗇𝗀 𝐢𝗇𝗌𝗍𝐚𝗅𝗅.
+- 𝗓𝗌𝗍𝐞𝗀 𝖽𝐞𝗉𝐞𝗇𝖽𝗌 𝐨𝗇 𝗍𝗁𝐞 `file` 𝐮𝗍𝐢𝗅𝐢𝗍𝗒; 𝗍𝗁𝐞 𝖣𝐨𝖼𝗄𝐞𝗋 𝐢𝗆𝐚𝗀𝐞 𝐢𝗇𝗌𝗍𝐚𝗅𝗅𝗌 `file` 𝐚𝗅𝐨𝗇𝗀 𝗐𝐢𝗍𝗁 `unzip` 𝐚𝗇𝖽 `unsquashfs` (𝖿𝗋𝐨𝗆 `squashfs-tools`) 𝗌𝐨 𝗍𝗁𝐞 𝗍𝐨𝐨𝗅𝐢𝗇𝗀 𝗀𝗋𝐢𝖽 𝗌𝗁𝐨𝐮𝗅𝖽 𝗌𝗁𝐨𝗐 𝗍𝗁𝐞𝗆 𝐚𝗌 ✅.
+- 𝖲𝗅𝐨𝗐 𝖻𝐮𝐢𝗅𝖽: 𝖿𝐢𝗋𝗌𝗍-𝗍𝐢𝗆𝐞 𝖣𝐨𝖼𝗄𝐞𝗋 𝖻𝐮𝐢𝗅𝖽 𝐢𝗇𝗌𝗍𝐚𝗅𝗅𝗌 𝖱𝐮𝖻𝗒/𝗀𝐞𝗆𝗌 𝐚𝗇𝖽 𝗌𝗍𝐞𝗀𝐨 𝗉𝐚𝖼𝗄𝐚𝗀𝐞𝗌; 𝗌𝐮𝖻𝗌𝐞𝗊𝐮𝐞𝗇𝗍 𝗋𝐮𝗇𝗌 𝐚𝗋𝐞 𝖿𝐚𝗌𝗍𝐞𝗋.
 
-## Security note
-Do not expose the Flask debugger PIN or run the dev/debug server on an untrusted network. For production, run behind a proper reverse proxy and disable debug mode (`gunicorn wsgi:app`).
+## 𝖲𝐞𝖼𝐮𝗋𝐢𝗍𝗒 𝗇𝐨𝗍𝐞
+𝖣𝐨 𝗇𝐨𝗍 𝐞𝗑𝗉𝐨𝗌𝐞 𝗍𝗁𝐞 𝖥𝗅𝐚𝗌𝗄 𝖽𝐞𝖻𝐮𝗀𝗀𝐞𝗋 𝖯𝐈𝖭 𝐨𝗋 𝗋𝐮𝗇 𝗍𝗁𝐞 𝖽𝐞𝗏/𝖽𝐞𝖻𝐮𝗀 𝗌𝐞𝗋𝗏𝐞𝗋 𝐨𝗇 𝐚𝗇 𝐮𝗇𝗍𝗋𝐮𝗌𝗍𝐞𝖽 𝗇𝐞𝗍𝗐𝐨𝗋𝗄. 𝖥𝐨𝗋 𝗉𝗋𝐨𝖽𝐮𝖼𝗍𝐢𝐨𝗇, 𝗋𝐮𝗇 𝖻𝐞𝗁𝐢𝗇𝖽 𝐚 𝗉𝗋𝐨𝗉𝐞𝗋 𝗋𝐞𝗏𝐞𝗋𝗌𝐞 𝗉𝗋𝐨𝗑𝗒 𝐚𝗇𝖽 𝖽𝐢𝗌𝐚𝖻𝗅𝐞 𝖽𝐞𝖻𝐮𝗀 𝗆𝐨𝖽𝐞 (`gunicorn wsgi:app`).
 
-## Twitter compatibility note
-The compression safeguard used to keep LSBs intact on Twitter is documented in `docs/twitter-encoding.md`.
+## 𝖳𝗐𝐢𝗍𝗍𝐞𝗋 𝖼𝐨𝗆𝗉𝐚𝗍𝐢𝖻𝐢𝗅𝐢𝗍𝗒 𝗇𝐨𝗍𝐞
+𝖳𝗁𝐞 𝖼𝐨𝗆𝗉𝗋𝐞𝗌𝗌𝐢𝐨𝗇 𝗌𝐚𝖿𝐞𝗀𝐮𝐚𝗋𝖽 𝐮𝗌𝐞𝖽 𝗍𝐨 𝗄𝐞𝐞𝗉 𝖫𝖲𝖡𝗌 𝐢𝗇𝗍𝐚𝖼𝗍 𝐨𝗇 𝖳𝗐𝐢𝗍𝗍𝐞𝗋 𝐢𝗌 𝖽𝐨𝖼𝐮𝗆𝐞𝗇𝗍𝐞𝖽 𝐢𝗇 `docs/twitter-encoding.md`.

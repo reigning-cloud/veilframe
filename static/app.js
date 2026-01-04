@@ -12,8 +12,67 @@ const MAX_IMAGE_BYTES = 8 * 1024 * 1024;
 const ALLOWED_IMAGE_TYPES = new Set(['image/png', 'image/jpeg']);
 const ALLOWED_IMAGE_EXTS = ['.png', '.jpg', '.jpeg'];
 
+const STYLE_MAP = {
+  A: '𝐀',
+  B: '𝖡',
+  C: '𝖢',
+  D: '𝖣',
+  E: '𝐄',
+  F: '𝖥',
+  G: '𝖦',
+  H: '𝖧',
+  I: '𝐈',
+  J: '𝖩',
+  K: '𝖪',
+  L: '𝖫',
+  M: '𝖬',
+  N: '𝖭',
+  O: '𝐎',
+  P: '𝖯',
+  Q: '𝖰',
+  R: '𝖱',
+  S: '𝖲',
+  T: '𝖳',
+  U: '𝐔',
+  V: '𝖵',
+  W: '𝖶',
+  X: '𝖷',
+  Y: '𝖸',
+  Z: '𝖹',
+  a: '𝐚',
+  b: '𝖻',
+  c: '𝖼',
+  d: '𝖽',
+  e: '𝐞',
+  f: '𝖿',
+  g: '𝗀',
+  h: '𝗁',
+  i: '𝐢',
+  j: '𝗃',
+  k: '𝗄',
+  l: '𝗅',
+  m: '𝗆',
+  n: '𝗇',
+  o: '𝐨',
+  p: '𝗉',
+  q: '𝗊',
+  r: '𝗋',
+  s: '𝗌',
+  t: '𝗍',
+  u: '𝐮',
+  v: '𝗏',
+  w: '𝗐',
+  x: '𝗑',
+  y: '𝗒',
+  z: '𝗓',
+};
+
+function stylizeText(text) {
+  return String(text || '').replace(/[A-Za-z]/g, (ch) => STYLE_MAP[ch] || ch);
+}
+
 function formatMb(bytes) {
-  return `${(bytes / (1024 * 1024)).toFixed(1)} MB`;
+  return stylizeText(`${(bytes / (1024 * 1024)).toFixed(1)} MB`);
 }
 
 function hasSupportedExtension(name) {
@@ -28,10 +87,12 @@ function isSupportedImage(file) {
 }
 
 function validateImageFile(file) {
-  if (!file) return 'Please choose an image to upload.';
-  if (!isSupportedImage(file)) return 'Unsupported image type. Please use PNG or JPG.';
+  if (!file) return stylizeText('Please choose an image to upload.');
+  if (!isSupportedImage(file)) return stylizeText('Unsupported image type. Please use PNG or JPG.');
   if (file.size > MAX_IMAGE_BYTES) {
-    return `Image too large (${formatMb(file.size)}). Try under ${formatMb(MAX_IMAGE_BYTES)}.`;
+    return stylizeText(
+      `Image too large (${formatMb(file.size)}). Try under ${formatMb(MAX_IMAGE_BYTES)}.`
+    );
   }
   return null;
 }
@@ -48,7 +109,7 @@ async function readResponse(res) {
 
 function responseMessage(res, data, text) {
   const status = `${res.status}${res.statusText ? ` ${res.statusText}` : ''}`;
-  const base = `Server response (${status})`;
+  const base = stylizeText(`Server response (${status})`);
   if (data && data.error) return `${base}: ${data.error}`;
   if (text) {
     const snippet = text.replace(/\s+/g, ' ').slice(0, 160);
@@ -126,7 +187,7 @@ showPanel(initialPanel, false);
 if (carrierInput && carrierFilename) {
   carrierInput.addEventListener('change', () => {
     const file = carrierInput.files && carrierInput.files[0] ? carrierInput.files[0] : null;
-    const name = file ? `${file.name} (${formatMb(file.size)})` : 'no photo chosen';
+    const name = file ? `${file.name} (${formatMb(file.size)})` : stylizeText('no photo chosen');
     carrierFilename.textContent = name;
   });
 }
@@ -136,7 +197,7 @@ const analyzeFilename = document.getElementById('analyze-filename');
 if (analyzeInput && analyzeFilename) {
   analyzeInput.addEventListener('change', () => {
     const file = analyzeInput.files && analyzeInput.files[0] ? analyzeInput.files[0] : null;
-    const name = file ? `${file.name} (${formatMb(file.size)})` : 'no photo chosen';
+    const name = file ? `${file.name} (${formatMb(file.size)})` : stylizeText('no photo chosen');
     analyzeFilename.textContent = name;
   });
 }
@@ -165,12 +226,12 @@ document.querySelectorAll('#advanced-grid .channel-card').forEach((card) => {
   if (fileInput) {
     fileInput.addEventListener('change', () => {
       const nameEl = card.querySelector('.ch-file-name');
-      const name = fileInput.files && fileInput.files[0] ? fileInput.files[0].name : 'no file';
+      const name = fileInput.files && fileInput.files[0] ? fileInput.files[0].name : stylizeText('no file');
       if (nameEl) nameEl.textContent = name;
       saveChannelState();
     });
     const nameEl = card.querySelector('.ch-file-name');
-    const name = fileInput.files && fileInput.files[0] ? fileInput.files[0].name : 'no file';
+    const name = fileInput.files && fileInput.files[0] ? fileInput.files[0].name : stylizeText('no file');
     if (nameEl) nameEl.textContent = name;
   }
 });
@@ -221,7 +282,7 @@ encodeForm.addEventListener('submit', async (e) => {
     encodeOutput.innerHTML = `<div class="status-line error">${carrierError}</div>`;
     return;
   }
-  encodeOutput.innerHTML = '<div class="status-line">Encoding...</div>';
+  encodeOutput.innerHTML = `<div class="status-line">${stylizeText('Encoding...')}</div>`;
 
   const fd = new FormData(encodeForm);
   fd.append('mode', 'text'); // simple defaults to text
@@ -284,16 +345,16 @@ function renderEncodeResult(data) {
 
 const decodeForm = document.getElementById('decode-form');
 const decodeOutput = document.getElementById('decode-output');
-const outguessToggle = document.querySelector('input[name="deep"]');
+const deepToggle = document.querySelector('input[name="deep"]');
 const outguessPasswordField = document.getElementById('outguess-password-field');
 
 function syncOutguessPassword() {
   if (!outguessPasswordField) return;
-  const enabled = outguessToggle && outguessToggle.checked;
+  const enabled = deepToggle && deepToggle.checked;
   outguessPasswordField.classList.toggle('visible', !!enabled);
 }
-if (outguessToggle) {
-  outguessToggle.addEventListener('change', syncOutguessPassword);
+if (deepToggle) {
+  deepToggle.addEventListener('change', syncOutguessPassword);
   syncOutguessPassword();
 }
 decodeForm.addEventListener('submit', async (e) => {
@@ -304,7 +365,7 @@ decodeForm.addEventListener('submit', async (e) => {
     decodeOutput.innerHTML = `<div class="status-line error">${analyzeError}</div>`;
     return;
   }
-  decodeOutput.innerHTML = '<div class="status-line">Running analyzers...</div>';
+  decodeOutput.innerHTML = `<div class="status-line">${stylizeText('Running analyzers...')}</div>`;
   const fd = new FormData(decodeForm);
   showPanel('decode-panel');
 
@@ -330,7 +391,64 @@ function renderDecodeResult(data) {
   const { results = {}, artifacts = { images: [], archives: [] } } = data;
   const priority = ["simple_rgb", "red_plane", "green_plane", "blue_plane", "alpha_plane"];
   const stringsKey = "strings";
-  const restOrder = ["simple_zlib", "binwalk", "foremost", "exiftool", "steghide", "outguess", "zsteg", "decomposer"];
+  const restOrder = [
+    "simple_zlib",
+    "binwalk",
+    "foremost",
+    "exiftool",
+    "steghide",
+    "outguess",
+    "zsteg",
+    "decomposer",
+    "identify",
+    "convert",
+    "jpeginfo",
+    "jpegtran",
+    "cjpeg",
+    "djpeg",
+    "jpegsnoop",
+    "jhead",
+    "exiv2",
+    "exifprobe",
+    "pngcheck",
+    "optipng",
+    "pngcrush",
+    "pngtools",
+    "stegdetect",
+    "jsteg",
+    "stegbreak",
+    "stegseek",
+    "stegcracker",
+    "fcrackzip",
+    "bulk_extractor",
+    "scalpel",
+    "testdisk",
+    "photorec",
+    "stegoveritas",
+    "zbarimg",
+    "qrencode",
+    "tesseract",
+    "ffprobe",
+    "ffmpeg",
+    "mediainfo",
+    "sox",
+    "pdfinfo",
+    "pdftotext",
+    "pdfimages",
+    "qpdf",
+    "radare2",
+    "rizin",
+    "hexyl",
+    "bvi",
+    "xxd",
+    "rg",
+    "tshark",
+    "wireshark",
+    "sleuthkit",
+    "volatility",
+    "stegsolve",
+    "openstego",
+  ];
 
   const cardsPriority = priority
     .filter((k) => results[k])
@@ -354,7 +472,7 @@ function renderDecodeResult(data) {
 
   decodeOutput.innerHTML = `
     <div class="result-grid priority-grid">${cardsPriority || ''}</div>
-    ${gallery ? `<h3 class="gallery-title">Bit-plane gallery</h3><div class="gallery">${gallery}</div>` : ''}
+    ${gallery ? `<h3 class="gallery-title">${stylizeText('Bit-plane gallery')}</h3><div class="gallery">${gallery}</div>` : ''}
     <div class="result-grid">${cardsRest || ''}</div>
     ${downloads ? `<div class="downloads" style="margin-top:12px;">${downloads}</div>` : ''}
     ${cardsStrings ? `<div class="result-grid strings-block">${cardsStrings}</div>` : ''}
@@ -367,6 +485,8 @@ function renderTool(tool, payload, wide = false) {
   }
   const status = payload.status || 'unknown';
   const tagClass = status === 'ok' ? 'ok' : status === 'error' ? 'error' : '';
+  const displayTool = stylizeText(tool);
+  const displayStatus = stylizeText(status);
   const hasOutput = Object.prototype.hasOwnProperty.call(payload, 'output');
   const content = formatPayload(
     hasOutput ? payload.output : (payload.error || payload.reason || payload)
@@ -376,8 +496,8 @@ function renderTool(tool, payload, wide = false) {
   return `
     <div class="result-card" ${style}>
       <div style="display:flex;justify-content:space-between;align-items:center;gap:8px;">
-        <h3>${tool}</h3>
-        <span class="tag ${tagClass}">${status}</span>
+        <h3>${displayTool}</h3>
+        <span class="tag ${tagClass}">${displayStatus}</span>
       </div>
       ${content}
     </div>
@@ -397,14 +517,14 @@ function formatPayload(val) {
 // Tooling status
 async function loadToolStatus() {
   if (!toolStatusEl) return;
-  toolStatusEl.innerHTML = '<div class="status-line">loading tools...</div>';
+  toolStatusEl.innerHTML = `<div class="status-line">${stylizeText('loading tools...')}</div>`;
   try {
     const res = await fetch('/api/tools');
     const data = await res.json();
     const tools = data.tools || {};
     const entries = Object.entries(tools);
     if (!entries.length) {
-      toolStatusEl.innerHTML = '<div class="status-line">no tools detected.</div>';
+      toolStatusEl.innerHTML = `<div class="status-line">${stylizeText('no tools detected.')}</div>`;
       return;
     }
     const html = entries
@@ -412,11 +532,14 @@ async function loadToolStatus() {
         const ok = info && info.available;
         const icon = ok ? '✅' : '❌';
         const cls = ok ? 'ok' : 'missing';
+        const displayName = stylizeText(name);
+        const mode = info && info.mode ? info.mode : 'auto';
+        const modeBadge = `<span class="tool-mode ${mode}">${stylizeText(mode)}</span>`;
         const path = info && info.path ? `<span class="tool-path">${info.path}</span>` : '';
-        return `<div class="tool-pill"><div class="tool-top"><span class="tool-icon ${cls}">${icon}</span><span class="tool-name">${name}</span></div>${path}</div>`;
+        return `<div class="tool-pill"><div class="tool-top"><span class="tool-icon ${cls}">${icon}</span><span class="tool-name">${displayName}</span>${modeBadge}</div>${path}</div>`;
       })
       .join('');
-    toolStatusEl.innerHTML = html || '<div class="status-line">No tools detected.</div>';
+    toolStatusEl.innerHTML = html || `<div class="status-line">${stylizeText('No tools detected.')}</div>`;
   } catch (err) {
     toolStatusEl.innerHTML = `<div class="status-line">Tool status unavailable</div>`;
   }

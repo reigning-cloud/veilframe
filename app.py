@@ -25,6 +25,10 @@ def sniff_image_mime(image_bytes: bytes) -> str:
     return "application/octet-stream"
 
 
+def _form_flag(value: Optional[str]) -> bool:
+    return str(value).strip().lower() in {"true", "1", "yes", "on"}
+
+
 @app.route("/")
 def index() -> str:
     return render_template("index.html")
@@ -211,8 +215,9 @@ def api_decode():
         return jsonify({"error": f"Image file too large. Maximum size is {max_size // (1024 * 1024)}MB"}), 400
 
     password = request.form.get("password") or None
-    deep_analysis = request.form.get("deep", "false") == "true"
-    binwalk_extract = request.form.get("binwalkExtract", "false") == "true"
+    deep_analysis = _form_flag(request.form.get("deep", "false"))
+    manual_tools = _form_flag(request.form.get("manual", "false"))
+    binwalk_extract = _form_flag(request.form.get("binwalkExtract", "false"))
 
     try:
         analysis = run_analysis(
@@ -220,6 +225,7 @@ def api_decode():
             image_file.filename or "upload.png",
             password=password,
             deep_analysis=deep_analysis,
+            manual_tools=manual_tools,
             binwalk_extract=binwalk_extract,
         )
         return jsonify(analysis)

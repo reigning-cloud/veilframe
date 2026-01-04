@@ -272,6 +272,19 @@ h3 {
 }
 .tool-pill .ok { color: var(--primary); }
 .tool-pill .missing { color: #ff8a80; }
+.tool-mode {
+  font-size: 9px;
+  text-transform: uppercase;
+  letter-spacing: 0.08em;
+  padding: 2px 6px;
+  border-radius: 999px;
+  border: 1px solid var(--border);
+  background: rgba(255, 255, 255, 0.04);
+  color: var(--muted);
+}
+.tool-mode.auto { color: var(--muted); }
+.tool-mode.deep { color: #ffd166; border-color: rgba(255, 209, 102, 0.4); }
+.tool-mode.manual { color: #ffb6c1; border-color: rgba(255, 182, 193, 0.35); }
 
 .form-grid {
   display: grid;

@@ -19,6 +19,7 @@ from .analyzers import (
     analyze_simple_zlib,
     analyze_steghide,
     analyze_strings,
+    analyze_tool_suite,
     analyze_zsteg,
 )
 from .analyzers.utils import update_data
@@ -127,6 +128,7 @@ def run_analysis(
     *,
     password: Optional[str] = None,
     deep_analysis: bool = False,
+    manual_tools: bool = False,
     binwalk_extract: bool = False,
 ) -> Dict[str, Any]:
     """
@@ -204,6 +206,7 @@ def run_analysis(
             (analyze_simple_zlib, (image_path, output_dir)),
             (analyze_strings, (image_path, output_dir)),
             (analyze_steghide, (image_path, output_dir, password)),
+            (analyze_tool_suite, (image_path, output_dir, deep_analysis, manual_tools)),
             (analyze_zsteg, (image_path, output_dir)),
         ]
 

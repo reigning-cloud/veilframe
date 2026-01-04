@@ -10,6 +10,8 @@ instance/
 
 # Temporary test files
 tmp_smoke_*.png
+tmp_stegdetect/
+tmp_*/
 
 # Python package metadata
 *.egg-info/

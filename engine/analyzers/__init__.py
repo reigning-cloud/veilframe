@@ -9,6 +9,7 @@ from .simple_lsb import analyze_simple_lsb
 from .simple_zlib import analyze_simple_zlib
 from .steghide import analyze_steghide
 from .strings import analyze_strings
+from .tool_suite import analyze_tool_suite
 from .zsteg import analyze_zsteg
 
 __all__ = [
@@ -21,5 +22,6 @@ __all__ = [
     "analyze_simple_zlib",
     "analyze_steghide",
     "analyze_strings",
+    "analyze_tool_suite",
     "analyze_zsteg",
 ]
