@@ -164,7 +164,17 @@ RUN apt-get update && \
     chmod +x /usr/local/bin/stegsolve && \
     printf '%s\n' '#!/bin/sh' 'exec java -Djava.awt.headless=true -jar /opt/veilframe/tools/openstego.jar "$@"' > /usr/local/bin/openstego && \
     chmod +x /usr/local/bin/openstego && \
-    printf '%s\n' '#!/bin/sh' 'exec pngfix "$@"' > /usr/local/bin/pngtools && \
+    printf '%s\n' \
+      '#!/bin/sh' \
+      'if command -v pngfix >/dev/null 2>&1; then' \
+      '  exec pngfix "$@"' \
+      'fi' \
+      'if command -v pngcheck >/dev/null 2>&1 && [ "$#" -ge 1 ]; then' \
+      '  exec pngcheck -v "$1"' \
+      'fi' \
+      'echo "pngtools fallback unavailable (pngfix/pngcheck missing)" >&2' \
+      'exit 127' \
+      > /usr/local/bin/pngtools && \
     chmod +x /usr/local/bin/pngtools && \
     printf '%s\n' '#!/bin/sh' 'exec jpeginfo "$@"' > /usr/local/bin/jpegsnoop && \
     chmod +x /usr/local/bin/jpegsnoop && \

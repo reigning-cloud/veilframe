@@ -232,8 +232,13 @@ def analyze_tool_suite(
         _run_tool(output_dir, "pngcrush", ["pngcrush", "-q", str(input_img), str(out_file)])
 
     if not _skip_if(output_dir, "pngtools", condition=is_png, reason="Not a PNG"):
-        out_file = tool_dir / "pngtools.png"
-        _run_tool(output_dir, "pngtools", ["pngtools", str(input_img), str(out_file)])
+        _run_tool(
+            output_dir,
+            "pngtools",
+            ["pngtools", str(input_img)],
+            output_mode="text",
+            note="auto mode: pngtools (pngfix fallback uses pngcheck -v)",
+        )
 
     if not _skip_if(output_dir, "stegdetect", condition=is_jpeg, reason="Not a JPEG"):
         _run_tool(output_dir, "stegdetect", ["stegdetect", "-t", "jopi", "-v", str(input_img)])
@@ -390,7 +395,13 @@ def analyze_tool_suite(
             _record(output_dir, "stegoveritas", status="ok", output=_list_files(veritas_dir))
 
     if not _skip_if(output_dir, "zbarimg", condition=is_image, reason="Not an image"):
-        _run_tool(output_dir, "zbarimg", ["zbarimg", "--quiet", str(input_img)])
+        _run_tool(
+            output_dir,
+            "zbarimg",
+            ["zbarimg", "--quiet", str(input_img)],
+            allow_error=True,
+            note="auto mode: zbarimg --quiet (no barcode found is normal)",
+        )
 
     if _skip_if(
         output_dir,
@@ -541,7 +552,17 @@ def analyze_tool_suite(
             output_mode="text",
             note="manual mode: wireshark --version",
         )
-    _run_tool(output_dir, "sleuthkit", ["mmls", str(input_img)], allow_error=True)
+    is_disk_candidate = not (is_image or is_audio or is_video or is_pdf)
+    if _skip_if(output_dir, "sleuthkit", condition=is_disk_candidate, reason="Not a disk image"):
+        pass
+    else:
+        _run_tool(
+            output_dir,
+            "sleuthkit",
+            ["mmls", str(input_img)],
+            allow_error=False,
+            note="auto mode: mmls",
+        )
     _record(output_dir, "volatility", status="skipped", reason="Requires a memory image")
     if _skip_if(
         output_dir,
@@ -562,8 +583,8 @@ def analyze_tool_suite(
     _run_tool(
         output_dir,
         "openstego",
-        ["openstego", "--help"],
+        ["openstego", "algorithms"],
         allow_error=True,
         output_mode="text",
-        note="auto mode: openstego --help",
+        note="auto mode: openstego algorithms",
     )
