@@ -13,7 +13,8 @@ from ..color_spaces import rgb_to_hsl, rgb_to_lab
 from ..option_decoders import _bits_to_bytes, _decode_with_length_prefix, _pvd_extract_bits, _pvd_ranges
 from .utils import update_data
 
-MAX_BYTES = 65536
+MAX_BYTES_LIGHT = 8192
+MAX_BYTES_DEEP = 65536
 MAX_HITS = 12
 MAX_PREVIEW = 200
 PATTERNS = [b"ctf{", b"flag{", b"steg{"]
@@ -109,15 +110,15 @@ def _scan_bitstream(
     method: str,
     config: Dict[str, Any],
     max_bytes: int,
+    shift_limit: int,
 ) -> List[Dict[str, Any]]:
     hits: List[Dict[str, Any]] = []
-    errors: List[Dict[str, str]] = []
     max_bits = max_bytes * 8 + 7
     if bits.size < 16:
         return hits
     if bits.size > max_bits:
         bits = bits[:max_bits]
-    for shift in range(8):
+    for shift in range(shift_limit):
         if bits.size <= shift + 8:
             continue
         shifted = bits[shift:]
@@ -161,7 +162,12 @@ def _dedupe_hits(hits: List[Dict[str, Any]]) -> List[Dict[str, Any]]:
     return unique
 
 
-def analyze_xor_flag_sweep(input_img: Path, output_dir: Path) -> None:
+def analyze_xor_flag_sweep(
+    input_img: Path,
+    output_dir: Path,
+    *,
+    deep_analysis: bool = False,
+) -> None:
     if not input_img.exists():
         update_data(
             output_dir,
@@ -186,18 +192,19 @@ def analyze_xor_flag_sweep(input_img: Path, output_dir: Path) -> None:
     hits: List[Dict[str, Any]] = []
     errors: List[Dict[str, str]] = []
     scanned = {"lsb": 0, "pvd": 0, "chroma": 0}
-    max_bits = MAX_BYTES * 8
+    max_bytes = MAX_BYTES_DEEP if deep_analysis else MAX_BYTES_LIGHT
+    max_bits = max_bytes * 8
+    shift_limit = 8 if deep_analysis else 4
 
     try:
         rgba = img.convert("RGBA")
         arr = np.array(rgba)
-        channel_orders = [
-            ("RGB", [0, 1, 2]),
-            ("BGR", [2, 1, 0]),
-            ("RGBA", [0, 1, 2, 3]),
-            ("ARGB", [3, 0, 1, 2]),
-        ]
-        for bits_per_channel in (1, 2, 4):
+        channel_orders = [("RGB", [0, 1, 2]), ("RGBA", [0, 1, 2, 3])]
+        bits_per_channel_set = (1, 2)
+        if deep_analysis:
+            channel_orders.extend([("BGR", [2, 1, 0]), ("ARGB", [3, 0, 1, 2])])
+            bits_per_channel_set = (1, 2, 4)
+        for bits_per_channel in bits_per_channel_set:
             for name, channels in channel_orders:
                 bits = _extract_lsb_bits(
                     arr, channels, bits_per_channel=bits_per_channel, max_bits=max_bits + 7
@@ -208,17 +215,27 @@ def analyze_xor_flag_sweep(input_img: Path, output_dir: Path) -> None:
                         bits,
                         method="lsb",
                         config={"channels": name, "bits_per_channel": bits_per_channel},
-                        max_bytes=MAX_BYTES,
+                        max_bytes=max_bytes,
+                        shift_limit=shift_limit,
                     )
                 )
+                if not deep_analysis and len(hits) >= MAX_HITS:
+                    break
+            if not deep_analysis and len(hits) >= MAX_HITS:
+                break
     except Exception as exc:
         errors.append({"method": "lsb", "error": f"LSB sweep failed: {exc}"})
 
     try:
         gray = img.convert("L")
         values = np.array(gray)
-        for direction in ("horizontal", "vertical", "both"):
-            for range_kind in ("wu-tsai", "wide", "narrow"):
+        directions = ("horizontal",)
+        ranges = ("wu-tsai",)
+        if deep_analysis:
+            directions = ("horizontal", "vertical", "both")
+            ranges = ("wu-tsai", "wide", "narrow")
+        for direction in directions:
+            for range_kind in ranges:
                 ranges = _pvd_ranges(range_kind)
                 if direction == "horizontal":
                     bits_list = _pvd_extract_bits(values, max_bits + 7, ranges)
@@ -235,9 +252,14 @@ def analyze_xor_flag_sweep(input_img: Path, output_dir: Path) -> None:
                         bits,
                         method="pvd",
                         config={"direction": direction, "range": range_kind},
-                        max_bytes=MAX_BYTES,
+                        max_bytes=max_bytes,
+                        shift_limit=shift_limit,
                     )
                 )
+                if not deep_analysis and len(hits) >= MAX_HITS:
+                    break
+            if not deep_analysis and len(hits) >= MAX_HITS:
+                break
     except Exception as exc:
         errors.append({"method": "pvd", "error": f"PVD sweep failed: {exc}"})
 
@@ -274,13 +296,23 @@ def analyze_xor_flag_sweep(input_img: Path, output_dir: Path) -> None:
             "lab": (a_u8, b_u8),
         }
 
-        for space_name, (ch1, ch2) in spaces.items():
-            for pattern_name, mask in masks.items():
-                for bit_pos in (0, 1, 2, 3):
+        space_items = [("ycbcr", spaces["ycbcr"])]
+        pattern_items = [("sequential", masks["sequential"])]
+        bit_positions = (0,)
+        channel_modes = ("both",)
+        if deep_analysis:
+            space_items = list(spaces.items())
+            pattern_items = list(masks.items())
+            bit_positions = (0, 1, 2, 3)
+            channel_modes = ("both", "cb", "cr")
+
+        for space_name, (ch1, ch2) in space_items:
+            for pattern_name, mask in pattern_items:
+                for bit_pos in bit_positions:
                     bit_mask = 1 << bit_pos
                     ch1_bits = ((ch1 & bit_mask) >> bit_pos).astype(np.uint8)
                     ch2_bits = ((ch2 & bit_mask) >> bit_pos).astype(np.uint8)
-                    for channel_mode in ("both", "cb", "cr"):
+                    for channel_mode in channel_modes:
                         if channel_mode == "cb":
                             seq = ch1_bits[mask].tolist()
                         elif channel_mode == "cr":
@@ -311,9 +343,18 @@ def analyze_xor_flag_sweep(input_img: Path, output_dir: Path) -> None:
                                     "channel": channel_mode,
                                     "bit_pos": bit_pos,
                                 },
-                                max_bytes=MAX_BYTES,
+                                max_bytes=max_bytes,
+                                shift_limit=shift_limit,
                             )
                         )
+                        if not deep_analysis and len(hits) >= MAX_HITS:
+                            break
+                    if not deep_analysis and len(hits) >= MAX_HITS:
+                        break
+                if not deep_analysis and len(hits) >= MAX_HITS:
+                    break
+            if not deep_analysis and len(hits) >= MAX_HITS:
+                break
     except Exception as exc:
         errors.append({"method": "chroma", "error": f"Chroma sweep failed: {exc}"})
 
@@ -345,7 +386,8 @@ def analyze_xor_flag_sweep(input_img: Path, output_dir: Path) -> None:
                     "hits": hits,
                     "scanned_streams": scanned,
                     "errors": errors,
-                    "max_bytes": MAX_BYTES,
+                    "max_bytes": max_bytes,
+                    "mode": "deep" if deep_analysis else "auto",
                 },
                 "artifacts": [],
                 "timing_ms": 0,

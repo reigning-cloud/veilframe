@@ -436,7 +436,7 @@ def run_analysis(
             )
         )
         analyzers.append((analyze_randomizer_decode, (image_path, output_dir)))
-        analyzers.append((analyze_xor_flag_sweep, (image_path, output_dir)))
+        analyzers.append((analyze_xor_flag_sweep, (image_path, output_dir), {"deep_analysis": deep_analysis}))
 
         for analyzer in analyzers:
             try:
