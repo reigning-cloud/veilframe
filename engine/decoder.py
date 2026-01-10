@@ -11,6 +11,7 @@ from PIL import Image
 
 from .analyzers import (
     analyze_binwalk,
+    analyze_advanced_lsb,
     analyze_decomposer,
     analyze_exiftool,
     analyze_foremost,
@@ -368,6 +369,7 @@ def run_analysis(
             (analyze_decomposer, (image_path, output_dir)),
             (analyze_exiftool, (image_path, output_dir)),
             (analyze_foremost, (image_path, output_dir)),
+            (analyze_advanced_lsb, (image_path, output_dir)),
             (analyze_simple_lsb, (image_path, output_dir)),
             (analyze_simple_zlib, (image_path, output_dir)),
             (analyze_stegg, (image_path, output_dir)),

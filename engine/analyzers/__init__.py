@@ -1,5 +1,6 @@
 """Analyzers for decoding and inspection."""
 
+from .advanced_lsb import analyze_advanced_lsb
 from .binwalk import analyze_binwalk
 from .decomposer import analyze_decomposer
 from .exiftool import analyze_exiftool
@@ -20,6 +21,7 @@ from .zsteg import analyze_zsteg
 
 __all__ = [
     "analyze_binwalk",
+    "analyze_advanced_lsb",
     "analyze_decomposer",
     "analyze_exiftool",
     "analyze_foremost",

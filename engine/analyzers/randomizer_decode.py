@@ -377,8 +377,22 @@ def _extract_text_candidates(payload: Dict[str, Any]) -> List[str]:
             if isinstance(item, str) and _is_candidate(item):
                 candidates.append(item)
 
+    decoded_text = payload.get("decoded_text")
+    if isinstance(decoded_text, dict):
+        for val in decoded_text.values():
+            if isinstance(val, str) and _is_candidate(val):
+                candidates.append(val)
+
     details = payload.get("details")
     if isinstance(details, dict):
+        text_channels = details.get("text_channels")
+        if isinstance(text_channels, dict):
+            for channel_data in text_channels.values():
+                if isinstance(channel_data, dict):
+                    val = channel_data.get("text_preview")
+                    if isinstance(val, str) and _is_candidate(val):
+                        candidates.append(val)
+
         for key in ("preview", "text", "pref_text", "text_preview", "zlib_preview"):
             val = details.get(key)
             if isinstance(val, str) and _is_candidate(val):
@@ -406,11 +420,13 @@ def _collect_sources(results: Dict[str, Any]) -> List[Tuple[str, str]]:
     sources: List[Tuple[str, str]] = []
     seen: set[str] = set()
     source_keys = [
+        "advanced_lsb",
         "lsb",
         "pvd",
         "dct",
         "f5",
         "chroma",
+        "simple_lsb",
         "simple_rgb",
         "red_plane",
         "green_plane",

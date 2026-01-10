@@ -497,6 +497,8 @@ function renderDecodeResult(data) {
   const unicodeDecodeKey = "invisible_unicode_decode";
   const autoDetectKey = "auto_detect";
   const restOrder = [
+    "advanced_lsb",
+    "simple_lsb",
     "simple_zlib",
     "stegg",
     "zero_width",
