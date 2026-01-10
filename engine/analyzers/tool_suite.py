@@ -1,5 +1,6 @@
 """Run a broad CLI tool suite against an uploaded file."""
 
+import platform
 import shutil
 import subprocess
 from pathlib import Path
@@ -11,6 +12,10 @@ from .utils import MAX_PENDING_TIME, update_data
 
 MAX_OUTPUT_LINES = 200
 MAX_OUTPUT_CHARS = 4000
+RESOURCE_DIR = Path(__file__).resolve().parent / "resources"
+STEGBREAK_RULES = RESOURCE_DIR / "stegbreak_rules.ini"
+STEGBREAK_WORDLIST = RESOURCE_DIR / "stegbreak_wordlist.txt"
+IS_ARM64 = platform.machine().lower() in {"aarch64", "arm64"}
 
 
 def _truncate_lines(text: str, max_lines: int = MAX_OUTPUT_LINES) -> list[str]:
@@ -121,6 +126,11 @@ def _run_tool(
 
     if output_mode == "text":
         output = _truncate_text(combined) if combined else "ok"
+        if note:
+            output = f"{note}\n{output}" if output else note
+    elif output_mode == "first_line":
+        first_line = combined.splitlines()[0] if combined else "ok"
+        output = _truncate_text(first_line)
         if note:
             output = f"{note}\n{output}" if output else note
     else:
@@ -241,7 +251,7 @@ def analyze_tool_suite(
         )
 
     if not _skip_if(output_dir, "stegdetect", condition=is_jpeg, reason="Not a JPEG"):
-        _run_tool(output_dir, "stegdetect", ["stegdetect", "-t", "jopi", "-v", str(input_img)])
+        _run_tool(output_dir, "stegdetect", ["stegdetect", "-t", "jopi", str(input_img)])
 
     if not _skip_if(output_dir, "jsteg", condition=is_jpeg, reason="Not a JPEG"):
         _run_tool(
@@ -260,7 +270,21 @@ def analyze_tool_suite(
     ):
         pass
     elif not _skip_if(output_dir, "stegbreak", condition=is_jpeg, reason="Not a JPEG"):
-        _run_tool(output_dir, "stegbreak", ["stegbreak", "-r", "1", "-n", "1", str(input_img)])
+        if IS_ARM64:
+            _record(
+                output_dir,
+                "stegbreak",
+                status="skipped",
+                reason="Disabled on arm64 (stegbreak crashes with SIGILL)",
+            )
+        else:
+            stegbreak_cmd = ["stegbreak", "-t", "jpo"]
+            if STEGBREAK_RULES.exists():
+                stegbreak_cmd.extend(["-r", str(STEGBREAK_RULES)])
+            if STEGBREAK_WORDLIST.exists():
+                stegbreak_cmd.extend(["-f", str(STEGBREAK_WORDLIST)])
+            stegbreak_cmd.append(str(input_img))
+            _run_tool(output_dir, "stegbreak", stegbreak_cmd)
 
     if _skip_if(
         output_dir,
@@ -549,7 +573,7 @@ def analyze_tool_suite(
             "wireshark",
             ["wireshark", "--version"],
             allow_error=True,
-            output_mode="text",
+            output_mode="first_line",
             note="manual mode: wireshark --version",
         )
     is_disk_candidate = not (is_image or is_audio or is_video or is_pdf)

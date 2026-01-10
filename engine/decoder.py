@@ -14,15 +14,24 @@ from .analyzers import (
     analyze_decomposer,
     analyze_exiftool,
     analyze_foremost,
+    analyze_invisible_unicode,
+    analyze_invisible_unicode_decode,
     analyze_outguess,
+    analyze_plane_carver,
+    analyze_randomizer_decode,
     analyze_simple_lsb,
     analyze_simple_zlib,
+    analyze_stegg,
     analyze_steghide,
     analyze_strings,
     analyze_tool_suite,
+    analyze_xor_flag_sweep,
+    analyze_zero_width,
     analyze_zsteg,
 )
 from .analyzers.utils import update_data
+from .decode_registry import get_registry
+from .option_decoders import build_auto_detect_result
 from .tooling import get_tool_status
 
 
@@ -122,6 +131,80 @@ def _decode_bits_to_text(bits: np.ndarray) -> str:
         raise ValueError(f"Failed to decode LSB text: {str(e)}")
 
 
+def _build_option_result(
+    option: Dict[str, Any],
+    *,
+    status: str,
+    summary: str,
+    confidence: float = 0.0,
+    details: Optional[Dict[str, Any]] = None,
+) -> Dict[str, Any]:
+    return {
+        "option_id": option["id"],
+        "label": option["label"],
+        "status": status,
+        "confidence": round(float(confidence), 3),
+        "summary": summary,
+        "details": details or {},
+        "artifacts": [],
+        "timing_ms": 0,
+        "mode": option.get("mode", "auto"),
+    }
+
+
+def _run_decode_options(
+    image_path: Path,
+    output_dir: Path,
+    *,
+    password: Optional[str],
+    deep_analysis: bool,
+    spread_enabled: bool,
+) -> Dict[str, Dict[str, Any]]:
+    registry = get_registry()
+    option_results: Dict[str, Dict[str, Any]] = {}
+    for option_id, option in registry.items():
+        if option_id == "auto_detect":
+            continue
+
+        mode = option.get("mode", "auto")
+        if option_id == "spread_spectrum" and not spread_enabled:
+            result = _build_option_result(
+                option,
+                status="skipped",
+                summary="Enable spread spectrum to run password-based decoding.",
+            )
+            update_data(output_dir, {option_id: result})
+            option_results[option_id] = result
+            continue
+
+        if mode == "deep" and not deep_analysis:
+            result = _build_option_result(
+                option,
+                status="skipped",
+                summary="Enable deep analysis to run this decoder.",
+            )
+            update_data(output_dir, {option_id: result})
+            option_results[option_id] = result
+            continue
+
+        params = {"password": password}
+        result = option["analyzer"](image_path, **option["params"](option, params))
+        result["mode"] = mode
+        update_data(output_dir, {option_id: result})
+        option_results[option_id] = result
+
+    auto_option = registry.get("auto_detect")
+    if auto_option:
+        auto_result = build_auto_detect_result(
+            auto_option["id"], auto_option["label"], option_results
+        )
+        auto_result["mode"] = auto_option.get("mode", "auto")
+        update_data(output_dir, {"auto_detect": auto_result})
+        option_results["auto_detect"] = auto_result
+
+    return option_results
+
+
 def run_analysis(
     image_bytes: bytes,
     filename: str,
@@ -130,6 +213,12 @@ def run_analysis(
     deep_analysis: bool = False,
     manual_tools: bool = False,
     binwalk_extract: bool = False,
+    invisible_unicode: bool = False,
+    unicode_tier1: bool = False,
+    unicode_separators: bool = False,
+    unicode_aggressiveness: str = "balanced",
+    decode_option: Optional[str] = None,
+    spread_enabled: bool = False,
 ) -> Dict[str, Any]:
     """
     Execute all analyzers over the provided image bytes and return results plus artifacts.
@@ -164,6 +253,46 @@ def run_analysis(
         except Exception as e:
             raise IOError(f"Failed to write image to temporary file: {str(e)}")
 
+        if decode_option:
+            registry = get_registry()
+            option = registry.get(decode_option)
+            if not option:
+                raise ValueError(f"Unknown decode option '{decode_option}'")
+
+            if decode_option == "auto_detect":
+                result = option["analyzer"](
+                    image_path,
+                    option_id=option["id"],
+                    label=option["label"],
+                    registry=registry,
+                    password=password,
+                )
+            else:
+                params = {"password": password}
+                result = option["analyzer"](image_path, **option["params"](option, params))
+
+            update_data(output_dir, {decode_option: result})
+
+            if invisible_unicode:
+                analyze_invisible_unicode(
+                    image_path,
+                    output_dir,
+                    invisible_unicode,
+                    tier1=unicode_tier1,
+                    separators=unicode_separators,
+                    aggressiveness=unicode_aggressiveness,
+                )
+                analyze_invisible_unicode_decode(
+                    image_path,
+                    output_dir,
+                    invisible_unicode,
+                    aggressiveness=unicode_aggressiveness,
+                )
+
+            results = _read_results_file(output_dir)
+            artifacts = _collect_artifacts(output_dir)
+            return {"results": results, "artifacts": artifacts}
+
         channel_map = [
             ("red_plane", 0),
             ("green_plane", 1),
@@ -197,13 +326,52 @@ def run_analysis(
                     print(f"Warning: {key} decode failed: {str(e)}")
                     channel_texts[key] = ""
 
-        analyzers: List[Tuple[Any, Tuple[Any, ...]]] = [
+        try:
+            update_data(
+                output_dir,
+                {
+                    "simple_rgb": {
+                        "status": "ok" if simple_rgb_text else "empty",
+                        "output": simple_rgb_text,
+                    },
+                    "red_plane": {
+                        "status": "ok" if channel_texts["red_plane"] else "empty",
+                        "output": channel_texts["red_plane"],
+                    },
+                    "green_plane": {
+                        "status": "ok" if channel_texts["green_plane"] else "empty",
+                        "output": channel_texts["green_plane"],
+                    },
+                    "blue_plane": {
+                        "status": "ok" if channel_texts["blue_plane"] else "empty",
+                        "output": channel_texts["blue_plane"],
+                    },
+                    "alpha_plane": {
+                        "status": "ok" if channel_texts["alpha_plane"] else "empty",
+                        "output": channel_texts["alpha_plane"],
+                    },
+                },
+            )
+        except Exception as e:
+            print(f"Warning: Failed to cache simple plane outputs: {str(e)}")
+
+        _run_decode_options(
+            image_path,
+            output_dir,
+            password=password,
+            deep_analysis=deep_analysis,
+            spread_enabled=spread_enabled,
+        )
+
+        analyzers: List[tuple] = [
             (analyze_binwalk, (image_path, output_dir, binwalk_extract)),
             (analyze_decomposer, (image_path, output_dir)),
             (analyze_exiftool, (image_path, output_dir)),
             (analyze_foremost, (image_path, output_dir)),
             (analyze_simple_lsb, (image_path, output_dir)),
             (analyze_simple_zlib, (image_path, output_dir)),
+            (analyze_stegg, (image_path, output_dir)),
+            (analyze_zero_width, (image_path, output_dir)),
             (analyze_strings, (image_path, output_dir)),
             (analyze_steghide, (image_path, output_dir, password)),
             (analyze_tool_suite, (image_path, output_dir, deep_analysis, manual_tools)),
@@ -211,6 +379,7 @@ def run_analysis(
         ]
 
         if deep_analysis:
+            analyzers.append((analyze_plane_carver, (image_path, output_dir)))
             try:
                 tools = get_tool_status()
                 if tools.get("outguess", {}).get("available"):
@@ -227,10 +396,56 @@ def run_analysis(
                     )
             except Exception as e:
                 print(f"Warning: Failed to check outguess availability: {str(e)}")
+        else:
+            update_data(
+                output_dir,
+                {
+                    "plane_carver": {
+                        "status": "skipped",
+                        "reason": "Enable deep analysis to scan bit-plane payloads",
+                    }
+                },
+            )
 
-        for analyzer_func, args in analyzers:
+        analyzers.append(
+            (
+                analyze_invisible_unicode,
+                (
+                    image_path,
+                    output_dir,
+                    invisible_unicode,
+                ),
+                {
+                    "tier1": unicode_tier1,
+                    "separators": unicode_separators,
+                    "aggressiveness": unicode_aggressiveness,
+                },
+            )
+        )
+        analyzers.append(
+            (
+                analyze_invisible_unicode_decode,
+                (
+                    image_path,
+                    output_dir,
+                    invisible_unicode,
+                ),
+                {
+                    "aggressiveness": unicode_aggressiveness,
+                },
+            )
+        )
+        analyzers.append((analyze_randomizer_decode, (image_path, output_dir)))
+        analyzers.append((analyze_xor_flag_sweep, (image_path, output_dir)))
+
+        for analyzer in analyzers:
             try:
-                analyzer_func(*args)
+                if len(analyzer) == 2:
+                    analyzer_func, args = analyzer
+                    analyzer_func(*args)
+                else:
+                    analyzer_func, args, kwargs = analyzer
+                    analyzer_func(*args, **kwargs)
             except Exception as exc:  # pragma: no cover - defensive
                 # Errors are already recorded inside analyzer, this keeps the pipeline alive.
                 print(f"Analyzer {analyzer_func.__name__} failed: {exc}")

@@ -5,3 +5,4 @@ gunicorn>=21.2
 stegoveritas>=1.10
 stegcracker>=2.0.9
 volatility3>=2.5.2
+pytest>=7.4

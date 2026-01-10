@@ -1,0 +1,7884 @@
+{
+  "entries": [
+    {
+      "bidi_class": "BN",
+      "category": "Cc",
+      "char": "\u0000",
+      "code": "U+0000",
+      "codepoint": 0,
+      "combining_class": 0,
+      "name": "UNNAMED",
+      "notes": "control",
+      "tags": [
+        "control"
+      ],
+      "tier": "tier1"
+    },
+    {
+      "bidi_class": "BN",
+      "category": "Cc",
+      "char": "\u0001",
+      "code": "U+0001",
+      "codepoint": 1,
+      "combining_class": 0,
+      "name": "UNNAMED",
+      "notes": "control",
+      "tags": [
+        "control"
+      ],
+      "tier": "tier1"
+    },
+    {
+      "bidi_class": "BN",
+      "category": "Cc",
+      "char": "\u0002",
+      "code": "U+0002",
+      "codepoint": 2,
+      "combining_class": 0,
+      "name": "UNNAMED",
+      "notes": "control",
+      "tags": [
+        "control"
+      ],
+      "tier": "tier1"
+    },
+    {
+      "bidi_class": "BN",
+      "category": "Cc",
+      "char": "\u0003",
+      "code": "U+0003",
+      "codepoint": 3,
+      "combining_class": 0,
+      "name": "UNNAMED",
+      "notes": "control",
+      "tags": [
+        "control"
+      ],
+      "tier": "tier1"
+    },
+    {
+      "bidi_class": "BN",
+      "category": "Cc",
+      "char": "\u0004",
+      "code": "U+0004",
+      "codepoint": 4,
+      "combining_class": 0,
+      "name": "UNNAMED",
+      "notes": "control",
+      "tags": [
+        "control"
+      ],
+      "tier": "tier1"
+    },
+    {
+      "bidi_class": "BN",
+      "category": "Cc",
+      "char": "\u0005",
+      "code": "U+0005",
+      "codepoint": 5,
+      "combining_class": 0,
+      "name": "UNNAMED",
+      "notes": "control",
+      "tags": [
+        "control"
+      ],
+      "tier": "tier1"
+    },
+    {
+      "bidi_class": "BN",
+      "category": "Cc",
+      "char": "\u0006",
+      "code": "U+0006",
+      "codepoint": 6,
+      "combining_class": 0,
+      "name": "UNNAMED",
+      "notes": "control",
+      "tags": [
+        "control"
+      ],
+      "tier": "tier1"
+    },
+    {
+      "bidi_class": "BN",
+      "category": "Cc",
+      "char": "\u0007",
+      "code": "U+0007",
+      "codepoint": 7,
+      "combining_class": 0,
+      "name": "UNNAMED",
+      "notes": "control",
+      "tags": [
+        "control"
+      ],
+      "tier": "tier1"
+    },
+    {
+      "bidi_class": "BN",
+      "category": "Cc",
+      "char": "\b",
+      "code": "U+0008",
+      "codepoint": 8,
+      "combining_class": 0,
+      "name": "UNNAMED",
+      "notes": "control",
+      "tags": [
+        "control"
+      ],
+      "tier": "tier1"
+    },
+    {
+      "bidi_class": "S",
+      "category": "Cc",
+      "char": "\t",
+      "code": "U+0009",
+      "codepoint": 9,
+      "combining_class": 0,
+      "name": "UNNAMED",
+      "notes": "control",
+      "tags": [
+        "control"
+      ],
+      "tier": "tier1"
+    },
+    {
+      "bidi_class": "B",
+      "category": "Cc",
+      "char": "\n",
+      "code": "U+000A",
+      "codepoint": 10,
+      "combining_class": 0,
+      "name": "UNNAMED",
+      "notes": "control",
+      "tags": [
+        "control"
+      ],
+      "tier": "tier1"
+    },
+    {
+      "bidi_class": "S",
+      "category": "Cc",
+      "char": "\u000b",
+      "code": "U+000B",
+      "codepoint": 11,
+      "combining_class": 0,
+      "name": "UNNAMED",
+      "notes": "control",
+      "tags": [
+        "control"
+      ],
+      "tier": "tier1"
+    },
+    {
+      "bidi_class": "WS",
+      "category": "Cc",
+      "char": "\f",
+      "code": "U+000C",
+      "codepoint": 12,
+      "combining_class": 0,
+      "name": "UNNAMED",
+      "notes": "control",
+      "tags": [
+        "control"
+      ],
+      "tier": "tier1"
+    },
+    {
+      "bidi_class": "B",
+      "category": "Cc",
+      "char": "\r",
+      "code": "U+000D",
+      "codepoint": 13,
+      "combining_class": 0,
+      "name": "UNNAMED",
+      "notes": "control",
+      "tags": [
+        "control"
+      ],
+      "tier": "tier1"
+    },
+    {
+      "bidi_class": "BN",
+      "category": "Cc",
+      "char": "\u000e",
+      "code": "U+000E",
+      "codepoint": 14,
+      "combining_class": 0,
+      "name": "UNNAMED",
+      "notes": "control",
+      "tags": [
+        "control"
+      ],
+      "tier": "tier1"
+    },
+    {
+      "bidi_class": "BN",
+      "category": "Cc",
+      "char": "\u000f",
+      "code": "U+000F",
+      "codepoint": 15,
+      "combining_class": 0,
+      "name": "UNNAMED",
+      "notes": "control",
+      "tags": [
+        "control"
+      ],
+      "tier": "tier1"
+    },
+    {
+      "bidi_class": "BN",
+      "category": "Cc",
+      "char": "\u0010",
+      "code": "U+0010",
+      "codepoint": 16,
+      "combining_class": 0,
+      "name": "UNNAMED",
+      "notes": "control",
+      "tags": [
+        "control"
+      ],
+      "tier": "tier1"
+    },
+    {
+      "bidi_class": "BN",
+      "category": "Cc",
+      "char": "\u0011",
+      "code": "U+0011",
+      "codepoint": 17,
+      "combining_class": 0,
+      "name": "UNNAMED",
+      "notes": "control",
+      "tags": [
+        "control"
+      ],
+      "tier": "tier1"
+    },
+    {
+      "bidi_class": "BN",
+      "category": "Cc",
+      "char": "\u0012",
+      "code": "U+0012",
+      "codepoint": 18,
+      "combining_class": 0,
+      "name": "UNNAMED",
+      "notes": "control",
+      "tags": [
+        "control"
+      ],
+      "tier": "tier1"
+    },
+    {
+      "bidi_class": "BN",
+      "category": "Cc",
+      "char": "\u0013",
+      "code": "U+0013",
+      "codepoint": 19,
+      "combining_class": 0,
+      "name": "UNNAMED",
+      "notes": "control",
+      "tags": [
+        "control"
+      ],
+      "tier": "tier1"
+    },
+    {
+      "bidi_class": "BN",
+      "category": "Cc",
+      "char": "\u0014",
+      "code": "U+0014",
+      "codepoint": 20,
+      "combining_class": 0,
+      "name": "UNNAMED",
+      "notes": "control",
+      "tags": [
+        "control"
+      ],
+      "tier": "tier1"
+    },
+    {
+      "bidi_class": "BN",
+      "category": "Cc",
+      "char": "\u0015",
+      "code": "U+0015",
+      "codepoint": 21,
+      "combining_class": 0,
+      "name": "UNNAMED",
+      "notes": "control",
+      "tags": [
+        "control"
+      ],
+      "tier": "tier1"
+    },
+    {
+      "bidi_class": "BN",
+      "category": "Cc",
+      "char": "\u0016",
+      "code": "U+0016",
+      "codepoint": 22,
+      "combining_class": 0,
+      "name": "UNNAMED",
+      "notes": "control",
+      "tags": [
+        "control"
+      ],
+      "tier": "tier1"
+    },
+    {
+      "bidi_class": "BN",
+      "category": "Cc",
+      "char": "\u0017",
+      "code": "U+0017",
+      "codepoint": 23,
+      "combining_class": 0,
+      "name": "UNNAMED",
+      "notes": "control",
+      "tags": [
+        "control"
+      ],
+      "tier": "tier1"
+    },
+    {
+      "bidi_class": "BN",
+      "category": "Cc",
+      "char": "\u0018",
+      "code": "U+0018",
+      "codepoint": 24,
+      "combining_class": 0,
+      "name": "UNNAMED",
+      "notes": "control",
+      "tags": [
+        "control"
+      ],
+      "tier": "tier1"
+    },
+    {
+      "bidi_class": "BN",
+      "category": "Cc",
+      "char": "\u0019",
+      "code": "U+0019",
+      "codepoint": 25,
+      "combining_class": 0,
+      "name": "UNNAMED",
+      "notes": "control",
+      "tags": [
+        "control"
+      ],
+      "tier": "tier1"
+    },
+    {
+      "bidi_class": "BN",
+      "category": "Cc",
+      "char": "\u001a",
+      "code": "U+001A",
+      "codepoint": 26,
+      "combining_class": 0,
+      "name": "UNNAMED",
+      "notes": "control",
+      "tags": [
+        "control"
+      ],
+      "tier": "tier1"
+    },
+    {
+      "bidi_class": "BN",
+      "category": "Cc",
+      "char": "\u001b",
+      "code": "U+001B",
+      "codepoint": 27,
+      "combining_class": 0,
+      "name": "UNNAMED",
+      "notes": "control",
+      "tags": [
+        "control"
+      ],
+      "tier": "tier1"
+    },
+    {
+      "bidi_class": "B",
+      "category": "Cc",
+      "char": "\u001c",
+      "code": "U+001C",
+      "codepoint": 28,
+      "combining_class": 0,
+      "name": "UNNAMED",
+      "notes": "control",
+      "tags": [
+        "control"
+      ],
+      "tier": "tier1"
+    },
+    {
+      "bidi_class": "B",
+      "category": "Cc",
+      "char": "\u001d",
+      "code": "U+001D",
+      "codepoint": 29,
+      "combining_class": 0,
+      "name": "UNNAMED",
+      "notes": "control",
+      "tags": [
+        "control"
+      ],
+      "tier": "tier1"
+    },
+    {
+      "bidi_class": "B",
+      "category": "Cc",
+      "char": "\u001e",
+      "code": "U+001E",
+      "codepoint": 30,
+      "combining_class": 0,
+      "name": "UNNAMED",
+      "notes": "control",
+      "tags": [
+        "control"
+      ],
+      "tier": "tier1"
+    },
+    {
+      "bidi_class": "S",
+      "category": "Cc",
+      "char": "\u001f",
+      "code": "U+001F",
+      "codepoint": 31,
+      "combining_class": 0,
+      "name": "UNNAMED",
+      "notes": "control",
+      "tags": [
+        "control"
+      ],
+      "tier": "tier1"
+    },
+    {
+      "bidi_class": "WS",
+      "category": "Zs",
+      "char": " ",
+      "code": "U+0020",
+      "codepoint": 32,
+      "combining_class": 0,
+      "name": "SPACE",
+      "notes": "separator/whitespace",
+      "tags": [
+        "separator"
+      ],
+      "tier": "separators"
+    },
+    {
+      "bidi_class": "BN",
+      "category": "Cc",
+      "char": "",
+      "code": "U+007F",
+      "codepoint": 127,
+      "combining_class": 0,
+      "name": "UNNAMED",
+      "notes": "control",
+      "tags": [
+        "control"
+      ],
+      "tier": "tier1"
+    },
+    {
+      "bidi_class": "BN",
+      "category": "Cc",
+      "char": "",
+      "code": "U+0080",
+      "codepoint": 128,
+      "combining_class": 0,
+      "name": "UNNAMED",
+      "notes": "control",
+      "tags": [
+        "control"
+      ],
+      "tier": "tier1"
+    },
+    {
+      "bidi_class": "BN",
+      "category": "Cc",
+      "char": "",
+      "code": "U+0081",
+      "codepoint": 129,
+      "combining_class": 0,
+      "name": "UNNAMED",
+      "notes": "control",
+      "tags": [
+        "control"
+      ],
+      "tier": "tier1"
+    },
+    {
+      "bidi_class": "BN",
+      "category": "Cc",
+      "char": "",
+      "code": "U+0082",
+      "codepoint": 130,
+      "combining_class": 0,
+      "name": "UNNAMED",
+      "notes": "control",
+      "tags": [
+        "control"
+      ],
+      "tier": "tier1"
+    },
+    {
+      "bidi_class": "BN",
+      "category": "Cc",
+      "char": "",
+      "code": "U+0083",
+      "codepoint": 131,
+      "combining_class": 0,
+      "name": "UNNAMED",
+      "notes": "control",
+      "tags": [
+        "control"
+      ],
+      "tier": "tier1"
+    },
+    {
+      "bidi_class": "BN",
+      "category": "Cc",
+      "char": "",
+      "code": "U+0084",
+      "codepoint": 132,
+      "combining_class": 0,
+      "name": "UNNAMED",
+      "notes": "control",
+      "tags": [
+        "control"
+      ],
+      "tier": "tier1"
+    },
+    {
+      "bidi_class": "B",
+      "category": "Cc",
+      "char": "",
+      "code": "U+0085",
+      "codepoint": 133,
+      "combining_class": 0,
+      "name": "UNNAMED",
+      "notes": "control",
+      "tags": [
+        "control"
+      ],
+      "tier": "tier1"
+    },
+    {
+      "bidi_class": "BN",
+      "category": "Cc",
+      "char": "",
+      "code": "U+0086",
+      "codepoint": 134,
+      "combining_class": 0,
+      "name": "UNNAMED",
+      "notes": "control",
+      "tags": [
+        "control"
+      ],
+      "tier": "tier1"
+    },
+    {
+      "bidi_class": "BN",
+      "category": "Cc",
+      "char": "",
+      "code": "U+0087",
+      "codepoint": 135,
+      "combining_class": 0,
+      "name": "UNNAMED",
+      "notes": "control",
+      "tags": [
+        "control"
+      ],
+      "tier": "tier1"
+    },
+    {
+      "bidi_class": "BN",
+      "category": "Cc",
+      "char": "",
+      "code": "U+0088",
+      "codepoint": 136,
+      "combining_class": 0,
+      "name": "UNNAMED",
+      "notes": "control",
+      "tags": [
+        "control"
+      ],
+      "tier": "tier1"
+    },
+    {
+      "bidi_class": "BN",
+      "category": "Cc",
+      "char": "",
+      "code": "U+0089",
+      "codepoint": 137,
+      "combining_class": 0,
+      "name": "UNNAMED",
+      "notes": "control",
+      "tags": [
+        "control"
+      ],
+      "tier": "tier1"
+    },
+    {
+      "bidi_class": "BN",
+      "category": "Cc",
+      "char": "",
+      "code": "U+008A",
+      "codepoint": 138,
+      "combining_class": 0,
+      "name": "UNNAMED",
+      "notes": "control",
+      "tags": [
+        "control"
+      ],
+      "tier": "tier1"
+    },
+    {
+      "bidi_class": "BN",
+      "category": "Cc",
+      "char": "",
+      "code": "U+008B",
+      "codepoint": 139,
+      "combining_class": 0,
+      "name": "UNNAMED",
+      "notes": "control",
+      "tags": [
+        "control"
+      ],
+      "tier": "tier1"
+    },
+    {
+      "bidi_class": "BN",
+      "category": "Cc",
+      "char": "",
+      "code": "U+008C",
+      "codepoint": 140,
+      "combining_class": 0,
+      "name": "UNNAMED",
+      "notes": "control",
+      "tags": [
+        "control"
+      ],
+      "tier": "tier1"
+    },
+    {
+      "bidi_class": "BN",
+      "category": "Cc",
+      "char": "",
+      "code": "U+008D",
+      "codepoint": 141,
+      "combining_class": 0,
+      "name": "UNNAMED",
+      "notes": "control",
+      "tags": [
+        "control"
+      ],
+      "tier": "tier1"
+    },
+    {
+      "bidi_class": "BN",
+      "category": "Cc",
+      "char": "",
+      "code": "U+008E",
+      "codepoint": 142,
+      "combining_class": 0,
+      "name": "UNNAMED",
+      "notes": "control",
+      "tags": [
+        "control"
+      ],
+      "tier": "tier1"
+    },
+    {
+      "bidi_class": "BN",
+      "category": "Cc",
+      "char": "",
+      "code": "U+008F",
+      "codepoint": 143,
+      "combining_class": 0,
+      "name": "UNNAMED",
+      "notes": "control",
+      "tags": [
+        "control"
+      ],
+      "tier": "tier1"
+    },
+    {
+      "bidi_class": "BN",
+      "category": "Cc",
+      "char": "",
+      "code": "U+0090",
+      "codepoint": 144,
+      "combining_class": 0,
+      "name": "UNNAMED",
+      "notes": "control",
+      "tags": [
+        "control"
+      ],
+      "tier": "tier1"
+    },
+    {
+      "bidi_class": "BN",
+      "category": "Cc",
+      "char": "",
+      "code": "U+0091",
+      "codepoint": 145,
+      "combining_class": 0,
+      "name": "UNNAMED",
+      "notes": "control",
+      "tags": [
+        "control"
+      ],
+      "tier": "tier1"
+    },
+    {
+      "bidi_class": "BN",
+      "category": "Cc",
+      "char": "",
+      "code": "U+0092",
+      "codepoint": 146,
+      "combining_class": 0,
+      "name": "UNNAMED",
+      "notes": "control",
+      "tags": [
+        "control"
+      ],
+      "tier": "tier1"
+    },
+    {
+      "bidi_class": "BN",
+      "category": "Cc",
+      "char": "",
+      "code": "U+0093",
+      "codepoint": 147,
+      "combining_class": 0,
+      "name": "UNNAMED",
+      "notes": "control",
+      "tags": [
+        "control"
+      ],
+      "tier": "tier1"
+    },
+    {
+      "bidi_class": "BN",
+      "category": "Cc",
+      "char": "",
+      "code": "U+0094",
+      "codepoint": 148,
+      "combining_class": 0,
+      "name": "UNNAMED",
+      "notes": "control",
+      "tags": [
+        "control"
+      ],
+      "tier": "tier1"
+    },
+    {
+      "bidi_class": "BN",
+      "category": "Cc",
+      "char": "",
+      "code": "U+0095",
+      "codepoint": 149,
+      "combining_class": 0,
+      "name": "UNNAMED",
+      "notes": "control",
+      "tags": [
+        "control"
+      ],
+      "tier": "tier1"
+    },
+    {
+      "bidi_class": "BN",
+      "category": "Cc",
+      "char": "",
+      "code": "U+0096",
+      "codepoint": 150,
+      "combining_class": 0,
+      "name": "UNNAMED",
+      "notes": "control",
+      "tags": [
+        "control"
+      ],
+      "tier": "tier1"
+    },
+    {
+      "bidi_class": "BN",
+      "category": "Cc",
+      "char": "",
+      "code": "U+0097",
+      "codepoint": 151,
+      "combining_class": 0,
+      "name": "UNNAMED",
+      "notes": "control",
+      "tags": [
+        "control"
+      ],
+      "tier": "tier1"
+    },
+    {
+      "bidi_class": "BN",
+      "category": "Cc",
+      "char": "",
+      "code": "U+0098",
+      "codepoint": 152,
+      "combining_class": 0,
+      "name": "UNNAMED",
+      "notes": "control",
+      "tags": [
+        "control"
+      ],
+      "tier": "tier1"
+    },
+    {
+      "bidi_class": "BN",
+      "category": "Cc",
+      "char": "",
+      "code": "U+0099",
+      "codepoint": 153,
+      "combining_class": 0,
+      "name": "UNNAMED",
+      "notes": "control",
+      "tags": [
+        "control"
+      ],
+      "tier": "tier1"
+    },
+    {
+      "bidi_class": "BN",
+      "category": "Cc",
+      "char": "",
+      "code": "U+009A",
+      "codepoint": 154,
+      "combining_class": 0,
+      "name": "UNNAMED",
+      "notes": "control",
+      "tags": [
+        "control"
+      ],
+      "tier": "tier1"
+    },
+    {
+      "bidi_class": "BN",
+      "category": "Cc",
+      "char": "",
+      "code": "U+009B",
+      "codepoint": 155,
+      "combining_class": 0,
+      "name": "UNNAMED",
+      "notes": "control",
+      "tags": [
+        "control"
+      ],
+      "tier": "tier1"
+    },
+    {
+      "bidi_class": "BN",
+      "category": "Cc",
+      "char": "",
+      "code": "U+009C",
+      "codepoint": 156,
+      "combining_class": 0,
+      "name": "UNNAMED",
+      "notes": "control",
+      "tags": [
+        "control"
+      ],
+      "tier": "tier1"
+    },
+    {
+      "bidi_class": "BN",
+      "category": "Cc",
+      "char": "",
+      "code": "U+009D",
+      "codepoint": 157,
+      "combining_class": 0,
+      "name": "UNNAMED",
+      "notes": "control",
+      "tags": [
+        "control"
+      ],
+      "tier": "tier1"
+    },
+    {
+      "bidi_class": "BN",
+      "category": "Cc",
+      "char": "",
+      "code": "U+009E",
+      "codepoint": 158,
+      "combining_class": 0,
+      "name": "UNNAMED",
+      "notes": "control",
+      "tags": [
+        "control"
+      ],
+      "tier": "tier1"
+    },
+    {
+      "bidi_class": "BN",
+      "category": "Cc",
+      "char": "",
+      "code": "U+009F",
+      "codepoint": 159,
+      "combining_class": 0,
+      "name": "UNNAMED",
+      "notes": "control",
+      "tags": [
+        "control"
+      ],
+      "tier": "tier1"
+    },
+    {
+      "bidi_class": "CS",
+      "category": "Zs",
+      "char": " ",
+      "code": "U+00A0",
+      "codepoint": 160,
+      "combining_class": 0,
+      "name": "NO-BREAK SPACE",
+      "notes": "separator/whitespace",
+      "tags": [
+        "separator"
+      ],
+      "tier": "separators"
+    },
+    {
+      "bidi_class": "BN",
+      "category": "Cf",
+      "char": "­",
+      "code": "U+00AD",
+      "codepoint": 173,
+      "combining_class": 0,
+      "name": "SOFT HYPHEN",
+      "notes": "soft hyphen (renders only when hyphenation is applied); format",
+      "tags": [
+        "format",
+        "soft_hyphen"
+      ],
+      "tier": "tier0"
+    },
+    {
+      "bidi_class": "NSM",
+      "category": "Mn",
+      "char": "͏",
+      "code": "U+034F",
+      "codepoint": 847,
+      "combining_class": 0,
+      "name": "COMBINING GRAPHEME JOINER",
+      "notes": "combining grapheme joiner",
+      "tags": [
+        "combining_grapheme_joiner"
+      ],
+      "tier": "tier0"
+    },
+    {
+      "bidi_class": "AN",
+      "category": "Cf",
+      "char": "؀",
+      "code": "U+0600",
+      "codepoint": 1536,
+      "combining_class": 0,
+      "name": "ARABIC NUMBER SIGN",
+      "notes": "format",
+      "tags": [
+        "format"
+      ],
+      "tier": "tier1"
+    },
+    {
+      "bidi_class": "AN",
+      "category": "Cf",
+      "char": "؁",
+      "code": "U+0601",
+      "codepoint": 1537,
+      "combining_class": 0,
+      "name": "ARABIC SIGN SANAH",
+      "notes": "format",
+      "tags": [
+        "format"
+      ],
+      "tier": "tier1"
+    },
+    {
+      "bidi_class": "AN",
+      "category": "Cf",
+      "char": "؂",
+      "code": "U+0602",
+      "codepoint": 1538,
+      "combining_class": 0,
+      "name": "ARABIC FOOTNOTE MARKER",
+      "notes": "format",
+      "tags": [
+        "format"
+      ],
+      "tier": "tier1"
+    },
+    {
+      "bidi_class": "AN",
+      "category": "Cf",
+      "char": "؃",
+      "code": "U+0603",
+      "codepoint": 1539,
+      "combining_class": 0,
+      "name": "ARABIC SIGN SAFHA",
+      "notes": "format",
+      "tags": [
+        "format"
+      ],
+      "tier": "tier1"
+    },
+    {
+      "bidi_class": "AN",
+      "category": "Cf",
+      "char": "؄",
+      "code": "U+0604",
+      "codepoint": 1540,
+      "combining_class": 0,
+      "name": "ARABIC SIGN SAMVAT",
+      "notes": "format",
+      "tags": [
+        "format"
+      ],
+      "tier": "tier1"
+    },
+    {
+      "bidi_class": "AN",
+      "category": "Cf",
+      "char": "؅",
+      "code": "U+0605",
+      "codepoint": 1541,
+      "combining_class": 0,
+      "name": "ARABIC NUMBER MARK ABOVE",
+      "notes": "format",
+      "tags": [
+        "format"
+      ],
+      "tier": "tier1"
+    },
+    {
+      "bidi_class": "AL",
+      "category": "Cf",
+      "char": "؜",
+      "code": "U+061C",
+      "codepoint": 1564,
+      "combining_class": 0,
+      "name": "ARABIC LETTER MARK",
+      "notes": "arabic letter mark; format",
+      "tags": [
+        "bidi",
+        "format"
+      ],
+      "tier": "tier0"
+    },
+    {
+      "bidi_class": "AN",
+      "category": "Cf",
+      "char": "۝",
+      "code": "U+06DD",
+      "codepoint": 1757,
+      "combining_class": 0,
+      "name": "ARABIC END OF AYAH",
+      "notes": "format",
+      "tags": [
+        "format"
+      ],
+      "tier": "tier1"
+    },
+    {
+      "bidi_class": "AL",
+      "category": "Cf",
+      "char": "܏",
+      "code": "U+070F",
+      "codepoint": 1807,
+      "combining_class": 0,
+      "name": "SYRIAC ABBREVIATION MARK",
+      "notes": "format",
+      "tags": [
+        "format"
+      ],
+      "tier": "tier1"
+    },
+    {
+      "bidi_class": "AN",
+      "category": "Cf",
+      "char": "࣢",
+      "code": "U+08E2",
+      "codepoint": 2274,
+      "combining_class": 0,
+      "name": "ARABIC DISPUTED END OF AYAH",
+      "notes": "format",
+      "tags": [
+        "format"
+      ],
+      "tier": "tier1"
+    },
+    {
+      "bidi_class": "L",
+      "category": "Lo",
+      "char": "ᅟ",
+      "code": "U+115F",
+      "codepoint": 4447,
+      "combining_class": 0,
+      "name": "HANGUL CHOSEONG FILLER",
+      "notes": "hangul filler",
+      "tags": [
+        "hangul_filler"
+      ],
+      "tier": "tier0"
+    },
+    {
+      "bidi_class": "L",
+      "category": "Lo",
+      "char": "ᅠ",
+      "code": "U+1160",
+      "codepoint": 4448,
+      "combining_class": 0,
+      "name": "HANGUL JUNGSEONG FILLER",
+      "notes": "hangul filler",
+      "tags": [
+        "hangul_filler"
+      ],
+      "tier": "tier0"
+    },
+    {
+      "bidi_class": "WS",
+      "category": "Zs",
+      "char": " ",
+      "code": "U+1680",
+      "codepoint": 5760,
+      "combining_class": 0,
+      "name": "OGHAM SPACE MARK",
+      "notes": "separator/whitespace",
+      "tags": [
+        "separator"
+      ],
+      "tier": "separators"
+    },
+    {
+      "bidi_class": "BN",
+      "category": "Cf",
+      "char": "᠎",
+      "code": "U+180E",
+      "codepoint": 6158,
+      "combining_class": 0,
+      "name": "MONGOLIAN VOWEL SEPARATOR",
+      "notes": "deprecated mongolian vowel separator; format",
+      "tags": [
+        "format"
+      ],
+      "tier": "tier1"
+    },
+    {
+      "bidi_class": "WS",
+      "category": "Zs",
+      "char": " ",
+      "code": "U+2000",
+      "codepoint": 8192,
+      "combining_class": 0,
+      "name": "EN QUAD",
+      "notes": "separator/whitespace",
+      "tags": [
+        "separator"
+      ],
+      "tier": "separators"
+    },
+    {
+      "bidi_class": "WS",
+      "category": "Zs",
+      "char": " ",
+      "code": "U+2001",
+      "codepoint": 8193,
+      "combining_class": 0,
+      "name": "EM QUAD",
+      "notes": "separator/whitespace",
+      "tags": [
+        "separator"
+      ],
+      "tier": "separators"
+    },
+    {
+      "bidi_class": "WS",
+      "category": "Zs",
+      "char": " ",
+      "code": "U+2002",
+      "codepoint": 8194,
+      "combining_class": 0,
+      "name": "EN SPACE",
+      "notes": "separator/whitespace",
+      "tags": [
+        "separator"
+      ],
+      "tier": "separators"
+    },
+    {
+      "bidi_class": "WS",
+      "category": "Zs",
+      "char": " ",
+      "code": "U+2003",
+      "codepoint": 8195,
+      "combining_class": 0,
+      "name": "EM SPACE",
+      "notes": "separator/whitespace",
+      "tags": [
+        "separator"
+      ],
+      "tier": "separators"
+    },
+    {
+      "bidi_class": "WS",
+      "category": "Zs",
+      "char": " ",
+      "code": "U+2004",
+      "codepoint": 8196,
+      "combining_class": 0,
+      "name": "THREE-PER-EM SPACE",
+      "notes": "separator/whitespace",
+      "tags": [
+        "separator"
+      ],
+      "tier": "separators"
+    },
+    {
+      "bidi_class": "WS",
+      "category": "Zs",
+      "char": " ",
+      "code": "U+2005",
+      "codepoint": 8197,
+      "combining_class": 0,
+      "name": "FOUR-PER-EM SPACE",
+      "notes": "separator/whitespace",
+      "tags": [
+        "separator"
+      ],
+      "tier": "separators"
+    },
+    {
+      "bidi_class": "WS",
+      "category": "Zs",
+      "char": " ",
+      "code": "U+2006",
+      "codepoint": 8198,
+      "combining_class": 0,
+      "name": "SIX-PER-EM SPACE",
+      "notes": "separator/whitespace",
+      "tags": [
+        "separator"
+      ],
+      "tier": "separators"
+    },
+    {
+      "bidi_class": "WS",
+      "category": "Zs",
+      "char": " ",
+      "code": "U+2007",
+      "codepoint": 8199,
+      "combining_class": 0,
+      "name": "FIGURE SPACE",
+      "notes": "separator/whitespace",
+      "tags": [
+        "separator"
+      ],
+      "tier": "separators"
+    },
+    {
+      "bidi_class": "WS",
+      "category": "Zs",
+      "char": " ",
+      "code": "U+2008",
+      "codepoint": 8200,
+      "combining_class": 0,
+      "name": "PUNCTUATION SPACE",
+      "notes": "separator/whitespace",
+      "tags": [
+        "separator"
+      ],
+      "tier": "separators"
+    },
+    {
+      "bidi_class": "WS",
+      "category": "Zs",
+      "char": " ",
+      "code": "U+2009",
+      "codepoint": 8201,
+      "combining_class": 0,
+      "name": "THIN SPACE",
+      "notes": "separator/whitespace",
+      "tags": [
+        "separator"
+      ],
+      "tier": "separators"
+    },
+    {
+      "bidi_class": "WS",
+      "category": "Zs",
+      "char": " ",
+      "code": "U+200A",
+      "codepoint": 8202,
+      "combining_class": 0,
+      "name": "HAIR SPACE",
+      "notes": "separator/whitespace",
+      "tags": [
+        "separator"
+      ],
+      "tier": "separators"
+    },
+    {
+      "bidi_class": "BN",
+      "category": "Cf",
+      "char": "​",
+      "code": "U+200B",
+      "codepoint": 8203,
+      "combining_class": 0,
+      "name": "ZERO WIDTH SPACE",
+      "notes": "zero width space; format",
+      "tags": [
+        "format",
+        "zero_width"
+      ],
+      "tier": "tier0"
+    },
+    {
+      "bidi_class": "BN",
+      "category": "Cf",
+      "char": "‌",
+      "code": "U+200C",
+      "codepoint": 8204,
+      "combining_class": 0,
+      "name": "ZERO WIDTH NON-JOINER",
+      "notes": "zero width non-joiner; format",
+      "tags": [
+        "format",
+        "zero_width"
+      ],
+      "tier": "tier0"
+    },
+    {
+      "bidi_class": "BN",
+      "category": "Cf",
+      "char": "‍",
+      "code": "U+200D",
+      "codepoint": 8205,
+      "combining_class": 0,
+      "name": "ZERO WIDTH JOINER",
+      "notes": "zero width joiner; format",
+      "tags": [
+        "format",
+        "zero_width"
+      ],
+      "tier": "tier0"
+    },
+    {
+      "bidi_class": "L",
+      "category": "Cf",
+      "char": "‎",
+      "code": "U+200E",
+      "codepoint": 8206,
+      "combining_class": 0,
+      "name": "LEFT-TO-RIGHT MARK",
+      "notes": "left-to-right mark; format",
+      "tags": [
+        "bidi",
+        "format"
+      ],
+      "tier": "tier0"
+    },
+    {
+      "bidi_class": "R",
+      "category": "Cf",
+      "char": "‏",
+      "code": "U+200F",
+      "codepoint": 8207,
+      "combining_class": 0,
+      "name": "RIGHT-TO-LEFT MARK",
+      "notes": "right-to-left mark; format",
+      "tags": [
+        "bidi",
+        "format"
+      ],
+      "tier": "tier0"
+    },
+    {
+      "bidi_class": "WS",
+      "category": "Zl",
+      "char": " ",
+      "code": "U+2028",
+      "codepoint": 8232,
+      "combining_class": 0,
+      "name": "LINE SEPARATOR",
+      "notes": "separator/whitespace",
+      "tags": [
+        "separator"
+      ],
+      "tier": "separators"
+    },
+    {
+      "bidi_class": "B",
+      "category": "Zp",
+      "char": " ",
+      "code": "U+2029",
+      "codepoint": 8233,
+      "combining_class": 0,
+      "name": "PARAGRAPH SEPARATOR",
+      "notes": "separator/whitespace",
+      "tags": [
+        "separator"
+      ],
+      "tier": "separators"
+    },
+    {
+      "bidi_class": "LRE",
+      "category": "Cf",
+      "char": "‪",
+      "code": "U+202A",
+      "codepoint": 8234,
+      "combining_class": 0,
+      "name": "LEFT-TO-RIGHT EMBEDDING",
+      "notes": "format",
+      "tags": [
+        "bidi",
+        "format"
+      ],
+      "tier": "tier0"
+    },
+    {
+      "bidi_class": "RLE",
+      "category": "Cf",
+      "char": "‫",
+      "code": "U+202B",
+      "codepoint": 8235,
+      "combining_class": 0,
+      "name": "RIGHT-TO-LEFT EMBEDDING",
+      "notes": "format",
+      "tags": [
+        "bidi",
+        "format"
+      ],
+      "tier": "tier0"
+    },
+    {
+      "bidi_class": "PDF",
+      "category": "Cf",
+      "char": "‬",
+      "code": "U+202C",
+      "codepoint": 8236,
+      "combining_class": 0,
+      "name": "POP DIRECTIONAL FORMATTING",
+      "notes": "format",
+      "tags": [
+        "bidi",
+        "format"
+      ],
+      "tier": "tier0"
+    },
+    {
+      "bidi_class": "LRO",
+      "category": "Cf",
+      "char": "‭",
+      "code": "U+202D",
+      "codepoint": 8237,
+      "combining_class": 0,
+      "name": "LEFT-TO-RIGHT OVERRIDE",
+      "notes": "format",
+      "tags": [
+        "bidi",
+        "format"
+      ],
+      "tier": "tier0"
+    },
+    {
+      "bidi_class": "RLO",
+      "category": "Cf",
+      "char": "‮",
+      "code": "U+202E",
+      "codepoint": 8238,
+      "combining_class": 0,
+      "name": "RIGHT-TO-LEFT OVERRIDE",
+      "notes": "format",
+      "tags": [
+        "bidi",
+        "format"
+      ],
+      "tier": "tier0"
+    },
+    {
+      "bidi_class": "CS",
+      "category": "Zs",
+      "char": " ",
+      "code": "U+202F",
+      "codepoint": 8239,
+      "combining_class": 0,
+      "name": "NARROW NO-BREAK SPACE",
+      "notes": "separator/whitespace",
+      "tags": [
+        "separator"
+      ],
+      "tier": "separators"
+    },
+    {
+      "bidi_class": "WS",
+      "category": "Zs",
+      "char": " ",
+      "code": "U+205F",
+      "codepoint": 8287,
+      "combining_class": 0,
+      "name": "MEDIUM MATHEMATICAL SPACE",
+      "notes": "separator/whitespace",
+      "tags": [
+        "separator"
+      ],
+      "tier": "separators"
+    },
+    {
+      "bidi_class": "BN",
+      "category": "Cf",
+      "char": "⁠",
+      "code": "U+2060",
+      "codepoint": 8288,
+      "combining_class": 0,
+      "name": "WORD JOINER",
+      "notes": "word joiner; format",
+      "tags": [
+        "format",
+        "invisible_operator",
+        "zero_width"
+      ],
+      "tier": "tier0"
+    },
+    {
+      "bidi_class": "BN",
+      "category": "Cf",
+      "char": "⁡",
+      "code": "U+2061",
+      "codepoint": 8289,
+      "combining_class": 0,
+      "name": "FUNCTION APPLICATION",
+      "notes": "invisible function application; format",
+      "tags": [
+        "format",
+        "invisible_operator"
+      ],
+      "tier": "tier0"
+    },
+    {
+      "bidi_class": "BN",
+      "category": "Cf",
+      "char": "⁢",
+      "code": "U+2062",
+      "codepoint": 8290,
+      "combining_class": 0,
+      "name": "INVISIBLE TIMES",
+      "notes": "invisible times; format",
+      "tags": [
+        "format",
+        "invisible_operator"
+      ],
+      "tier": "tier0"
+    },
+    {
+      "bidi_class": "BN",
+      "category": "Cf",
+      "char": "⁣",
+      "code": "U+2063",
+      "codepoint": 8291,
+      "combining_class": 0,
+      "name": "INVISIBLE SEPARATOR",
+      "notes": "invisible separator; format",
+      "tags": [
+        "format",
+        "invisible_operator"
+      ],
+      "tier": "tier0"
+    },
+    {
+      "bidi_class": "BN",
+      "category": "Cf",
+      "char": "⁤",
+      "code": "U+2064",
+      "codepoint": 8292,
+      "combining_class": 0,
+      "name": "INVISIBLE PLUS",
+      "notes": "invisible plus; format",
+      "tags": [
+        "format",
+        "invisible_operator"
+      ],
+      "tier": "tier0"
+    },
+    {
+      "bidi_class": "LRI",
+      "category": "Cf",
+      "char": "⁦",
+      "code": "U+2066",
+      "codepoint": 8294,
+      "combining_class": 0,
+      "name": "LEFT-TO-RIGHT ISOLATE",
+      "notes": "format",
+      "tags": [
+        "bidi",
+        "format"
+      ],
+      "tier": "tier0"
+    },
+    {
+      "bidi_class": "RLI",
+      "category": "Cf",
+      "char": "⁧",
+      "code": "U+2067",
+      "codepoint": 8295,
+      "combining_class": 0,
+      "name": "RIGHT-TO-LEFT ISOLATE",
+      "notes": "format",
+      "tags": [
+        "bidi",
+        "format"
+      ],
+      "tier": "tier0"
+    },
+    {
+      "bidi_class": "FSI",
+      "category": "Cf",
+      "char": "⁨",
+      "code": "U+2068",
+      "codepoint": 8296,
+      "combining_class": 0,
+      "name": "FIRST STRONG ISOLATE",
+      "notes": "format",
+      "tags": [
+        "bidi",
+        "format"
+      ],
+      "tier": "tier0"
+    },
+    {
+      "bidi_class": "PDI",
+      "category": "Cf",
+      "char": "⁩",
+      "code": "U+2069",
+      "codepoint": 8297,
+      "combining_class": 0,
+      "name": "POP DIRECTIONAL ISOLATE",
+      "notes": "format",
+      "tags": [
+        "bidi",
+        "format"
+      ],
+      "tier": "tier0"
+    },
+    {
+      "bidi_class": "BN",
+      "category": "Cf",
+      "char": "⁪",
+      "code": "U+206A",
+      "codepoint": 8298,
+      "combining_class": 0,
+      "name": "INHIBIT SYMMETRIC SWAPPING",
+      "notes": "format",
+      "tags": [
+        "format"
+      ],
+      "tier": "tier1"
+    },
+    {
+      "bidi_class": "BN",
+      "category": "Cf",
+      "char": "⁫",
+      "code": "U+206B",
+      "codepoint": 8299,
+      "combining_class": 0,
+      "name": "ACTIVATE SYMMETRIC SWAPPING",
+      "notes": "format",
+      "tags": [
+        "format"
+      ],
+      "tier": "tier1"
+    },
+    {
+      "bidi_class": "BN",
+      "category": "Cf",
+      "char": "⁬",
+      "code": "U+206C",
+      "codepoint": 8300,
+      "combining_class": 0,
+      "name": "INHIBIT ARABIC FORM SHAPING",
+      "notes": "format",
+      "tags": [
+        "format"
+      ],
+      "tier": "tier1"
+    },
+    {
+      "bidi_class": "BN",
+      "category": "Cf",
+      "char": "⁭",
+      "code": "U+206D",
+      "codepoint": 8301,
+      "combining_class": 0,
+      "name": "ACTIVATE ARABIC FORM SHAPING",
+      "notes": "format",
+      "tags": [
+        "format"
+      ],
+      "tier": "tier1"
+    },
+    {
+      "bidi_class": "BN",
+      "category": "Cf",
+      "char": "⁮",
+      "code": "U+206E",
+      "codepoint": 8302,
+      "combining_class": 0,
+      "name": "NATIONAL DIGIT SHAPES",
+      "notes": "format",
+      "tags": [
+        "format"
+      ],
+      "tier": "tier1"
+    },
+    {
+      "bidi_class": "BN",
+      "category": "Cf",
+      "char": "⁯",
+      "code": "U+206F",
+      "codepoint": 8303,
+      "combining_class": 0,
+      "name": "NOMINAL DIGIT SHAPES",
+      "notes": "format",
+      "tags": [
+        "format"
+      ],
+      "tier": "tier1"
+    },
+    {
+      "bidi_class": "WS",
+      "category": "Zs",
+      "char": "　",
+      "code": "U+3000",
+      "codepoint": 12288,
+      "combining_class": 0,
+      "name": "IDEOGRAPHIC SPACE",
+      "notes": "separator/whitespace",
+      "tags": [
+        "separator"
+      ],
+      "tier": "separators"
+    },
+    {
+      "bidi_class": "L",
+      "category": "Lo",
+      "char": "ㅤ",
+      "code": "U+3164",
+      "codepoint": 12644,
+      "combining_class": 0,
+      "name": "HANGUL FILLER",
+      "notes": "hangul filler",
+      "tags": [
+        "hangul_filler"
+      ],
+      "tier": "tier0"
+    },
+    {
+      "bidi_class": "NSM",
+      "category": "Mn",
+      "char": "︀",
+      "code": "U+FE00",
+      "codepoint": 65024,
+      "combining_class": 0,
+      "name": "VARIATION SELECTOR-1",
+      "notes": "variation selector",
+      "tags": [
+        "variation_selector"
+      ],
+      "tier": "tier2"
+    },
+    {
+      "bidi_class": "NSM",
+      "category": "Mn",
+      "char": "︁",
+      "code": "U+FE01",
+      "codepoint": 65025,
+      "combining_class": 0,
+      "name": "VARIATION SELECTOR-2",
+      "notes": "variation selector",
+      "tags": [
+        "variation_selector"
+      ],
+      "tier": "tier2"
+    },
+    {
+      "bidi_class": "NSM",
+      "category": "Mn",
+      "char": "︂",
+      "code": "U+FE02",
+      "codepoint": 65026,
+      "combining_class": 0,
+      "name": "VARIATION SELECTOR-3",
+      "notes": "variation selector",
+      "tags": [
+        "variation_selector"
+      ],
+      "tier": "tier2"
+    },
+    {
+      "bidi_class": "NSM",
+      "category": "Mn",
+      "char": "︃",
+      "code": "U+FE03",
+      "codepoint": 65027,
+      "combining_class": 0,
+      "name": "VARIATION SELECTOR-4",
+      "notes": "variation selector",
+      "tags": [
+        "variation_selector"
+      ],
+      "tier": "tier2"
+    },
+    {
+      "bidi_class": "NSM",
+      "category": "Mn",
+      "char": "︄",
+      "code": "U+FE04",
+      "codepoint": 65028,
+      "combining_class": 0,
+      "name": "VARIATION SELECTOR-5",
+      "notes": "variation selector",
+      "tags": [
+        "variation_selector"
+      ],
+      "tier": "tier2"
+    },
+    {
+      "bidi_class": "NSM",
+      "category": "Mn",
+      "char": "︅",
+      "code": "U+FE05",
+      "codepoint": 65029,
+      "combining_class": 0,
+      "name": "VARIATION SELECTOR-6",
+      "notes": "variation selector",
+      "tags": [
+        "variation_selector"
+      ],
+      "tier": "tier2"
+    },
+    {
+      "bidi_class": "NSM",
+      "category": "Mn",
+      "char": "︆",
+      "code": "U+FE06",
+      "codepoint": 65030,
+      "combining_class": 0,
+      "name": "VARIATION SELECTOR-7",
+      "notes": "variation selector",
+      "tags": [
+        "variation_selector"
+      ],
+      "tier": "tier2"
+    },
+    {
+      "bidi_class": "NSM",
+      "category": "Mn",
+      "char": "︇",
+      "code": "U+FE07",
+      "codepoint": 65031,
+      "combining_class": 0,
+      "name": "VARIATION SELECTOR-8",
+      "notes": "variation selector",
+      "tags": [
+        "variation_selector"
+      ],
+      "tier": "tier2"
+    },
+    {
+      "bidi_class": "NSM",
+      "category": "Mn",
+      "char": "︈",
+      "code": "U+FE08",
+      "codepoint": 65032,
+      "combining_class": 0,
+      "name": "VARIATION SELECTOR-9",
+      "notes": "variation selector",
+      "tags": [
+        "variation_selector"
+      ],
+      "tier": "tier2"
+    },
+    {
+      "bidi_class": "NSM",
+      "category": "Mn",
+      "char": "︉",
+      "code": "U+FE09",
+      "codepoint": 65033,
+      "combining_class": 0,
+      "name": "VARIATION SELECTOR-10",
+      "notes": "variation selector",
+      "tags": [
+        "variation_selector"
+      ],
+      "tier": "tier2"
+    },
+    {
+      "bidi_class": "NSM",
+      "category": "Mn",
+      "char": "︊",
+      "code": "U+FE0A",
+      "codepoint": 65034,
+      "combining_class": 0,
+      "name": "VARIATION SELECTOR-11",
+      "notes": "variation selector",
+      "tags": [
+        "variation_selector"
+      ],
+      "tier": "tier2"
+    },
+    {
+      "bidi_class": "NSM",
+      "category": "Mn",
+      "char": "︋",
+      "code": "U+FE0B",
+      "codepoint": 65035,
+      "combining_class": 0,
+      "name": "VARIATION SELECTOR-12",
+      "notes": "variation selector",
+      "tags": [
+        "variation_selector"
+      ],
+      "tier": "tier2"
+    },
+    {
+      "bidi_class": "NSM",
+      "category": "Mn",
+      "char": "︌",
+      "code": "U+FE0C",
+      "codepoint": 65036,
+      "combining_class": 0,
+      "name": "VARIATION SELECTOR-13",
+      "notes": "variation selector",
+      "tags": [
+        "variation_selector"
+      ],
+      "tier": "tier2"
+    },
+    {
+      "bidi_class": "NSM",
+      "category": "Mn",
+      "char": "︍",
+      "code": "U+FE0D",
+      "codepoint": 65037,
+      "combining_class": 0,
+      "name": "VARIATION SELECTOR-14",
+      "notes": "variation selector",
+      "tags": [
+        "variation_selector"
+      ],
+      "tier": "tier2"
+    },
+    {
+      "bidi_class": "NSM",
+      "category": "Mn",
+      "char": "︎",
+      "code": "U+FE0E",
+      "codepoint": 65038,
+      "combining_class": 0,
+      "name": "VARIATION SELECTOR-15",
+      "notes": "variation selector",
+      "tags": [
+        "variation_selector"
+      ],
+      "tier": "tier2"
+    },
+    {
+      "bidi_class": "NSM",
+      "category": "Mn",
+      "char": "️",
+      "code": "U+FE0F",
+      "codepoint": 65039,
+      "combining_class": 0,
+      "name": "VARIATION SELECTOR-16",
+      "notes": "variation selector",
+      "tags": [
+        "variation_selector"
+      ],
+      "tier": "tier2"
+    },
+    {
+      "bidi_class": "BN",
+      "category": "Cf",
+      "char": "﻿",
+      "code": "U+FEFF",
+      "codepoint": 65279,
+      "combining_class": 0,
+      "name": "ZERO WIDTH NO-BREAK SPACE",
+      "notes": "zero width no-break space / BOM; format",
+      "tags": [
+        "bom",
+        "format",
+        "zero_width"
+      ],
+      "tier": "tier0"
+    },
+    {
+      "bidi_class": "L",
+      "category": "Lo",
+      "char": "ﾠ",
+      "code": "U+FFA0",
+      "codepoint": 65440,
+      "combining_class": 0,
+      "name": "HALFWIDTH HANGUL FILLER",
+      "notes": "hangul filler",
+      "tags": [
+        "hangul_filler"
+      ],
+      "tier": "tier0"
+    },
+    {
+      "bidi_class": "ON",
+      "category": "Cf",
+      "char": "￹",
+      "code": "U+FFF9",
+      "codepoint": 65529,
+      "combining_class": 0,
+      "name": "INTERLINEAR ANNOTATION ANCHOR",
+      "notes": "format",
+      "tags": [
+        "format"
+      ],
+      "tier": "tier1"
+    },
+    {
+      "bidi_class": "ON",
+      "category": "Cf",
+      "char": "￺",
+      "code": "U+FFFA",
+      "codepoint": 65530,
+      "combining_class": 0,
+      "name": "INTERLINEAR ANNOTATION SEPARATOR",
+      "notes": "format",
+      "tags": [
+        "format"
+      ],
+      "tier": "tier1"
+    },
+    {
+      "bidi_class": "ON",
+      "category": "Cf",
+      "char": "￻",
+      "code": "U+FFFB",
+      "codepoint": 65531,
+      "combining_class": 0,
+      "name": "INTERLINEAR ANNOTATION TERMINATOR",
+      "notes": "format",
+      "tags": [
+        "format"
+      ],
+      "tier": "tier1"
+    },
+    {
+      "bidi_class": "L",
+      "category": "Cf",
+      "char": "𑂽",
+      "code": "U+110BD",
+      "codepoint": 69821,
+      "combining_class": 0,
+      "name": "KAITHI NUMBER SIGN",
+      "notes": "format",
+      "tags": [
+        "format"
+      ],
+      "tier": "tier1"
+    },
+    {
+      "bidi_class": "L",
+      "category": "Cf",
+      "char": "𑃍",
+      "code": "U+110CD",
+      "codepoint": 69837,
+      "combining_class": 0,
+      "name": "KAITHI NUMBER SIGN ABOVE",
+      "notes": "format",
+      "tags": [
+        "format"
+      ],
+      "tier": "tier1"
+    },
+    {
+      "bidi_class": "L",
+      "category": "Cf",
+      "char": "𓐰",
+      "code": "U+13430",
+      "codepoint": 78896,
+      "combining_class": 0,
+      "name": "EGYPTIAN HIEROGLYPH VERTICAL JOINER",
+      "notes": "format",
+      "tags": [
+        "format"
+      ],
+      "tier": "tier1"
+    },
+    {
+      "bidi_class": "L",
+      "category": "Cf",
+      "char": "𓐱",
+      "code": "U+13431",
+      "codepoint": 78897,
+      "combining_class": 0,
+      "name": "EGYPTIAN HIEROGLYPH HORIZONTAL JOINER",
+      "notes": "format",
+      "tags": [
+        "format"
+      ],
+      "tier": "tier1"
+    },
+    {
+      "bidi_class": "L",
+      "category": "Cf",
+      "char": "𓐲",
+      "code": "U+13432",
+      "codepoint": 78898,
+      "combining_class": 0,
+      "name": "EGYPTIAN HIEROGLYPH INSERT AT TOP START",
+      "notes": "format",
+      "tags": [
+        "format"
+      ],
+      "tier": "tier1"
+    },
+    {
+      "bidi_class": "L",
+      "category": "Cf",
+      "char": "𓐳",
+      "code": "U+13433",
+      "codepoint": 78899,
+      "combining_class": 0,
+      "name": "EGYPTIAN HIEROGLYPH INSERT AT BOTTOM START",
+      "notes": "format",
+      "tags": [
+        "format"
+      ],
+      "tier": "tier1"
+    },
+    {
+      "bidi_class": "L",
+      "category": "Cf",
+      "char": "𓐴",
+      "code": "U+13434",
+      "codepoint": 78900,
+      "combining_class": 0,
+      "name": "EGYPTIAN HIEROGLYPH INSERT AT TOP END",
+      "notes": "format",
+      "tags": [
+        "format"
+      ],
+      "tier": "tier1"
+    },
+    {
+      "bidi_class": "L",
+      "category": "Cf",
+      "char": "𓐵",
+      "code": "U+13435",
+      "codepoint": 78901,
+      "combining_class": 0,
+      "name": "EGYPTIAN HIEROGLYPH INSERT AT BOTTOM END",
+      "notes": "format",
+      "tags": [
+        "format"
+      ],
+      "tier": "tier1"
+    },
+    {
+      "bidi_class": "L",
+      "category": "Cf",
+      "char": "𓐶",
+      "code": "U+13436",
+      "codepoint": 78902,
+      "combining_class": 0,
+      "name": "EGYPTIAN HIEROGLYPH OVERLAY MIDDLE",
+      "notes": "format",
+      "tags": [
+        "format"
+      ],
+      "tier": "tier1"
+    },
+    {
+      "bidi_class": "L",
+      "category": "Cf",
+      "char": "𓐷",
+      "code": "U+13437",
+      "codepoint": 78903,
+      "combining_class": 0,
+      "name": "EGYPTIAN HIEROGLYPH BEGIN SEGMENT",
+      "notes": "format",
+      "tags": [
+        "format"
+      ],
+      "tier": "tier1"
+    },
+    {
+      "bidi_class": "L",
+      "category": "Cf",
+      "char": "𓐸",
+      "code": "U+13438",
+      "codepoint": 78904,
+      "combining_class": 0,
+      "name": "EGYPTIAN HIEROGLYPH END SEGMENT",
+      "notes": "format",
+      "tags": [
+        "format"
+      ],
+      "tier": "tier1"
+    },
+    {
+      "bidi_class": "BN",
+      "category": "Cf",
+      "char": "𛲠",
+      "code": "U+1BCA0",
+      "codepoint": 113824,
+      "combining_class": 0,
+      "name": "SHORTHAND FORMAT LETTER OVERLAP",
+      "notes": "format",
+      "tags": [
+        "format"
+      ],
+      "tier": "tier1"
+    },
+    {
+      "bidi_class": "BN",
+      "category": "Cf",
+      "char": "𛲡",
+      "code": "U+1BCA1",
+      "codepoint": 113825,
+      "combining_class": 0,
+      "name": "SHORTHAND FORMAT CONTINUING OVERLAP",
+      "notes": "format",
+      "tags": [
+        "format"
+      ],
+      "tier": "tier1"
+    },
+    {
+      "bidi_class": "BN",
+      "category": "Cf",
+      "char": "𛲢",
+      "code": "U+1BCA2",
+      "codepoint": 113826,
+      "combining_class": 0,
+      "name": "SHORTHAND FORMAT DOWN STEP",
+      "notes": "format",
+      "tags": [
+        "format"
+      ],
+      "tier": "tier1"
+    },
+    {
+      "bidi_class": "BN",
+      "category": "Cf",
+      "char": "𛲣",
+      "code": "U+1BCA3",
+      "codepoint": 113827,
+      "combining_class": 0,
+      "name": "SHORTHAND FORMAT UP STEP",
+      "notes": "format",
+      "tags": [
+        "format"
+      ],
+      "tier": "tier1"
+    },
+    {
+      "bidi_class": "BN",
+      "category": "Cf",
+      "char": "𝅳",
+      "code": "U+1D173",
+      "codepoint": 119155,
+      "combining_class": 0,
+      "name": "MUSICAL SYMBOL BEGIN BEAM",
+      "notes": "format",
+      "tags": [
+        "format"
+      ],
+      "tier": "tier1"
+    },
+    {
+      "bidi_class": "BN",
+      "category": "Cf",
+      "char": "𝅴",
+      "code": "U+1D174",
+      "codepoint": 119156,
+      "combining_class": 0,
+      "name": "MUSICAL SYMBOL END BEAM",
+      "notes": "format",
+      "tags": [
+        "format"
+      ],
+      "tier": "tier1"
+    },
+    {
+      "bidi_class": "BN",
+      "category": "Cf",
+      "char": "𝅵",
+      "code": "U+1D175",
+      "codepoint": 119157,
+      "combining_class": 0,
+      "name": "MUSICAL SYMBOL BEGIN TIE",
+      "notes": "format",
+      "tags": [
+        "format"
+      ],
+      "tier": "tier1"
+    },
+    {
+      "bidi_class": "BN",
+      "category": "Cf",
+      "char": "𝅶",
+      "code": "U+1D176",
+      "codepoint": 119158,
+      "combining_class": 0,
+      "name": "MUSICAL SYMBOL END TIE",
+      "notes": "format",
+      "tags": [
+        "format"
+      ],
+      "tier": "tier1"
+    },
+    {
+      "bidi_class": "BN",
+      "category": "Cf",
+      "char": "𝅷",
+      "code": "U+1D177",
+      "codepoint": 119159,
+      "combining_class": 0,
+      "name": "MUSICAL SYMBOL BEGIN SLUR",
+      "notes": "format",
+      "tags": [
+        "format"
+      ],
+      "tier": "tier1"
+    },
+    {
+      "bidi_class": "BN",
+      "category": "Cf",
+      "char": "𝅸",
+      "code": "U+1D178",
+      "codepoint": 119160,
+      "combining_class": 0,
+      "name": "MUSICAL SYMBOL END SLUR",
+      "notes": "format",
+      "tags": [
+        "format"
+      ],
+      "tier": "tier1"
+    },
+    {
+      "bidi_class": "BN",
+      "category": "Cf",
+      "char": "𝅹",
+      "code": "U+1D179",
+      "codepoint": 119161,
+      "combining_class": 0,
+      "name": "MUSICAL SYMBOL BEGIN PHRASE",
+      "notes": "format",
+      "tags": [
+        "format"
+      ],
+      "tier": "tier1"
+    },
+    {
+      "bidi_class": "BN",
+      "category": "Cf",
+      "char": "𝅺",
+      "code": "U+1D17A",
+      "codepoint": 119162,
+      "combining_class": 0,
+      "name": "MUSICAL SYMBOL END PHRASE",
+      "notes": "format",
+      "tags": [
+        "format"
+      ],
+      "tier": "tier1"
+    },
+    {
+      "bidi_class": "",
+      "category": "Cn",
+      "char": "󠀀",
+      "code": "U+E0000",
+      "codepoint": 917504,
+      "combining_class": 0,
+      "name": "UNNAMED",
+      "notes": "tag character",
+      "tags": [
+        "tag_character"
+      ],
+      "tier": "tier0"
+    },
+    {
+      "bidi_class": "BN",
+      "category": "Cf",
+      "char": "󠀁",
+      "code": "U+E0001",
+      "codepoint": 917505,
+      "combining_class": 0,
+      "name": "LANGUAGE TAG",
+      "notes": "tag character; format",
+      "tags": [
+        "format",
+        "tag_character"
+      ],
+      "tier": "tier0"
+    },
+    {
+      "bidi_class": "",
+      "category": "Cn",
+      "char": "󠀂",
+      "code": "U+E0002",
+      "codepoint": 917506,
+      "combining_class": 0,
+      "name": "UNNAMED",
+      "notes": "tag character",
+      "tags": [
+        "tag_character"
+      ],
+      "tier": "tier0"
+    },
+    {
+      "bidi_class": "",
+      "category": "Cn",
+      "char": "󠀃",
+      "code": "U+E0003",
+      "codepoint": 917507,
+      "combining_class": 0,
+      "name": "UNNAMED",
+      "notes": "tag character",
+      "tags": [
+        "tag_character"
+      ],
+      "tier": "tier0"
+    },
+    {
+      "bidi_class": "",
+      "category": "Cn",
+      "char": "󠀄",
+      "code": "U+E0004",
+      "codepoint": 917508,
+      "combining_class": 0,
+      "name": "UNNAMED",
+      "notes": "tag character",
+      "tags": [
+        "tag_character"
+      ],
+      "tier": "tier0"
+    },
+    {
+      "bidi_class": "",
+      "category": "Cn",
+      "char": "󠀅",
+      "code": "U+E0005",
+      "codepoint": 917509,
+      "combining_class": 0,
+      "name": "UNNAMED",
+      "notes": "tag character",
+      "tags": [
+        "tag_character"
+      ],
+      "tier": "tier0"
+    },
+    {
+      "bidi_class": "",
+      "category": "Cn",
+      "char": "󠀆",
+      "code": "U+E0006",
+      "codepoint": 917510,
+      "combining_class": 0,
+      "name": "UNNAMED",
+      "notes": "tag character",
+      "tags": [
+        "tag_character"
+      ],
+      "tier": "tier0"
+    },
+    {
+      "bidi_class": "",
+      "category": "Cn",
+      "char": "󠀇",
+      "code": "U+E0007",
+      "codepoint": 917511,
+      "combining_class": 0,
+      "name": "UNNAMED",
+      "notes": "tag character",
+      "tags": [
+        "tag_character"
+      ],
+      "tier": "tier0"
+    },
+    {
+      "bidi_class": "",
+      "category": "Cn",
+      "char": "󠀈",
+      "code": "U+E0008",
+      "codepoint": 917512,
+      "combining_class": 0,
+      "name": "UNNAMED",
+      "notes": "tag character",
+      "tags": [
+        "tag_character"
+      ],
+      "tier": "tier0"
+    },
+    {
+      "bidi_class": "",
+      "category": "Cn",
+      "char": "󠀉",
+      "code": "U+E0009",
+      "codepoint": 917513,
+      "combining_class": 0,
+      "name": "UNNAMED",
+      "notes": "tag character",
+      "tags": [
+        "tag_character"
+      ],
+      "tier": "tier0"
+    },
+    {
+      "bidi_class": "",
+      "category": "Cn",
+      "char": "󠀊",
+      "code": "U+E000A",
+      "codepoint": 917514,
+      "combining_class": 0,
+      "name": "UNNAMED",
+      "notes": "tag character",
+      "tags": [
+        "tag_character"
+      ],
+      "tier": "tier0"
+    },
+    {
+      "bidi_class": "",
+      "category": "Cn",
+      "char": "󠀋",
+      "code": "U+E000B",
+      "codepoint": 917515,
+      "combining_class": 0,
+      "name": "UNNAMED",
+      "notes": "tag character",
+      "tags": [
+        "tag_character"
+      ],
+      "tier": "tier0"
+    },
+    {
+      "bidi_class": "",
+      "category": "Cn",
+      "char": "󠀌",
+      "code": "U+E000C",
+      "codepoint": 917516,
+      "combining_class": 0,
+      "name": "UNNAMED",
+      "notes": "tag character",
+      "tags": [
+        "tag_character"
+      ],
+      "tier": "tier0"
+    },
+    {
+      "bidi_class": "",
+      "category": "Cn",
+      "char": "󠀍",
+      "code": "U+E000D",
+      "codepoint": 917517,
+      "combining_class": 0,
+      "name": "UNNAMED",
+      "notes": "tag character",
+      "tags": [
+        "tag_character"
+      ],
+      "tier": "tier0"
+    },
+    {
+      "bidi_class": "",
+      "category": "Cn",
+      "char": "󠀎",
+      "code": "U+E000E",
+      "codepoint": 917518,
+      "combining_class": 0,
+      "name": "UNNAMED",
+      "notes": "tag character",
+      "tags": [
+        "tag_character"
+      ],
+      "tier": "tier0"
+    },
+    {
+      "bidi_class": "",
+      "category": "Cn",
+      "char": "󠀏",
+      "code": "U+E000F",
+      "codepoint": 917519,
+      "combining_class": 0,
+      "name": "UNNAMED",
+      "notes": "tag character",
+      "tags": [
+        "tag_character"
+      ],
+      "tier": "tier0"
+    },
+    {
+      "bidi_class": "",
+      "category": "Cn",
+      "char": "󠀐",
+      "code": "U+E0010",
+      "codepoint": 917520,
+      "combining_class": 0,
+      "name": "UNNAMED",
+      "notes": "tag character",
+      "tags": [
+        "tag_character"
+      ],
+      "tier": "tier0"
+    },
+    {
+      "bidi_class": "",
+      "category": "Cn",
+      "char": "󠀑",
+      "code": "U+E0011",
+      "codepoint": 917521,
+      "combining_class": 0,
+      "name": "UNNAMED",
+      "notes": "tag character",
+      "tags": [
+        "tag_character"
+      ],
+      "tier": "tier0"
+    },
+    {
+      "bidi_class": "",
+      "category": "Cn",
+      "char": "󠀒",
+      "code": "U+E0012",
+      "codepoint": 917522,
+      "combining_class": 0,
+      "name": "UNNAMED",
+      "notes": "tag character",
+      "tags": [
+        "tag_character"
+      ],
+      "tier": "tier0"
+    },
+    {
+      "bidi_class": "",
+      "category": "Cn",
+      "char": "󠀓",
+      "code": "U+E0013",
+      "codepoint": 917523,
+      "combining_class": 0,
+      "name": "UNNAMED",
+      "notes": "tag character",
+      "tags": [
+        "tag_character"
+      ],
+      "tier": "tier0"
+    },
+    {
+      "bidi_class": "",
+      "category": "Cn",
+      "char": "󠀔",
+      "code": "U+E0014",
+      "codepoint": 917524,
+      "combining_class": 0,
+      "name": "UNNAMED",
+      "notes": "tag character",
+      "tags": [
+        "tag_character"
+      ],
+      "tier": "tier0"
+    },
+    {
+      "bidi_class": "",
+      "category": "Cn",
+      "char": "󠀕",
+      "code": "U+E0015",
+      "codepoint": 917525,
+      "combining_class": 0,
+      "name": "UNNAMED",
+      "notes": "tag character",
+      "tags": [
+        "tag_character"
+      ],
+      "tier": "tier0"
+    },
+    {
+      "bidi_class": "",
+      "category": "Cn",
+      "char": "󠀖",
+      "code": "U+E0016",
+      "codepoint": 917526,
+      "combining_class": 0,
+      "name": "UNNAMED",
+      "notes": "tag character",
+      "tags": [
+        "tag_character"
+      ],
+      "tier": "tier0"
+    },
+    {
+      "bidi_class": "",
+      "category": "Cn",
+      "char": "󠀗",
+      "code": "U+E0017",
+      "codepoint": 917527,
+      "combining_class": 0,
+      "name": "UNNAMED",
+      "notes": "tag character",
+      "tags": [
+        "tag_character"
+      ],
+      "tier": "tier0"
+    },
+    {
+      "bidi_class": "",
+      "category": "Cn",
+      "char": "󠀘",
+      "code": "U+E0018",
+      "codepoint": 917528,
+      "combining_class": 0,
+      "name": "UNNAMED",
+      "notes": "tag character",
+      "tags": [
+        "tag_character"
+      ],
+      "tier": "tier0"
+    },
+    {
+      "bidi_class": "",
+      "category": "Cn",
+      "char": "󠀙",
+      "code": "U+E0019",
+      "codepoint": 917529,
+      "combining_class": 0,
+      "name": "UNNAMED",
+      "notes": "tag character",
+      "tags": [
+        "tag_character"
+      ],
+      "tier": "tier0"
+    },
+    {
+      "bidi_class": "",
+      "category": "Cn",
+      "char": "󠀚",
+      "code": "U+E001A",
+      "codepoint": 917530,
+      "combining_class": 0,
+      "name": "UNNAMED",
+      "notes": "tag character",
+      "tags": [
+        "tag_character"
+      ],
+      "tier": "tier0"
+    },
+    {
+      "bidi_class": "",
+      "category": "Cn",
+      "char": "󠀛",
+      "code": "U+E001B",
+      "codepoint": 917531,
+      "combining_class": 0,
+      "name": "UNNAMED",
+      "notes": "tag character",
+      "tags": [
+        "tag_character"
+      ],
+      "tier": "tier0"
+    },
+    {
+      "bidi_class": "",
+      "category": "Cn",
+      "char": "󠀜",
+      "code": "U+E001C",
+      "codepoint": 917532,
+      "combining_class": 0,
+      "name": "UNNAMED",
+      "notes": "tag character",
+      "tags": [
+        "tag_character"
+      ],
+      "tier": "tier0"
+    },
+    {
+      "bidi_class": "",
+      "category": "Cn",
+      "char": "󠀝",
+      "code": "U+E001D",
+      "codepoint": 917533,
+      "combining_class": 0,
+      "name": "UNNAMED",
+      "notes": "tag character",
+      "tags": [
+        "tag_character"
+      ],
+      "tier": "tier0"
+    },
+    {
+      "bidi_class": "",
+      "category": "Cn",
+      "char": "󠀞",
+      "code": "U+E001E",
+      "codepoint": 917534,
+      "combining_class": 0,
+      "name": "UNNAMED",
+      "notes": "tag character",
+      "tags": [
+        "tag_character"
+      ],
+      "tier": "tier0"
+    },
+    {
+      "bidi_class": "",
+      "category": "Cn",
+      "char": "󠀟",
+      "code": "U+E001F",
+      "codepoint": 917535,
+      "combining_class": 0,
+      "name": "UNNAMED",
+      "notes": "tag character",
+      "tags": [
+        "tag_character"
+      ],
+      "tier": "tier0"
+    },
+    {
+      "bidi_class": "BN",
+      "category": "Cf",
+      "char": "󠀠",
+      "code": "U+E0020",
+      "codepoint": 917536,
+      "combining_class": 0,
+      "name": "TAG SPACE",
+      "notes": "tag character; format",
+      "tags": [
+        "format",
+        "tag_character"
+      ],
+      "tier": "tier0"
+    },
+    {
+      "bidi_class": "BN",
+      "category": "Cf",
+      "char": "󠀡",
+      "code": "U+E0021",
+      "codepoint": 917537,
+      "combining_class": 0,
+      "name": "TAG EXCLAMATION MARK",
+      "notes": "tag character; format",
+      "tags": [
+        "format",
+        "tag_character"
+      ],
+      "tier": "tier0"
+    },
+    {
+      "bidi_class": "BN",
+      "category": "Cf",
+      "char": "󠀢",
+      "code": "U+E0022",
+      "codepoint": 917538,
+      "combining_class": 0,
+      "name": "TAG QUOTATION MARK",
+      "notes": "tag character; format",
+      "tags": [
+        "format",
+        "tag_character"
+      ],
+      "tier": "tier0"
+    },
+    {
+      "bidi_class": "BN",
+      "category": "Cf",
+      "char": "󠀣",
+      "code": "U+E0023",
+      "codepoint": 917539,
+      "combining_class": 0,
+      "name": "TAG NUMBER SIGN",
+      "notes": "tag character; format",
+      "tags": [
+        "format",
+        "tag_character"
+      ],
+      "tier": "tier0"
+    },
+    {
+      "bidi_class": "BN",
+      "category": "Cf",
+      "char": "󠀤",
+      "code": "U+E0024",
+      "codepoint": 917540,
+      "combining_class": 0,
+      "name": "TAG DOLLAR SIGN",
+      "notes": "tag character; format",
+      "tags": [
+        "format",
+        "tag_character"
+      ],
+      "tier": "tier0"
+    },
+    {
+      "bidi_class": "BN",
+      "category": "Cf",
+      "char": "󠀥",
+      "code": "U+E0025",
+      "codepoint": 917541,
+      "combining_class": 0,
+      "name": "TAG PERCENT SIGN",
+      "notes": "tag character; format",
+      "tags": [
+        "format",
+        "tag_character"
+      ],
+      "tier": "tier0"
+    },
+    {
+      "bidi_class": "BN",
+      "category": "Cf",
+      "char": "󠀦",
+      "code": "U+E0026",
+      "codepoint": 917542,
+      "combining_class": 0,
+      "name": "TAG AMPERSAND",
+      "notes": "tag character; format",
+      "tags": [
+        "format",
+        "tag_character"
+      ],
+      "tier": "tier0"
+    },
+    {
+      "bidi_class": "BN",
+      "category": "Cf",
+      "char": "󠀧",
+      "code": "U+E0027",
+      "codepoint": 917543,
+      "combining_class": 0,
+      "name": "TAG APOSTROPHE",
+      "notes": "tag character; format",
+      "tags": [
+        "format",
+        "tag_character"
+      ],
+      "tier": "tier0"
+    },
+    {
+      "bidi_class": "BN",
+      "category": "Cf",
+      "char": "󠀨",
+      "code": "U+E0028",
+      "codepoint": 917544,
+      "combining_class": 0,
+      "name": "TAG LEFT PARENTHESIS",
+      "notes": "tag character; format",
+      "tags": [
+        "format",
+        "tag_character"
+      ],
+      "tier": "tier0"
+    },
+    {
+      "bidi_class": "BN",
+      "category": "Cf",
+      "char": "󠀩",
+      "code": "U+E0029",
+      "codepoint": 917545,
+      "combining_class": 0,
+      "name": "TAG RIGHT PARENTHESIS",
+      "notes": "tag character; format",
+      "tags": [
+        "format",
+        "tag_character"
+      ],
+      "tier": "tier0"
+    },
+    {
+      "bidi_class": "BN",
+      "category": "Cf",
+      "char": "󠀪",
+      "code": "U+E002A",
+      "codepoint": 917546,
+      "combining_class": 0,
+      "name": "TAG ASTERISK",
+      "notes": "tag character; format",
+      "tags": [
+        "format",
+        "tag_character"
+      ],
+      "tier": "tier0"
+    },
+    {
+      "bidi_class": "BN",
+      "category": "Cf",
+      "char": "󠀫",
+      "code": "U+E002B",
+      "codepoint": 917547,
+      "combining_class": 0,
+      "name": "TAG PLUS SIGN",
+      "notes": "tag character; format",
+      "tags": [
+        "format",
+        "tag_character"
+      ],
+      "tier": "tier0"
+    },
+    {
+      "bidi_class": "BN",
+      "category": "Cf",
+      "char": "󠀬",
+      "code": "U+E002C",
+      "codepoint": 917548,
+      "combining_class": 0,
+      "name": "TAG COMMA",
+      "notes": "tag character; format",
+      "tags": [
+        "format",
+        "tag_character"
+      ],
+      "tier": "tier0"
+    },
+    {
+      "bidi_class": "BN",
+      "category": "Cf",
+      "char": "󠀭",
+      "code": "U+E002D",
+      "codepoint": 917549,
+      "combining_class": 0,
+      "name": "TAG HYPHEN-MINUS",
+      "notes": "tag character; format",
+      "tags": [
+        "format",
+        "tag_character"
+      ],
+      "tier": "tier0"
+    },
+    {
+      "bidi_class": "BN",
+      "category": "Cf",
+      "char": "󠀮",
+      "code": "U+E002E",
+      "codepoint": 917550,
+      "combining_class": 0,
+      "name": "TAG FULL STOP",
+      "notes": "tag character; format",
+      "tags": [
+        "format",
+        "tag_character"
+      ],
+      "tier": "tier0"
+    },
+    {
+      "bidi_class": "BN",
+      "category": "Cf",
+      "char": "󠀯",
+      "code": "U+E002F",
+      "codepoint": 917551,
+      "combining_class": 0,
+      "name": "TAG SOLIDUS",
+      "notes": "tag character; format",
+      "tags": [
+        "format",
+        "tag_character"
+      ],
+      "tier": "tier0"
+    },
+    {
+      "bidi_class": "BN",
+      "category": "Cf",
+      "char": "󠀰",
+      "code": "U+E0030",
+      "codepoint": 917552,
+      "combining_class": 0,
+      "name": "TAG DIGIT ZERO",
+      "notes": "tag character; format",
+      "tags": [
+        "format",
+        "tag_character"
+      ],
+      "tier": "tier0"
+    },
+    {
+      "bidi_class": "BN",
+      "category": "Cf",
+      "char": "󠀱",
+      "code": "U+E0031",
+      "codepoint": 917553,
+      "combining_class": 0,
+      "name": "TAG DIGIT ONE",
+      "notes": "tag character; format",
+      "tags": [
+        "format",
+        "tag_character"
+      ],
+      "tier": "tier0"
+    },
+    {
+      "bidi_class": "BN",
+      "category": "Cf",
+      "char": "󠀲",
+      "code": "U+E0032",
+      "codepoint": 917554,
+      "combining_class": 0,
+      "name": "TAG DIGIT TWO",
+      "notes": "tag character; format",
+      "tags": [
+        "format",
+        "tag_character"
+      ],
+      "tier": "tier0"
+    },
+    {
+      "bidi_class": "BN",
+      "category": "Cf",
+      "char": "󠀳",
+      "code": "U+E0033",
+      "codepoint": 917555,
+      "combining_class": 0,
+      "name": "TAG DIGIT THREE",
+      "notes": "tag character; format",
+      "tags": [
+        "format",
+        "tag_character"
+      ],
+      "tier": "tier0"
+    },
+    {
+      "bidi_class": "BN",
+      "category": "Cf",
+      "char": "󠀴",
+      "code": "U+E0034",
+      "codepoint": 917556,
+      "combining_class": 0,
+      "name": "TAG DIGIT FOUR",
+      "notes": "tag character; format",
+      "tags": [
+        "format",
+        "tag_character"
+      ],
+      "tier": "tier0"
+    },
+    {
+      "bidi_class": "BN",
+      "category": "Cf",
+      "char": "󠀵",
+      "code": "U+E0035",
+      "codepoint": 917557,
+      "combining_class": 0,
+      "name": "TAG DIGIT FIVE",
+      "notes": "tag character; format",
+      "tags": [
+        "format",
+        "tag_character"
+      ],
+      "tier": "tier0"
+    },
+    {
+      "bidi_class": "BN",
+      "category": "Cf",
+      "char": "󠀶",
+      "code": "U+E0036",
+      "codepoint": 917558,
+      "combining_class": 0,
+      "name": "TAG DIGIT SIX",
+      "notes": "tag character; format",
+      "tags": [
+        "format",
+        "tag_character"
+      ],
+      "tier": "tier0"
+    },
+    {
+      "bidi_class": "BN",
+      "category": "Cf",
+      "char": "󠀷",
+      "code": "U+E0037",
+      "codepoint": 917559,
+      "combining_class": 0,
+      "name": "TAG DIGIT SEVEN",
+      "notes": "tag character; format",
+      "tags": [
+        "format",
+        "tag_character"
+      ],
+      "tier": "tier0"
+    },
+    {
+      "bidi_class": "BN",
+      "category": "Cf",
+      "char": "󠀸",
+      "code": "U+E0038",
+      "codepoint": 917560,
+      "combining_class": 0,
+      "name": "TAG DIGIT EIGHT",
+      "notes": "tag character; format",
+      "tags": [
+        "format",
+        "tag_character"
+      ],
+      "tier": "tier0"
+    },
+    {
+      "bidi_class": "BN",
+      "category": "Cf",
+      "char": "󠀹",
+      "code": "U+E0039",
+      "codepoint": 917561,
+      "combining_class": 0,
+      "name": "TAG DIGIT NINE",
+      "notes": "tag character; format",
+      "tags": [
+        "format",
+        "tag_character"
+      ],
+      "tier": "tier0"
+    },
+    {
+      "bidi_class": "BN",
+      "category": "Cf",
+      "char": "󠀺",
+      "code": "U+E003A",
+      "codepoint": 917562,
+      "combining_class": 0,
+      "name": "TAG COLON",
+      "notes": "tag character; format",
+      "tags": [
+        "format",
+        "tag_character"
+      ],
+      "tier": "tier0"
+    },
+    {
+      "bidi_class": "BN",
+      "category": "Cf",
+      "char": "󠀻",
+      "code": "U+E003B",
+      "codepoint": 917563,
+      "combining_class": 0,
+      "name": "TAG SEMICOLON",
+      "notes": "tag character; format",
+      "tags": [
+        "format",
+        "tag_character"
+      ],
+      "tier": "tier0"
+    },
+    {
+      "bidi_class": "BN",
+      "category": "Cf",
+      "char": "󠀼",
+      "code": "U+E003C",
+      "codepoint": 917564,
+      "combining_class": 0,
+      "name": "TAG LESS-THAN SIGN",
+      "notes": "tag character; format",
+      "tags": [
+        "format",
+        "tag_character"
+      ],
+      "tier": "tier0"
+    },
+    {
+      "bidi_class": "BN",
+      "category": "Cf",
+      "char": "󠀽",
+      "code": "U+E003D",
+      "codepoint": 917565,
+      "combining_class": 0,
+      "name": "TAG EQUALS SIGN",
+      "notes": "tag character; format",
+      "tags": [
+        "format",
+        "tag_character"
+      ],
+      "tier": "tier0"
+    },
+    {
+      "bidi_class": "BN",
+      "category": "Cf",
+      "char": "󠀾",
+      "code": "U+E003E",
+      "codepoint": 917566,
+      "combining_class": 0,
+      "name": "TAG GREATER-THAN SIGN",
+      "notes": "tag character; format",
+      "tags": [
+        "format",
+        "tag_character"
+      ],
+      "tier": "tier0"
+    },
+    {
+      "bidi_class": "BN",
+      "category": "Cf",
+      "char": "󠀿",
+      "code": "U+E003F",
+      "codepoint": 917567,
+      "combining_class": 0,
+      "name": "TAG QUESTION MARK",
+      "notes": "tag character; format",
+      "tags": [
+        "format",
+        "tag_character"
+      ],
+      "tier": "tier0"
+    },
+    {
+      "bidi_class": "BN",
+      "category": "Cf",
+      "char": "󠁀",
+      "code": "U+E0040",
+      "codepoint": 917568,
+      "combining_class": 0,
+      "name": "TAG COMMERCIAL AT",
+      "notes": "tag character; format",
+      "tags": [
+        "format",
+        "tag_character"
+      ],
+      "tier": "tier0"
+    },
+    {
+      "bidi_class": "BN",
+      "category": "Cf",
+      "char": "󠁁",
+      "code": "U+E0041",
+      "codepoint": 917569,
+      "combining_class": 0,
+      "name": "TAG LATIN CAPITAL LETTER A",
+      "notes": "tag character; format",
+      "tags": [
+        "format",
+        "tag_character"
+      ],
+      "tier": "tier0"
+    },
+    {
+      "bidi_class": "BN",
+      "category": "Cf",
+      "char": "󠁂",
+      "code": "U+E0042",
+      "codepoint": 917570,
+      "combining_class": 0,
+      "name": "TAG LATIN CAPITAL LETTER B",
+      "notes": "tag character; format",
+      "tags": [
+        "format",
+        "tag_character"
+      ],
+      "tier": "tier0"
+    },
+    {
+      "bidi_class": "BN",
+      "category": "Cf",
+      "char": "󠁃",
+      "code": "U+E0043",
+      "codepoint": 917571,
+      "combining_class": 0,
+      "name": "TAG LATIN CAPITAL LETTER C",
+      "notes": "tag character; format",
+      "tags": [
+        "format",
+        "tag_character"
+      ],
+      "tier": "tier0"
+    },
+    {
+      "bidi_class": "BN",
+      "category": "Cf",
+      "char": "󠁄",
+      "code": "U+E0044",
+      "codepoint": 917572,
+      "combining_class": 0,
+      "name": "TAG LATIN CAPITAL LETTER D",
+      "notes": "tag character; format",
+      "tags": [
+        "format",
+        "tag_character"
+      ],
+      "tier": "tier0"
+    },
+    {
+      "bidi_class": "BN",
+      "category": "Cf",
+      "char": "󠁅",
+      "code": "U+E0045",
+      "codepoint": 917573,
+      "combining_class": 0,
+      "name": "TAG LATIN CAPITAL LETTER E",
+      "notes": "tag character; format",
+      "tags": [
+        "format",
+        "tag_character"
+      ],
+      "tier": "tier0"
+    },
+    {
+      "bidi_class": "BN",
+      "category": "Cf",
+      "char": "󠁆",
+      "code": "U+E0046",
+      "codepoint": 917574,
+      "combining_class": 0,
+      "name": "TAG LATIN CAPITAL LETTER F",
+      "notes": "tag character; format",
+      "tags": [
+        "format",
+        "tag_character"
+      ],
+      "tier": "tier0"
+    },
+    {
+      "bidi_class": "BN",
+      "category": "Cf",
+      "char": "󠁇",
+      "code": "U+E0047",
+      "codepoint": 917575,
+      "combining_class": 0,
+      "name": "TAG LATIN CAPITAL LETTER G",
+      "notes": "tag character; format",
+      "tags": [
+        "format",
+        "tag_character"
+      ],
+      "tier": "tier0"
+    },
+    {
+      "bidi_class": "BN",
+      "category": "Cf",
+      "char": "󠁈",
+      "code": "U+E0048",
+      "codepoint": 917576,
+      "combining_class": 0,
+      "name": "TAG LATIN CAPITAL LETTER H",
+      "notes": "tag character; format",
+      "tags": [
+        "format",
+        "tag_character"
+      ],
+      "tier": "tier0"
+    },
+    {
+      "bidi_class": "BN",
+      "category": "Cf",
+      "char": "󠁉",
+      "code": "U+E0049",
+      "codepoint": 917577,
+      "combining_class": 0,
+      "name": "TAG LATIN CAPITAL LETTER I",
+      "notes": "tag character; format",
+      "tags": [
+        "format",
+        "tag_character"
+      ],
+      "tier": "tier0"
+    },
+    {
+      "bidi_class": "BN",
+      "category": "Cf",
+      "char": "󠁊",
+      "code": "U+E004A",
+      "codepoint": 917578,
+      "combining_class": 0,
+      "name": "TAG LATIN CAPITAL LETTER J",
+      "notes": "tag character; format",
+      "tags": [
+        "format",
+        "tag_character"
+      ],
+      "tier": "tier0"
+    },
+    {
+      "bidi_class": "BN",
+      "category": "Cf",
+      "char": "󠁋",
+      "code": "U+E004B",
+      "codepoint": 917579,
+      "combining_class": 0,
+      "name": "TAG LATIN CAPITAL LETTER K",
+      "notes": "tag character; format",
+      "tags": [
+        "format",
+        "tag_character"
+      ],
+      "tier": "tier0"
+    },
+    {
+      "bidi_class": "BN",
+      "category": "Cf",
+      "char": "󠁌",
+      "code": "U+E004C",
+      "codepoint": 917580,
+      "combining_class": 0,
+      "name": "TAG LATIN CAPITAL LETTER L",
+      "notes": "tag character; format",
+      "tags": [
+        "format",
+        "tag_character"
+      ],
+      "tier": "tier0"
+    },
+    {
+      "bidi_class": "BN",
+      "category": "Cf",
+      "char": "󠁍",
+      "code": "U+E004D",
+      "codepoint": 917581,
+      "combining_class": 0,
+      "name": "TAG LATIN CAPITAL LETTER M",
+      "notes": "tag character; format",
+      "tags": [
+        "format",
+        "tag_character"
+      ],
+      "tier": "tier0"
+    },
+    {
+      "bidi_class": "BN",
+      "category": "Cf",
+      "char": "󠁎",
+      "code": "U+E004E",
+      "codepoint": 917582,
+      "combining_class": 0,
+      "name": "TAG LATIN CAPITAL LETTER N",
+      "notes": "tag character; format",
+      "tags": [
+        "format",
+        "tag_character"
+      ],
+      "tier": "tier0"
+    },
+    {
+      "bidi_class": "BN",
+      "category": "Cf",
+      "char": "󠁏",
+      "code": "U+E004F",
+      "codepoint": 917583,
+      "combining_class": 0,
+      "name": "TAG LATIN CAPITAL LETTER O",
+      "notes": "tag character; format",
+      "tags": [
+        "format",
+        "tag_character"
+      ],
+      "tier": "tier0"
+    },
+    {
+      "bidi_class": "BN",
+      "category": "Cf",
+      "char": "󠁐",
+      "code": "U+E0050",
+      "codepoint": 917584,
+      "combining_class": 0,
+      "name": "TAG LATIN CAPITAL LETTER P",
+      "notes": "tag character; format",
+      "tags": [
+        "format",
+        "tag_character"
+      ],
+      "tier": "tier0"
+    },
+    {
+      "bidi_class": "BN",
+      "category": "Cf",
+      "char": "󠁑",
+      "code": "U+E0051",
+      "codepoint": 917585,
+      "combining_class": 0,
+      "name": "TAG LATIN CAPITAL LETTER Q",
+      "notes": "tag character; format",
+      "tags": [
+        "format",
+        "tag_character"
+      ],
+      "tier": "tier0"
+    },
+    {
+      "bidi_class": "BN",
+      "category": "Cf",
+      "char": "󠁒",
+      "code": "U+E0052",
+      "codepoint": 917586,
+      "combining_class": 0,
+      "name": "TAG LATIN CAPITAL LETTER R",
+      "notes": "tag character; format",
+      "tags": [
+        "format",
+        "tag_character"
+      ],
+      "tier": "tier0"
+    },
+    {
+      "bidi_class": "BN",
+      "category": "Cf",
+      "char": "󠁓",
+      "code": "U+E0053",
+      "codepoint": 917587,
+      "combining_class": 0,
+      "name": "TAG LATIN CAPITAL LETTER S",
+      "notes": "tag character; format",
+      "tags": [
+        "format",
+        "tag_character"
+      ],
+      "tier": "tier0"
+    },
+    {
+      "bidi_class": "BN",
+      "category": "Cf",
+      "char": "󠁔",
+      "code": "U+E0054",
+      "codepoint": 917588,
+      "combining_class": 0,
+      "name": "TAG LATIN CAPITAL LETTER T",
+      "notes": "tag character; format",
+      "tags": [
+        "format",
+        "tag_character"
+      ],
+      "tier": "tier0"
+    },
+    {
+      "bidi_class": "BN",
+      "category": "Cf",
+      "char": "󠁕",
+      "code": "U+E0055",
+      "codepoint": 917589,
+      "combining_class": 0,
+      "name": "TAG LATIN CAPITAL LETTER U",
+      "notes": "tag character; format",
+      "tags": [
+        "format",
+        "tag_character"
+      ],
+      "tier": "tier0"
+    },
+    {
+      "bidi_class": "BN",
+      "category": "Cf",
+      "char": "󠁖",
+      "code": "U+E0056",
+      "codepoint": 917590,
+      "combining_class": 0,
+      "name": "TAG LATIN CAPITAL LETTER V",
+      "notes": "tag character; format",
+      "tags": [
+        "format",
+        "tag_character"
+      ],
+      "tier": "tier0"
+    },
+    {
+      "bidi_class": "BN",
+      "category": "Cf",
+      "char": "󠁗",
+      "code": "U+E0057",
+      "codepoint": 917591,
+      "combining_class": 0,
+      "name": "TAG LATIN CAPITAL LETTER W",
+      "notes": "tag character; format",
+      "tags": [
+        "format",
+        "tag_character"
+      ],
+      "tier": "tier0"
+    },
+    {
+      "bidi_class": "BN",
+      "category": "Cf",
+      "char": "󠁘",
+      "code": "U+E0058",
+      "codepoint": 917592,
+      "combining_class": 0,
+      "name": "TAG LATIN CAPITAL LETTER X",
+      "notes": "tag character; format",
+      "tags": [
+        "format",
+        "tag_character"
+      ],
+      "tier": "tier0"
+    },
+    {
+      "bidi_class": "BN",
+      "category": "Cf",
+      "char": "󠁙",
+      "code": "U+E0059",
+      "codepoint": 917593,
+      "combining_class": 0,
+      "name": "TAG LATIN CAPITAL LETTER Y",
+      "notes": "tag character; format",
+      "tags": [
+        "format",
+        "tag_character"
+      ],
+      "tier": "tier0"
+    },
+    {
+      "bidi_class": "BN",
+      "category": "Cf",
+      "char": "󠁚",
+      "code": "U+E005A",
+      "codepoint": 917594,
+      "combining_class": 0,
+      "name": "TAG LATIN CAPITAL LETTER Z",
+      "notes": "tag character; format",
+      "tags": [
+        "format",
+        "tag_character"
+      ],
+      "tier": "tier0"
+    },
+    {
+      "bidi_class": "BN",
+      "category": "Cf",
+      "char": "󠁛",
+      "code": "U+E005B",
+      "codepoint": 917595,
+      "combining_class": 0,
+      "name": "TAG LEFT SQUARE BRACKET",
+      "notes": "tag character; format",
+      "tags": [
+        "format",
+        "tag_character"
+      ],
+      "tier": "tier0"
+    },
+    {
+      "bidi_class": "BN",
+      "category": "Cf",
+      "char": "󠁜",
+      "code": "U+E005C",
+      "codepoint": 917596,
+      "combining_class": 0,
+      "name": "TAG REVERSE SOLIDUS",
+      "notes": "tag character; format",
+      "tags": [
+        "format",
+        "tag_character"
+      ],
+      "tier": "tier0"
+    },
+    {
+      "bidi_class": "BN",
+      "category": "Cf",
+      "char": "󠁝",
+      "code": "U+E005D",
+      "codepoint": 917597,
+      "combining_class": 0,
+      "name": "TAG RIGHT SQUARE BRACKET",
+      "notes": "tag character; format",
+      "tags": [
+        "format",
+        "tag_character"
+      ],
+      "tier": "tier0"
+    },
+    {
+      "bidi_class": "BN",
+      "category": "Cf",
+      "char": "󠁞",
+      "code": "U+E005E",
+      "codepoint": 917598,
+      "combining_class": 0,
+      "name": "TAG CIRCUMFLEX ACCENT",
+      "notes": "tag character; format",
+      "tags": [
+        "format",
+        "tag_character"
+      ],
+      "tier": "tier0"
+    },
+    {
+      "bidi_class": "BN",
+      "category": "Cf",
+      "char": "󠁟",
+      "code": "U+E005F",
+      "codepoint": 917599,
+      "combining_class": 0,
+      "name": "TAG LOW LINE",
+      "notes": "tag character; format",
+      "tags": [
+        "format",
+        "tag_character"
+      ],
+      "tier": "tier0"
+    },
+    {
+      "bidi_class": "BN",
+      "category": "Cf",
+      "char": "󠁠",
+      "code": "U+E0060",
+      "codepoint": 917600,
+      "combining_class": 0,
+      "name": "TAG GRAVE ACCENT",
+      "notes": "tag character; format",
+      "tags": [
+        "format",
+        "tag_character"
+      ],
+      "tier": "tier0"
+    },
+    {
+      "bidi_class": "BN",
+      "category": "Cf",
+      "char": "󠁡",
+      "code": "U+E0061",
+      "codepoint": 917601,
+      "combining_class": 0,
+      "name": "TAG LATIN SMALL LETTER A",
+      "notes": "tag character; format",
+      "tags": [
+        "format",
+        "tag_character"
+      ],
+      "tier": "tier0"
+    },
+    {
+      "bidi_class": "BN",
+      "category": "Cf",
+      "char": "󠁢",
+      "code": "U+E0062",
+      "codepoint": 917602,
+      "combining_class": 0,
+      "name": "TAG LATIN SMALL LETTER B",
+      "notes": "tag character; format",
+      "tags": [
+        "format",
+        "tag_character"
+      ],
+      "tier": "tier0"
+    },
+    {
+      "bidi_class": "BN",
+      "category": "Cf",
+      "char": "󠁣",
+      "code": "U+E0063",
+      "codepoint": 917603,
+      "combining_class": 0,
+      "name": "TAG LATIN SMALL LETTER C",
+      "notes": "tag character; format",
+      "tags": [
+        "format",
+        "tag_character"
+      ],
+      "tier": "tier0"
+    },
+    {
+      "bidi_class": "BN",
+      "category": "Cf",
+      "char": "󠁤",
+      "code": "U+E0064",
+      "codepoint": 917604,
+      "combining_class": 0,
+      "name": "TAG LATIN SMALL LETTER D",
+      "notes": "tag character; format",
+      "tags": [
+        "format",
+        "tag_character"
+      ],
+      "tier": "tier0"
+    },
+    {
+      "bidi_class": "BN",
+      "category": "Cf",
+      "char": "󠁥",
+      "code": "U+E0065",
+      "codepoint": 917605,
+      "combining_class": 0,
+      "name": "TAG LATIN SMALL LETTER E",
+      "notes": "tag character; format",
+      "tags": [
+        "format",
+        "tag_character"
+      ],
+      "tier": "tier0"
+    },
+    {
+      "bidi_class": "BN",
+      "category": "Cf",
+      "char": "󠁦",
+      "code": "U+E0066",
+      "codepoint": 917606,
+      "combining_class": 0,
+      "name": "TAG LATIN SMALL LETTER F",
+      "notes": "tag character; format",
+      "tags": [
+        "format",
+        "tag_character"
+      ],
+      "tier": "tier0"
+    },
+    {
+      "bidi_class": "BN",
+      "category": "Cf",
+      "char": "󠁧",
+      "code": "U+E0067",
+      "codepoint": 917607,
+      "combining_class": 0,
+      "name": "TAG LATIN SMALL LETTER G",
+      "notes": "tag character; format",
+      "tags": [
+        "format",
+        "tag_character"
+      ],
+      "tier": "tier0"
+    },
+    {
+      "bidi_class": "BN",
+      "category": "Cf",
+      "char": "󠁨",
+      "code": "U+E0068",
+      "codepoint": 917608,
+      "combining_class": 0,
+      "name": "TAG LATIN SMALL LETTER H",
+      "notes": "tag character; format",
+      "tags": [
+        "format",
+        "tag_character"
+      ],
+      "tier": "tier0"
+    },
+    {
+      "bidi_class": "BN",
+      "category": "Cf",
+      "char": "󠁩",
+      "code": "U+E0069",
+      "codepoint": 917609,
+      "combining_class": 0,
+      "name": "TAG LATIN SMALL LETTER I",
+      "notes": "tag character; format",
+      "tags": [
+        "format",
+        "tag_character"
+      ],
+      "tier": "tier0"
+    },
+    {
+      "bidi_class": "BN",
+      "category": "Cf",
+      "char": "󠁪",
+      "code": "U+E006A",
+      "codepoint": 917610,
+      "combining_class": 0,
+      "name": "TAG LATIN SMALL LETTER J",
+      "notes": "tag character; format",
+      "tags": [
+        "format",
+        "tag_character"
+      ],
+      "tier": "tier0"
+    },
+    {
+      "bidi_class": "BN",
+      "category": "Cf",
+      "char": "󠁫",
+      "code": "U+E006B",
+      "codepoint": 917611,
+      "combining_class": 0,
+      "name": "TAG LATIN SMALL LETTER K",
+      "notes": "tag character; format",
+      "tags": [
+        "format",
+        "tag_character"
+      ],
+      "tier": "tier0"
+    },
+    {
+      "bidi_class": "BN",
+      "category": "Cf",
+      "char": "󠁬",
+      "code": "U+E006C",
+      "codepoint": 917612,
+      "combining_class": 0,
+      "name": "TAG LATIN SMALL LETTER L",
+      "notes": "tag character; format",
+      "tags": [
+        "format",
+        "tag_character"
+      ],
+      "tier": "tier0"
+    },
+    {
+      "bidi_class": "BN",
+      "category": "Cf",
+      "char": "󠁭",
+      "code": "U+E006D",
+      "codepoint": 917613,
+      "combining_class": 0,
+      "name": "TAG LATIN SMALL LETTER M",
+      "notes": "tag character; format",
+      "tags": [
+        "format",
+        "tag_character"
+      ],
+      "tier": "tier0"
+    },
+    {
+      "bidi_class": "BN",
+      "category": "Cf",
+      "char": "󠁮",
+      "code": "U+E006E",
+      "codepoint": 917614,
+      "combining_class": 0,
+      "name": "TAG LATIN SMALL LETTER N",
+      "notes": "tag character; format",
+      "tags": [
+        "format",
+        "tag_character"
+      ],
+      "tier": "tier0"
+    },
+    {
+      "bidi_class": "BN",
+      "category": "Cf",
+      "char": "󠁯",
+      "code": "U+E006F",
+      "codepoint": 917615,
+      "combining_class": 0,
+      "name": "TAG LATIN SMALL LETTER O",
+      "notes": "tag character; format",
+      "tags": [
+        "format",
+        "tag_character"
+      ],
+      "tier": "tier0"
+    },
+    {
+      "bidi_class": "BN",
+      "category": "Cf",
+      "char": "󠁰",
+      "code": "U+E0070",
+      "codepoint": 917616,
+      "combining_class": 0,
+      "name": "TAG LATIN SMALL LETTER P",
+      "notes": "tag character; format",
+      "tags": [
+        "format",
+        "tag_character"
+      ],
+      "tier": "tier0"
+    },
+    {
+      "bidi_class": "BN",
+      "category": "Cf",
+      "char": "󠁱",
+      "code": "U+E0071",
+      "codepoint": 917617,
+      "combining_class": 0,
+      "name": "TAG LATIN SMALL LETTER Q",
+      "notes": "tag character; format",
+      "tags": [
+        "format",
+        "tag_character"
+      ],
+      "tier": "tier0"
+    },
+    {
+      "bidi_class": "BN",
+      "category": "Cf",
+      "char": "󠁲",
+      "code": "U+E0072",
+      "codepoint": 917618,
+      "combining_class": 0,
+      "name": "TAG LATIN SMALL LETTER R",
+      "notes": "tag character; format",
+      "tags": [
+        "format",
+        "tag_character"
+      ],
+      "tier": "tier0"
+    },
+    {
+      "bidi_class": "BN",
+      "category": "Cf",
+      "char": "󠁳",
+      "code": "U+E0073",
+      "codepoint": 917619,
+      "combining_class": 0,
+      "name": "TAG LATIN SMALL LETTER S",
+      "notes": "tag character; format",
+      "tags": [
+        "format",
+        "tag_character"
+      ],
+      "tier": "tier0"
+    },
+    {
+      "bidi_class": "BN",
+      "category": "Cf",
+      "char": "󠁴",
+      "code": "U+E0074",
+      "codepoint": 917620,
+      "combining_class": 0,
+      "name": "TAG LATIN SMALL LETTER T",
+      "notes": "tag character; format",
+      "tags": [
+        "format",
+        "tag_character"
+      ],
+      "tier": "tier0"
+    },
+    {
+      "bidi_class": "BN",
+      "category": "Cf",
+      "char": "󠁵",
+      "code": "U+E0075",
+      "codepoint": 917621,
+      "combining_class": 0,
+      "name": "TAG LATIN SMALL LETTER U",
+      "notes": "tag character; format",
+      "tags": [
+        "format",
+        "tag_character"
+      ],
+      "tier": "tier0"
+    },
+    {
+      "bidi_class": "BN",
+      "category": "Cf",
+      "char": "󠁶",
+      "code": "U+E0076",
+      "codepoint": 917622,
+      "combining_class": 0,
+      "name": "TAG LATIN SMALL LETTER V",
+      "notes": "tag character; format",
+      "tags": [
+        "format",
+        "tag_character"
+      ],
+      "tier": "tier0"
+    },
+    {
+      "bidi_class": "BN",
+      "category": "Cf",
+      "char": "󠁷",
+      "code": "U+E0077",
+      "codepoint": 917623,
+      "combining_class": 0,
+      "name": "TAG LATIN SMALL LETTER W",
+      "notes": "tag character; format",
+      "tags": [
+        "format",
+        "tag_character"
+      ],
+      "tier": "tier0"
+    },
+    {
+      "bidi_class": "BN",
+      "category": "Cf",
+      "char": "󠁸",
+      "code": "U+E0078",
+      "codepoint": 917624,
+      "combining_class": 0,
+      "name": "TAG LATIN SMALL LETTER X",
+      "notes": "tag character; format",
+      "tags": [
+        "format",
+        "tag_character"
+      ],
+      "tier": "tier0"
+    },
+    {
+      "bidi_class": "BN",
+      "category": "Cf",
+      "char": "󠁹",
+      "code": "U+E0079",
+      "codepoint": 917625,
+      "combining_class": 0,
+      "name": "TAG LATIN SMALL LETTER Y",
+      "notes": "tag character; format",
+      "tags": [
+        "format",
+        "tag_character"
+      ],
+      "tier": "tier0"
+    },
+    {
+      "bidi_class": "BN",
+      "category": "Cf",
+      "char": "󠁺",
+      "code": "U+E007A",
+      "codepoint": 917626,
+      "combining_class": 0,
+      "name": "TAG LATIN SMALL LETTER Z",
+      "notes": "tag character; format",
+      "tags": [
+        "format",
+        "tag_character"
+      ],
+      "tier": "tier0"
+    },
+    {
+      "bidi_class": "BN",
+      "category": "Cf",
+      "char": "󠁻",
+      "code": "U+E007B",
+      "codepoint": 917627,
+      "combining_class": 0,
+      "name": "TAG LEFT CURLY BRACKET",
+      "notes": "tag character; format",
+      "tags": [
+        "format",
+        "tag_character"
+      ],
+      "tier": "tier0"
+    },
+    {
+      "bidi_class": "BN",
+      "category": "Cf",
+      "char": "󠁼",
+      "code": "U+E007C",
+      "codepoint": 917628,
+      "combining_class": 0,
+      "name": "TAG VERTICAL LINE",
+      "notes": "tag character; format",
+      "tags": [
+        "format",
+        "tag_character"
+      ],
+      "tier": "tier0"
+    },
+    {
+      "bidi_class": "BN",
+      "category": "Cf",
+      "char": "󠁽",
+      "code": "U+E007D",
+      "codepoint": 917629,
+      "combining_class": 0,
+      "name": "TAG RIGHT CURLY BRACKET",
+      "notes": "tag character; format",
+      "tags": [
+        "format",
+        "tag_character"
+      ],
+      "tier": "tier0"
+    },
+    {
+      "bidi_class": "BN",
+      "category": "Cf",
+      "char": "󠁾",
+      "code": "U+E007E",
+      "codepoint": 917630,
+      "combining_class": 0,
+      "name": "TAG TILDE",
+      "notes": "tag character; format",
+      "tags": [
+        "format",
+        "tag_character"
+      ],
+      "tier": "tier0"
+    },
+    {
+      "bidi_class": "BN",
+      "category": "Cf",
+      "char": "󠁿",
+      "code": "U+E007F",
+      "codepoint": 917631,
+      "combining_class": 0,
+      "name": "CANCEL TAG",
+      "notes": "tag character; format",
+      "tags": [
+        "format",
+        "tag_character"
+      ],
+      "tier": "tier0"
+    },
+    {
+      "bidi_class": "NSM",
+      "category": "Mn",
+      "char": "󠄀",
+      "code": "U+E0100",
+      "codepoint": 917760,
+      "combining_class": 0,
+      "name": "VARIATION SELECTOR-17",
+      "notes": "variation selector",
+      "tags": [
+        "variation_selector",
+        "variation_selector_supplement"
+      ],
+      "tier": "tier2"
+    },
+    {
+      "bidi_class": "NSM",
+      "category": "Mn",
+      "char": "󠄁",
+      "code": "U+E0101",
+      "codepoint": 917761,
+      "combining_class": 0,
+      "name": "VARIATION SELECTOR-18",
+      "notes": "variation selector",
+      "tags": [
+        "variation_selector",
+        "variation_selector_supplement"
+      ],
+      "tier": "tier2"
+    },
+    {
+      "bidi_class": "NSM",
+      "category": "Mn",
+      "char": "󠄂",
+      "code": "U+E0102",
+      "codepoint": 917762,
+      "combining_class": 0,
+      "name": "VARIATION SELECTOR-19",
+      "notes": "variation selector",
+      "tags": [
+        "variation_selector",
+        "variation_selector_supplement"
+      ],
+      "tier": "tier2"
+    },
+    {
+      "bidi_class": "NSM",
+      "category": "Mn",
+      "char": "󠄃",
+      "code": "U+E0103",
+      "codepoint": 917763,
+      "combining_class": 0,
+      "name": "VARIATION SELECTOR-20",
+      "notes": "variation selector",
+      "tags": [
+        "variation_selector",
+        "variation_selector_supplement"
+      ],
+      "tier": "tier2"
+    },
+    {
+      "bidi_class": "NSM",
+      "category": "Mn",
+      "char": "󠄄",
+      "code": "U+E0104",
+      "codepoint": 917764,
+      "combining_class": 0,
+      "name": "VARIATION SELECTOR-21",
+      "notes": "variation selector",
+      "tags": [
+        "variation_selector",
+        "variation_selector_supplement"
+      ],
+      "tier": "tier2"
+    },
+    {
+      "bidi_class": "NSM",
+      "category": "Mn",
+      "char": "󠄅",
+      "code": "U+E0105",
+      "codepoint": 917765,
+      "combining_class": 0,
+      "name": "VARIATION SELECTOR-22",
+      "notes": "variation selector",
+      "tags": [
+        "variation_selector",
+        "variation_selector_supplement"
+      ],
+      "tier": "tier2"
+    },
+    {
+      "bidi_class": "NSM",
+      "category": "Mn",
+      "char": "󠄆",
+      "code": "U+E0106",
+      "codepoint": 917766,
+      "combining_class": 0,
+      "name": "VARIATION SELECTOR-23",
+      "notes": "variation selector",
+      "tags": [
+        "variation_selector",
+        "variation_selector_supplement"
+      ],
+      "tier": "tier2"
+    },
+    {
+      "bidi_class": "NSM",
+      "category": "Mn",
+      "char": "󠄇",
+      "code": "U+E0107",
+      "codepoint": 917767,
+      "combining_class": 0,
+      "name": "VARIATION SELECTOR-24",
+      "notes": "variation selector",
+      "tags": [
+        "variation_selector",
+        "variation_selector_supplement"
+      ],
+      "tier": "tier2"
+    },
+    {
+      "bidi_class": "NSM",
+      "category": "Mn",
+      "char": "󠄈",
+      "code": "U+E0108",
+      "codepoint": 917768,
+      "combining_class": 0,
+      "name": "VARIATION SELECTOR-25",
+      "notes": "variation selector",
+      "tags": [
+        "variation_selector",
+        "variation_selector_supplement"
+      ],
+      "tier": "tier2"
+    },
+    {
+      "bidi_class": "NSM",
+      "category": "Mn",
+      "char": "󠄉",
+      "code": "U+E0109",
+      "codepoint": 917769,
+      "combining_class": 0,
+      "name": "VARIATION SELECTOR-26",
+      "notes": "variation selector",
+      "tags": [
+        "variation_selector",
+        "variation_selector_supplement"
+      ],
+      "tier": "tier2"
+    },
+    {
+      "bidi_class": "NSM",
+      "category": "Mn",
+      "char": "󠄊",
+      "code": "U+E010A",
+      "codepoint": 917770,
+      "combining_class": 0,
+      "name": "VARIATION SELECTOR-27",
+      "notes": "variation selector",
+      "tags": [
+        "variation_selector",
+        "variation_selector_supplement"
+      ],
+      "tier": "tier2"
+    },
+    {
+      "bidi_class": "NSM",
+      "category": "Mn",
+      "char": "󠄋",
+      "code": "U+E010B",
+      "codepoint": 917771,
+      "combining_class": 0,
+      "name": "VARIATION SELECTOR-28",
+      "notes": "variation selector",
+      "tags": [
+        "variation_selector",
+        "variation_selector_supplement"
+      ],
+      "tier": "tier2"
+    },
+    {
+      "bidi_class": "NSM",
+      "category": "Mn",
+      "char": "󠄌",
+      "code": "U+E010C",
+      "codepoint": 917772,
+      "combining_class": 0,
+      "name": "VARIATION SELECTOR-29",
+      "notes": "variation selector",
+      "tags": [
+        "variation_selector",
+        "variation_selector_supplement"
+      ],
+      "tier": "tier2"
+    },
+    {
+      "bidi_class": "NSM",
+      "category": "Mn",
+      "char": "󠄍",
+      "code": "U+E010D",
+      "codepoint": 917773,
+      "combining_class": 0,
+      "name": "VARIATION SELECTOR-30",
+      "notes": "variation selector",
+      "tags": [
+        "variation_selector",
+        "variation_selector_supplement"
+      ],
+      "tier": "tier2"
+    },
+    {
+      "bidi_class": "NSM",
+      "category": "Mn",
+      "char": "󠄎",
+      "code": "U+E010E",
+      "codepoint": 917774,
+      "combining_class": 0,
+      "name": "VARIATION SELECTOR-31",
+      "notes": "variation selector",
+      "tags": [
+        "variation_selector",
+        "variation_selector_supplement"
+      ],
+      "tier": "tier2"
+    },
+    {
+      "bidi_class": "NSM",
+      "category": "Mn",
+      "char": "󠄏",
+      "code": "U+E010F",
+      "codepoint": 917775,
+      "combining_class": 0,
+      "name": "VARIATION SELECTOR-32",
+      "notes": "variation selector",
+      "tags": [
+        "variation_selector",
+        "variation_selector_supplement"
+      ],
+      "tier": "tier2"
+    },
+    {
+      "bidi_class": "NSM",
+      "category": "Mn",
+      "char": "󠄐",
+      "code": "U+E0110",
+      "codepoint": 917776,
+      "combining_class": 0,
+      "name": "VARIATION SELECTOR-33",
+      "notes": "variation selector",
+      "tags": [
+        "variation_selector",
+        "variation_selector_supplement"
+      ],
+      "tier": "tier2"
+    },
+    {
+      "bidi_class": "NSM",
+      "category": "Mn",
+      "char": "󠄑",
+      "code": "U+E0111",
+      "codepoint": 917777,
+      "combining_class": 0,
+      "name": "VARIATION SELECTOR-34",
+      "notes": "variation selector",
+      "tags": [
+        "variation_selector",
+        "variation_selector_supplement"
+      ],
+      "tier": "tier2"
+    },
+    {
+      "bidi_class": "NSM",
+      "category": "Mn",
+      "char": "󠄒",
+      "code": "U+E0112",
+      "codepoint": 917778,
+      "combining_class": 0,
+      "name": "VARIATION SELECTOR-35",
+      "notes": "variation selector",
+      "tags": [
+        "variation_selector",
+        "variation_selector_supplement"
+      ],
+      "tier": "tier2"
+    },
+    {
+      "bidi_class": "NSM",
+      "category": "Mn",
+      "char": "󠄓",
+      "code": "U+E0113",
+      "codepoint": 917779,
+      "combining_class": 0,
+      "name": "VARIATION SELECTOR-36",
+      "notes": "variation selector",
+      "tags": [
+        "variation_selector",
+        "variation_selector_supplement"
+      ],
+      "tier": "tier2"
+    },
+    {
+      "bidi_class": "NSM",
+      "category": "Mn",
+      "char": "󠄔",
+      "code": "U+E0114",
+      "codepoint": 917780,
+      "combining_class": 0,
+      "name": "VARIATION SELECTOR-37",
+      "notes": "variation selector",
+      "tags": [
+        "variation_selector",
+        "variation_selector_supplement"
+      ],
+      "tier": "tier2"
+    },
+    {
+      "bidi_class": "NSM",
+      "category": "Mn",
+      "char": "󠄕",
+      "code": "U+E0115",
+      "codepoint": 917781,
+      "combining_class": 0,
+      "name": "VARIATION SELECTOR-38",
+      "notes": "variation selector",
+      "tags": [
+        "variation_selector",
+        "variation_selector_supplement"
+      ],
+      "tier": "tier2"
+    },
+    {
+      "bidi_class": "NSM",
+      "category": "Mn",
+      "char": "󠄖",
+      "code": "U+E0116",
+      "codepoint": 917782,
+      "combining_class": 0,
+      "name": "VARIATION SELECTOR-39",
+      "notes": "variation selector",
+      "tags": [
+        "variation_selector",
+        "variation_selector_supplement"
+      ],
+      "tier": "tier2"
+    },
+    {
+      "bidi_class": "NSM",
+      "category": "Mn",
+      "char": "󠄗",
+      "code": "U+E0117",
+      "codepoint": 917783,
+      "combining_class": 0,
+      "name": "VARIATION SELECTOR-40",
+      "notes": "variation selector",
+      "tags": [
+        "variation_selector",
+        "variation_selector_supplement"
+      ],
+      "tier": "tier2"
+    },
+    {
+      "bidi_class": "NSM",
+      "category": "Mn",
+      "char": "󠄘",
+      "code": "U+E0118",
+      "codepoint": 917784,
+      "combining_class": 0,
+      "name": "VARIATION SELECTOR-41",
+      "notes": "variation selector",
+      "tags": [
+        "variation_selector",
+        "variation_selector_supplement"
+      ],
+      "tier": "tier2"
+    },
+    {
+      "bidi_class": "NSM",
+      "category": "Mn",
+      "char": "󠄙",
+      "code": "U+E0119",
+      "codepoint": 917785,
+      "combining_class": 0,
+      "name": "VARIATION SELECTOR-42",
+      "notes": "variation selector",
+      "tags": [
+        "variation_selector",
+        "variation_selector_supplement"
+      ],
+      "tier": "tier2"
+    },
+    {
+      "bidi_class": "NSM",
+      "category": "Mn",
+      "char": "󠄚",
+      "code": "U+E011A",
+      "codepoint": 917786,
+      "combining_class": 0,
+      "name": "VARIATION SELECTOR-43",
+      "notes": "variation selector",
+      "tags": [
+        "variation_selector",
+        "variation_selector_supplement"
+      ],
+      "tier": "tier2"
+    },
+    {
+      "bidi_class": "NSM",
+      "category": "Mn",
+      "char": "󠄛",
+      "code": "U+E011B",
+      "codepoint": 917787,
+      "combining_class": 0,
+      "name": "VARIATION SELECTOR-44",
+      "notes": "variation selector",
+      "tags": [
+        "variation_selector",
+        "variation_selector_supplement"
+      ],
+      "tier": "tier2"
+    },
+    {
+      "bidi_class": "NSM",
+      "category": "Mn",
+      "char": "󠄜",
+      "code": "U+E011C",
+      "codepoint": 917788,
+      "combining_class": 0,
+      "name": "VARIATION SELECTOR-45",
+      "notes": "variation selector",
+      "tags": [
+        "variation_selector",
+        "variation_selector_supplement"
+      ],
+      "tier": "tier2"
+    },
+    {
+      "bidi_class": "NSM",
+      "category": "Mn",
+      "char": "󠄝",
+      "code": "U+E011D",
+      "codepoint": 917789,
+      "combining_class": 0,
+      "name": "VARIATION SELECTOR-46",
+      "notes": "variation selector",
+      "tags": [
+        "variation_selector",
+        "variation_selector_supplement"
+      ],
+      "tier": "tier2"
+    },
+    {
+      "bidi_class": "NSM",
+      "category": "Mn",
+      "char": "󠄞",
+      "code": "U+E011E",
+      "codepoint": 917790,
+      "combining_class": 0,
+      "name": "VARIATION SELECTOR-47",
+      "notes": "variation selector",
+      "tags": [
+        "variation_selector",
+        "variation_selector_supplement"
+      ],
+      "tier": "tier2"
+    },
+    {
+      "bidi_class": "NSM",
+      "category": "Mn",
+      "char": "󠄟",
+      "code": "U+E011F",
+      "codepoint": 917791,
+      "combining_class": 0,
+      "name": "VARIATION SELECTOR-48",
+      "notes": "variation selector",
+      "tags": [
+        "variation_selector",
+        "variation_selector_supplement"
+      ],
+      "tier": "tier2"
+    },
+    {
+      "bidi_class": "NSM",
+      "category": "Mn",
+      "char": "󠄠",
+      "code": "U+E0120",
+      "codepoint": 917792,
+      "combining_class": 0,
+      "name": "VARIATION SELECTOR-49",
+      "notes": "variation selector",
+      "tags": [
+        "variation_selector",
+        "variation_selector_supplement"
+      ],
+      "tier": "tier2"
+    },
+    {
+      "bidi_class": "NSM",
+      "category": "Mn",
+      "char": "󠄡",
+      "code": "U+E0121",
+      "codepoint": 917793,
+      "combining_class": 0,
+      "name": "VARIATION SELECTOR-50",
+      "notes": "variation selector",
+      "tags": [
+        "variation_selector",
+        "variation_selector_supplement"
+      ],
+      "tier": "tier2"
+    },
+    {
+      "bidi_class": "NSM",
+      "category": "Mn",
+      "char": "󠄢",
+      "code": "U+E0122",
+      "codepoint": 917794,
+      "combining_class": 0,
+      "name": "VARIATION SELECTOR-51",
+      "notes": "variation selector",
+      "tags": [
+        "variation_selector",
+        "variation_selector_supplement"
+      ],
+      "tier": "tier2"
+    },
+    {
+      "bidi_class": "NSM",
+      "category": "Mn",
+      "char": "󠄣",
+      "code": "U+E0123",
+      "codepoint": 917795,
+      "combining_class": 0,
+      "name": "VARIATION SELECTOR-52",
+      "notes": "variation selector",
+      "tags": [
+        "variation_selector",
+        "variation_selector_supplement"
+      ],
+      "tier": "tier2"
+    },
+    {
+      "bidi_class": "NSM",
+      "category": "Mn",
+      "char": "󠄤",
+      "code": "U+E0124",
+      "codepoint": 917796,
+      "combining_class": 0,
+      "name": "VARIATION SELECTOR-53",
+      "notes": "variation selector",
+      "tags": [
+        "variation_selector",
+        "variation_selector_supplement"
+      ],
+      "tier": "tier2"
+    },
+    {
+      "bidi_class": "NSM",
+      "category": "Mn",
+      "char": "󠄥",
+      "code": "U+E0125",
+      "codepoint": 917797,
+      "combining_class": 0,
+      "name": "VARIATION SELECTOR-54",
+      "notes": "variation selector",
+      "tags": [
+        "variation_selector",
+        "variation_selector_supplement"
+      ],
+      "tier": "tier2"
+    },
+    {
+      "bidi_class": "NSM",
+      "category": "Mn",
+      "char": "󠄦",
+      "code": "U+E0126",
+      "codepoint": 917798,
+      "combining_class": 0,
+      "name": "VARIATION SELECTOR-55",
+      "notes": "variation selector",
+      "tags": [
+        "variation_selector",
+        "variation_selector_supplement"
+      ],
+      "tier": "tier2"
+    },
+    {
+      "bidi_class": "NSM",
+      "category": "Mn",
+      "char": "󠄧",
+      "code": "U+E0127",
+      "codepoint": 917799,
+      "combining_class": 0,
+      "name": "VARIATION SELECTOR-56",
+      "notes": "variation selector",
+      "tags": [
+        "variation_selector",
+        "variation_selector_supplement"
+      ],
+      "tier": "tier2"
+    },
+    {
+      "bidi_class": "NSM",
+      "category": "Mn",
+      "char": "󠄨",
+      "code": "U+E0128",
+      "codepoint": 917800,
+      "combining_class": 0,
+      "name": "VARIATION SELECTOR-57",
+      "notes": "variation selector",
+      "tags": [
+        "variation_selector",
+        "variation_selector_supplement"
+      ],
+      "tier": "tier2"
+    },
+    {
+      "bidi_class": "NSM",
+      "category": "Mn",
+      "char": "󠄩",
+      "code": "U+E0129",
+      "codepoint": 917801,
+      "combining_class": 0,
+      "name": "VARIATION SELECTOR-58",
+      "notes": "variation selector",
+      "tags": [
+        "variation_selector",
+        "variation_selector_supplement"
+      ],
+      "tier": "tier2"
+    },
+    {
+      "bidi_class": "NSM",
+      "category": "Mn",
+      "char": "󠄪",
+      "code": "U+E012A",
+      "codepoint": 917802,
+      "combining_class": 0,
+      "name": "VARIATION SELECTOR-59",
+      "notes": "variation selector",
+      "tags": [
+        "variation_selector",
+        "variation_selector_supplement"
+      ],
+      "tier": "tier2"
+    },
+    {
+      "bidi_class": "NSM",
+      "category": "Mn",
+      "char": "󠄫",
+      "code": "U+E012B",
+      "codepoint": 917803,
+      "combining_class": 0,
+      "name": "VARIATION SELECTOR-60",
+      "notes": "variation selector",
+      "tags": [
+        "variation_selector",
+        "variation_selector_supplement"
+      ],
+      "tier": "tier2"
+    },
+    {
+      "bidi_class": "NSM",
+      "category": "Mn",
+      "char": "󠄬",
+      "code": "U+E012C",
+      "codepoint": 917804,
+      "combining_class": 0,
+      "name": "VARIATION SELECTOR-61",
+      "notes": "variation selector",
+      "tags": [
+        "variation_selector",
+        "variation_selector_supplement"
+      ],
+      "tier": "tier2"
+    },
+    {
+      "bidi_class": "NSM",
+      "category": "Mn",
+      "char": "󠄭",
+      "code": "U+E012D",
+      "codepoint": 917805,
+      "combining_class": 0,
+      "name": "VARIATION SELECTOR-62",
+      "notes": "variation selector",
+      "tags": [
+        "variation_selector",
+        "variation_selector_supplement"
+      ],
+      "tier": "tier2"
+    },
+    {
+      "bidi_class": "NSM",
+      "category": "Mn",
+      "char": "󠄮",
+      "code": "U+E012E",
+      "codepoint": 917806,
+      "combining_class": 0,
+      "name": "VARIATION SELECTOR-63",
+      "notes": "variation selector",
+      "tags": [
+        "variation_selector",
+        "variation_selector_supplement"
+      ],
+      "tier": "tier2"
+    },
+    {
+      "bidi_class": "NSM",
+      "category": "Mn",
+      "char": "󠄯",
+      "code": "U+E012F",
+      "codepoint": 917807,
+      "combining_class": 0,
+      "name": "VARIATION SELECTOR-64",
+      "notes": "variation selector",
+      "tags": [
+        "variation_selector",
+        "variation_selector_supplement"
+      ],
+      "tier": "tier2"
+    },
+    {
+      "bidi_class": "NSM",
+      "category": "Mn",
+      "char": "󠄰",
+      "code": "U+E0130",
+      "codepoint": 917808,
+      "combining_class": 0,
+      "name": "VARIATION SELECTOR-65",
+      "notes": "variation selector",
+      "tags": [
+        "variation_selector",
+        "variation_selector_supplement"
+      ],
+      "tier": "tier2"
+    },
+    {
+      "bidi_class": "NSM",
+      "category": "Mn",
+      "char": "󠄱",
+      "code": "U+E0131",
+      "codepoint": 917809,
+      "combining_class": 0,
+      "name": "VARIATION SELECTOR-66",
+      "notes": "variation selector",
+      "tags": [
+        "variation_selector",
+        "variation_selector_supplement"
+      ],
+      "tier": "tier2"
+    },
+    {
+      "bidi_class": "NSM",
+      "category": "Mn",
+      "char": "󠄲",
+      "code": "U+E0132",
+      "codepoint": 917810,
+      "combining_class": 0,
+      "name": "VARIATION SELECTOR-67",
+      "notes": "variation selector",
+      "tags": [
+        "variation_selector",
+        "variation_selector_supplement"
+      ],
+      "tier": "tier2"
+    },
+    {
+      "bidi_class": "NSM",
+      "category": "Mn",
+      "char": "󠄳",
+      "code": "U+E0133",
+      "codepoint": 917811,
+      "combining_class": 0,
+      "name": "VARIATION SELECTOR-68",
+      "notes": "variation selector",
+      "tags": [
+        "variation_selector",
+        "variation_selector_supplement"
+      ],
+      "tier": "tier2"
+    },
+    {
+      "bidi_class": "NSM",
+      "category": "Mn",
+      "char": "󠄴",
+      "code": "U+E0134",
+      "codepoint": 917812,
+      "combining_class": 0,
+      "name": "VARIATION SELECTOR-69",
+      "notes": "variation selector",
+      "tags": [
+        "variation_selector",
+        "variation_selector_supplement"
+      ],
+      "tier": "tier2"
+    },
+    {
+      "bidi_class": "NSM",
+      "category": "Mn",
+      "char": "󠄵",
+      "code": "U+E0135",
+      "codepoint": 917813,
+      "combining_class": 0,
+      "name": "VARIATION SELECTOR-70",
+      "notes": "variation selector",
+      "tags": [
+        "variation_selector",
+        "variation_selector_supplement"
+      ],
+      "tier": "tier2"
+    },
+    {
+      "bidi_class": "NSM",
+      "category": "Mn",
+      "char": "󠄶",
+      "code": "U+E0136",
+      "codepoint": 917814,
+      "combining_class": 0,
+      "name": "VARIATION SELECTOR-71",
+      "notes": "variation selector",
+      "tags": [
+        "variation_selector",
+        "variation_selector_supplement"
+      ],
+      "tier": "tier2"
+    },
+    {
+      "bidi_class": "NSM",
+      "category": "Mn",
+      "char": "󠄷",
+      "code": "U+E0137",
+      "codepoint": 917815,
+      "combining_class": 0,
+      "name": "VARIATION SELECTOR-72",
+      "notes": "variation selector",
+      "tags": [
+        "variation_selector",
+        "variation_selector_supplement"
+      ],
+      "tier": "tier2"
+    },
+    {
+      "bidi_class": "NSM",
+      "category": "Mn",
+      "char": "󠄸",
+      "code": "U+E0138",
+      "codepoint": 917816,
+      "combining_class": 0,
+      "name": "VARIATION SELECTOR-73",
+      "notes": "variation selector",
+      "tags": [
+        "variation_selector",
+        "variation_selector_supplement"
+      ],
+      "tier": "tier2"
+    },
+    {
+      "bidi_class": "NSM",
+      "category": "Mn",
+      "char": "󠄹",
+      "code": "U+E0139",
+      "codepoint": 917817,
+      "combining_class": 0,
+      "name": "VARIATION SELECTOR-74",
+      "notes": "variation selector",
+      "tags": [
+        "variation_selector",
+        "variation_selector_supplement"
+      ],
+      "tier": "tier2"
+    },
+    {
+      "bidi_class": "NSM",
+      "category": "Mn",
+      "char": "󠄺",
+      "code": "U+E013A",
+      "codepoint": 917818,
+      "combining_class": 0,
+      "name": "VARIATION SELECTOR-75",
+      "notes": "variation selector",
+      "tags": [
+        "variation_selector",
+        "variation_selector_supplement"
+      ],
+      "tier": "tier2"
+    },
+    {
+      "bidi_class": "NSM",
+      "category": "Mn",
+      "char": "󠄻",
+      "code": "U+E013B",
+      "codepoint": 917819,
+      "combining_class": 0,
+      "name": "VARIATION SELECTOR-76",
+      "notes": "variation selector",
+      "tags": [
+        "variation_selector",
+        "variation_selector_supplement"
+      ],
+      "tier": "tier2"
+    },
+    {
+      "bidi_class": "NSM",
+      "category": "Mn",
+      "char": "󠄼",
+      "code": "U+E013C",
+      "codepoint": 917820,
+      "combining_class": 0,
+      "name": "VARIATION SELECTOR-77",
+      "notes": "variation selector",
+      "tags": [
+        "variation_selector",
+        "variation_selector_supplement"
+      ],
+      "tier": "tier2"
+    },
+    {
+      "bidi_class": "NSM",
+      "category": "Mn",
+      "char": "󠄽",
+      "code": "U+E013D",
+      "codepoint": 917821,
+      "combining_class": 0,
+      "name": "VARIATION SELECTOR-78",
+      "notes": "variation selector",
+      "tags": [
+        "variation_selector",
+        "variation_selector_supplement"
+      ],
+      "tier": "tier2"
+    },
+    {
+      "bidi_class": "NSM",
+      "category": "Mn",
+      "char": "󠄾",
+      "code": "U+E013E",
+      "codepoint": 917822,
+      "combining_class": 0,
+      "name": "VARIATION SELECTOR-79",
+      "notes": "variation selector",
+      "tags": [
+        "variation_selector",
+        "variation_selector_supplement"
+      ],
+      "tier": "tier2"
+    },
+    {
+      "bidi_class": "NSM",
+      "category": "Mn",
+      "char": "󠄿",
+      "code": "U+E013F",
+      "codepoint": 917823,
+      "combining_class": 0,
+      "name": "VARIATION SELECTOR-80",
+      "notes": "variation selector",
+      "tags": [
+        "variation_selector",
+        "variation_selector_supplement"
+      ],
+      "tier": "tier2"
+    },
+    {
+      "bidi_class": "NSM",
+      "category": "Mn",
+      "char": "󠅀",
+      "code": "U+E0140",
+      "codepoint": 917824,
+      "combining_class": 0,
+      "name": "VARIATION SELECTOR-81",
+      "notes": "variation selector",
+      "tags": [
+        "variation_selector",
+        "variation_selector_supplement"
+      ],
+      "tier": "tier2"
+    },
+    {
+      "bidi_class": "NSM",
+      "category": "Mn",
+      "char": "󠅁",
+      "code": "U+E0141",
+      "codepoint": 917825,
+      "combining_class": 0,
+      "name": "VARIATION SELECTOR-82",
+      "notes": "variation selector",
+      "tags": [
+        "variation_selector",
+        "variation_selector_supplement"
+      ],
+      "tier": "tier2"
+    },
+    {
+      "bidi_class": "NSM",
+      "category": "Mn",
+      "char": "󠅂",
+      "code": "U+E0142",
+      "codepoint": 917826,
+      "combining_class": 0,
+      "name": "VARIATION SELECTOR-83",
+      "notes": "variation selector",
+      "tags": [
+        "variation_selector",
+        "variation_selector_supplement"
+      ],
+      "tier": "tier2"
+    },
+    {
+      "bidi_class": "NSM",
+      "category": "Mn",
+      "char": "󠅃",
+      "code": "U+E0143",
+      "codepoint": 917827,
+      "combining_class": 0,
+      "name": "VARIATION SELECTOR-84",
+      "notes": "variation selector",
+      "tags": [
+        "variation_selector",
+        "variation_selector_supplement"
+      ],
+      "tier": "tier2"
+    },
+    {
+      "bidi_class": "NSM",
+      "category": "Mn",
+      "char": "󠅄",
+      "code": "U+E0144",
+      "codepoint": 917828,
+      "combining_class": 0,
+      "name": "VARIATION SELECTOR-85",
+      "notes": "variation selector",
+      "tags": [
+        "variation_selector",
+        "variation_selector_supplement"
+      ],
+      "tier": "tier2"
+    },
+    {
+      "bidi_class": "NSM",
+      "category": "Mn",
+      "char": "󠅅",
+      "code": "U+E0145",
+      "codepoint": 917829,
+      "combining_class": 0,
+      "name": "VARIATION SELECTOR-86",
+      "notes": "variation selector",
+      "tags": [
+        "variation_selector",
+        "variation_selector_supplement"
+      ],
+      "tier": "tier2"
+    },
+    {
+      "bidi_class": "NSM",
+      "category": "Mn",
+      "char": "󠅆",
+      "code": "U+E0146",
+      "codepoint": 917830,
+      "combining_class": 0,
+      "name": "VARIATION SELECTOR-87",
+      "notes": "variation selector",
+      "tags": [
+        "variation_selector",
+        "variation_selector_supplement"
+      ],
+      "tier": "tier2"
+    },
+    {
+      "bidi_class": "NSM",
+      "category": "Mn",
+      "char": "󠅇",
+      "code": "U+E0147",
+      "codepoint": 917831,
+      "combining_class": 0,
+      "name": "VARIATION SELECTOR-88",
+      "notes": "variation selector",
+      "tags": [
+        "variation_selector",
+        "variation_selector_supplement"
+      ],
+      "tier": "tier2"
+    },
+    {
+      "bidi_class": "NSM",
+      "category": "Mn",
+      "char": "󠅈",
+      "code": "U+E0148",
+      "codepoint": 917832,
+      "combining_class": 0,
+      "name": "VARIATION SELECTOR-89",
+      "notes": "variation selector",
+      "tags": [
+        "variation_selector",
+        "variation_selector_supplement"
+      ],
+      "tier": "tier2"
+    },
+    {
+      "bidi_class": "NSM",
+      "category": "Mn",
+      "char": "󠅉",
+      "code": "U+E0149",
+      "codepoint": 917833,
+      "combining_class": 0,
+      "name": "VARIATION SELECTOR-90",
+      "notes": "variation selector",
+      "tags": [
+        "variation_selector",
+        "variation_selector_supplement"
+      ],
+      "tier": "tier2"
+    },
+    {
+      "bidi_class": "NSM",
+      "category": "Mn",
+      "char": "󠅊",
+      "code": "U+E014A",
+      "codepoint": 917834,
+      "combining_class": 0,
+      "name": "VARIATION SELECTOR-91",
+      "notes": "variation selector",
+      "tags": [
+        "variation_selector",
+        "variation_selector_supplement"
+      ],
+      "tier": "tier2"
+    },
+    {
+      "bidi_class": "NSM",
+      "category": "Mn",
+      "char": "󠅋",
+      "code": "U+E014B",
+      "codepoint": 917835,
+      "combining_class": 0,
+      "name": "VARIATION SELECTOR-92",
+      "notes": "variation selector",
+      "tags": [
+        "variation_selector",
+        "variation_selector_supplement"
+      ],
+      "tier": "tier2"
+    },
+    {
+      "bidi_class": "NSM",
+      "category": "Mn",
+      "char": "󠅌",
+      "code": "U+E014C",
+      "codepoint": 917836,
+      "combining_class": 0,
+      "name": "VARIATION SELECTOR-93",
+      "notes": "variation selector",
+      "tags": [
+        "variation_selector",
+        "variation_selector_supplement"
+      ],
+      "tier": "tier2"
+    },
+    {
+      "bidi_class": "NSM",
+      "category": "Mn",
+      "char": "󠅍",
+      "code": "U+E014D",
+      "codepoint": 917837,
+      "combining_class": 0,
+      "name": "VARIATION SELECTOR-94",
+      "notes": "variation selector",
+      "tags": [
+        "variation_selector",
+        "variation_selector_supplement"
+      ],
+      "tier": "tier2"
+    },
+    {
+      "bidi_class": "NSM",
+      "category": "Mn",
+      "char": "󠅎",
+      "code": "U+E014E",
+      "codepoint": 917838,
+      "combining_class": 0,
+      "name": "VARIATION SELECTOR-95",
+      "notes": "variation selector",
+      "tags": [
+        "variation_selector",
+        "variation_selector_supplement"
+      ],
+      "tier": "tier2"
+    },
+    {
+      "bidi_class": "NSM",
+      "category": "Mn",
+      "char": "󠅏",
+      "code": "U+E014F",
+      "codepoint": 917839,
+      "combining_class": 0,
+      "name": "VARIATION SELECTOR-96",
+      "notes": "variation selector",
+      "tags": [
+        "variation_selector",
+        "variation_selector_supplement"
+      ],
+      "tier": "tier2"
+    },
+    {
+      "bidi_class": "NSM",
+      "category": "Mn",
+      "char": "󠅐",
+      "code": "U+E0150",
+      "codepoint": 917840,
+      "combining_class": 0,
+      "name": "VARIATION SELECTOR-97",
+      "notes": "variation selector",
+      "tags": [
+        "variation_selector",
+        "variation_selector_supplement"
+      ],
+      "tier": "tier2"
+    },
+    {
+      "bidi_class": "NSM",
+      "category": "Mn",
+      "char": "󠅑",
+      "code": "U+E0151",
+      "codepoint": 917841,
+      "combining_class": 0,
+      "name": "VARIATION SELECTOR-98",
+      "notes": "variation selector",
+      "tags": [
+        "variation_selector",
+        "variation_selector_supplement"
+      ],
+      "tier": "tier2"
+    },
+    {
+      "bidi_class": "NSM",
+      "category": "Mn",
+      "char": "󠅒",
+      "code": "U+E0152",
+      "codepoint": 917842,
+      "combining_class": 0,
+      "name": "VARIATION SELECTOR-99",
+      "notes": "variation selector",
+      "tags": [
+        "variation_selector",
+        "variation_selector_supplement"
+      ],
+      "tier": "tier2"
+    },
+    {
+      "bidi_class": "NSM",
+      "category": "Mn",
+      "char": "󠅓",
+      "code": "U+E0153",
+      "codepoint": 917843,
+      "combining_class": 0,
+      "name": "VARIATION SELECTOR-100",
+      "notes": "variation selector",
+      "tags": [
+        "variation_selector",
+        "variation_selector_supplement"
+      ],
+      "tier": "tier2"
+    },
+    {
+      "bidi_class": "NSM",
+      "category": "Mn",
+      "char": "󠅔",
+      "code": "U+E0154",
+      "codepoint": 917844,
+      "combining_class": 0,
+      "name": "VARIATION SELECTOR-101",
+      "notes": "variation selector",
+      "tags": [
+        "variation_selector",
+        "variation_selector_supplement"
+      ],
+      "tier": "tier2"
+    },
+    {
+      "bidi_class": "NSM",
+      "category": "Mn",
+      "char": "󠅕",
+      "code": "U+E0155",
+      "codepoint": 917845,
+      "combining_class": 0,
+      "name": "VARIATION SELECTOR-102",
+      "notes": "variation selector",
+      "tags": [
+        "variation_selector",
+        "variation_selector_supplement"
+      ],
+      "tier": "tier2"
+    },
+    {
+      "bidi_class": "NSM",
+      "category": "Mn",
+      "char": "󠅖",
+      "code": "U+E0156",
+      "codepoint": 917846,
+      "combining_class": 0,
+      "name": "VARIATION SELECTOR-103",
+      "notes": "variation selector",
+      "tags": [
+        "variation_selector",
+        "variation_selector_supplement"
+      ],
+      "tier": "tier2"
+    },
+    {
+      "bidi_class": "NSM",
+      "category": "Mn",
+      "char": "󠅗",
+      "code": "U+E0157",
+      "codepoint": 917847,
+      "combining_class": 0,
+      "name": "VARIATION SELECTOR-104",
+      "notes": "variation selector",
+      "tags": [
+        "variation_selector",
+        "variation_selector_supplement"
+      ],
+      "tier": "tier2"
+    },
+    {
+      "bidi_class": "NSM",
+      "category": "Mn",
+      "char": "󠅘",
+      "code": "U+E0158",
+      "codepoint": 917848,
+      "combining_class": 0,
+      "name": "VARIATION SELECTOR-105",
+      "notes": "variation selector",
+      "tags": [
+        "variation_selector",
+        "variation_selector_supplement"
+      ],
+      "tier": "tier2"
+    },
+    {
+      "bidi_class": "NSM",
+      "category": "Mn",
+      "char": "󠅙",
+      "code": "U+E0159",
+      "codepoint": 917849,
+      "combining_class": 0,
+      "name": "VARIATION SELECTOR-106",
+      "notes": "variation selector",
+      "tags": [
+        "variation_selector",
+        "variation_selector_supplement"
+      ],
+      "tier": "tier2"
+    },
+    {
+      "bidi_class": "NSM",
+      "category": "Mn",
+      "char": "󠅚",
+      "code": "U+E015A",
+      "codepoint": 917850,
+      "combining_class": 0,
+      "name": "VARIATION SELECTOR-107",
+      "notes": "variation selector",
+      "tags": [
+        "variation_selector",
+        "variation_selector_supplement"
+      ],
+      "tier": "tier2"
+    },
+    {
+      "bidi_class": "NSM",
+      "category": "Mn",
+      "char": "󠅛",
+      "code": "U+E015B",
+      "codepoint": 917851,
+      "combining_class": 0,
+      "name": "VARIATION SELECTOR-108",
+      "notes": "variation selector",
+      "tags": [
+        "variation_selector",
+        "variation_selector_supplement"
+      ],
+      "tier": "tier2"
+    },
+    {
+      "bidi_class": "NSM",
+      "category": "Mn",
+      "char": "󠅜",
+      "code": "U+E015C",
+      "codepoint": 917852,
+      "combining_class": 0,
+      "name": "VARIATION SELECTOR-109",
+      "notes": "variation selector",
+      "tags": [
+        "variation_selector",
+        "variation_selector_supplement"
+      ],
+      "tier": "tier2"
+    },
+    {
+      "bidi_class": "NSM",
+      "category": "Mn",
+      "char": "󠅝",
+      "code": "U+E015D",
+      "codepoint": 917853,
+      "combining_class": 0,
+      "name": "VARIATION SELECTOR-110",
+      "notes": "variation selector",
+      "tags": [
+        "variation_selector",
+        "variation_selector_supplement"
+      ],
+      "tier": "tier2"
+    },
+    {
+      "bidi_class": "NSM",
+      "category": "Mn",
+      "char": "󠅞",
+      "code": "U+E015E",
+      "codepoint": 917854,
+      "combining_class": 0,
+      "name": "VARIATION SELECTOR-111",
+      "notes": "variation selector",
+      "tags": [
+        "variation_selector",
+        "variation_selector_supplement"
+      ],
+      "tier": "tier2"
+    },
+    {
+      "bidi_class": "NSM",
+      "category": "Mn",
+      "char": "󠅟",
+      "code": "U+E015F",
+      "codepoint": 917855,
+      "combining_class": 0,
+      "name": "VARIATION SELECTOR-112",
+      "notes": "variation selector",
+      "tags": [
+        "variation_selector",
+        "variation_selector_supplement"
+      ],
+      "tier": "tier2"
+    },
+    {
+      "bidi_class": "NSM",
+      "category": "Mn",
+      "char": "󠅠",
+      "code": "U+E0160",
+      "codepoint": 917856,
+      "combining_class": 0,
+      "name": "VARIATION SELECTOR-113",
+      "notes": "variation selector",
+      "tags": [
+        "variation_selector",
+        "variation_selector_supplement"
+      ],
+      "tier": "tier2"
+    },
+    {
+      "bidi_class": "NSM",
+      "category": "Mn",
+      "char": "󠅡",
+      "code": "U+E0161",
+      "codepoint": 917857,
+      "combining_class": 0,
+      "name": "VARIATION SELECTOR-114",
+      "notes": "variation selector",
+      "tags": [
+        "variation_selector",
+        "variation_selector_supplement"
+      ],
+      "tier": "tier2"
+    },
+    {
+      "bidi_class": "NSM",
+      "category": "Mn",
+      "char": "󠅢",
+      "code": "U+E0162",
+      "codepoint": 917858,
+      "combining_class": 0,
+      "name": "VARIATION SELECTOR-115",
+      "notes": "variation selector",
+      "tags": [
+        "variation_selector",
+        "variation_selector_supplement"
+      ],
+      "tier": "tier2"
+    },
+    {
+      "bidi_class": "NSM",
+      "category": "Mn",
+      "char": "󠅣",
+      "code": "U+E0163",
+      "codepoint": 917859,
+      "combining_class": 0,
+      "name": "VARIATION SELECTOR-116",
+      "notes": "variation selector",
+      "tags": [
+        "variation_selector",
+        "variation_selector_supplement"
+      ],
+      "tier": "tier2"
+    },
+    {
+      "bidi_class": "NSM",
+      "category": "Mn",
+      "char": "󠅤",
+      "code": "U+E0164",
+      "codepoint": 917860,
+      "combining_class": 0,
+      "name": "VARIATION SELECTOR-117",
+      "notes": "variation selector",
+      "tags": [
+        "variation_selector",
+        "variation_selector_supplement"
+      ],
+      "tier": "tier2"
+    },
+    {
+      "bidi_class": "NSM",
+      "category": "Mn",
+      "char": "󠅥",
+      "code": "U+E0165",
+      "codepoint": 917861,
+      "combining_class": 0,
+      "name": "VARIATION SELECTOR-118",
+      "notes": "variation selector",
+      "tags": [
+        "variation_selector",
+        "variation_selector_supplement"
+      ],
+      "tier": "tier2"
+    },
+    {
+      "bidi_class": "NSM",
+      "category": "Mn",
+      "char": "󠅦",
+      "code": "U+E0166",
+      "codepoint": 917862,
+      "combining_class": 0,
+      "name": "VARIATION SELECTOR-119",
+      "notes": "variation selector",
+      "tags": [
+        "variation_selector",
+        "variation_selector_supplement"
+      ],
+      "tier": "tier2"
+    },
+    {
+      "bidi_class": "NSM",
+      "category": "Mn",
+      "char": "󠅧",
+      "code": "U+E0167",
+      "codepoint": 917863,
+      "combining_class": 0,
+      "name": "VARIATION SELECTOR-120",
+      "notes": "variation selector",
+      "tags": [
+        "variation_selector",
+        "variation_selector_supplement"
+      ],
+      "tier": "tier2"
+    },
+    {
+      "bidi_class": "NSM",
+      "category": "Mn",
+      "char": "󠅨",
+      "code": "U+E0168",
+      "codepoint": 917864,
+      "combining_class": 0,
+      "name": "VARIATION SELECTOR-121",
+      "notes": "variation selector",
+      "tags": [
+        "variation_selector",
+        "variation_selector_supplement"
+      ],
+      "tier": "tier2"
+    },
+    {
+      "bidi_class": "NSM",
+      "category": "Mn",
+      "char": "󠅩",
+      "code": "U+E0169",
+      "codepoint": 917865,
+      "combining_class": 0,
+      "name": "VARIATION SELECTOR-122",
+      "notes": "variation selector",
+      "tags": [
+        "variation_selector",
+        "variation_selector_supplement"
+      ],
+      "tier": "tier2"
+    },
+    {
+      "bidi_class": "NSM",
+      "category": "Mn",
+      "char": "󠅪",
+      "code": "U+E016A",
+      "codepoint": 917866,
+      "combining_class": 0,
+      "name": "VARIATION SELECTOR-123",
+      "notes": "variation selector",
+      "tags": [
+        "variation_selector",
+        "variation_selector_supplement"
+      ],
+      "tier": "tier2"
+    },
+    {
+      "bidi_class": "NSM",
+      "category": "Mn",
+      "char": "󠅫",
+      "code": "U+E016B",
+      "codepoint": 917867,
+      "combining_class": 0,
+      "name": "VARIATION SELECTOR-124",
+      "notes": "variation selector",
+      "tags": [
+        "variation_selector",
+        "variation_selector_supplement"
+      ],
+      "tier": "tier2"
+    },
+    {
+      "bidi_class": "NSM",
+      "category": "Mn",
+      "char": "󠅬",
+      "code": "U+E016C",
+      "codepoint": 917868,
+      "combining_class": 0,
+      "name": "VARIATION SELECTOR-125",
+      "notes": "variation selector",
+      "tags": [
+        "variation_selector",
+        "variation_selector_supplement"
+      ],
+      "tier": "tier2"
+    },
+    {
+      "bidi_class": "NSM",
+      "category": "Mn",
+      "char": "󠅭",
+      "code": "U+E016D",
+      "codepoint": 917869,
+      "combining_class": 0,
+      "name": "VARIATION SELECTOR-126",
+      "notes": "variation selector",
+      "tags": [
+        "variation_selector",
+        "variation_selector_supplement"
+      ],
+      "tier": "tier2"
+    },
+    {
+      "bidi_class": "NSM",
+      "category": "Mn",
+      "char": "󠅮",
+      "code": "U+E016E",
+      "codepoint": 917870,
+      "combining_class": 0,
+      "name": "VARIATION SELECTOR-127",
+      "notes": "variation selector",
+      "tags": [
+        "variation_selector",
+        "variation_selector_supplement"
+      ],
+      "tier": "tier2"
+    },
+    {
+      "bidi_class": "NSM",
+      "category": "Mn",
+      "char": "󠅯",
+      "code": "U+E016F",
+      "codepoint": 917871,
+      "combining_class": 0,
+      "name": "VARIATION SELECTOR-128",
+      "notes": "variation selector",
+      "tags": [
+        "variation_selector",
+        "variation_selector_supplement"
+      ],
+      "tier": "tier2"
+    },
+    {
+      "bidi_class": "NSM",
+      "category": "Mn",
+      "char": "󠅰",
+      "code": "U+E0170",
+      "codepoint": 917872,
+      "combining_class": 0,
+      "name": "VARIATION SELECTOR-129",
+      "notes": "variation selector",
+      "tags": [
+        "variation_selector",
+        "variation_selector_supplement"
+      ],
+      "tier": "tier2"
+    },
+    {
+      "bidi_class": "NSM",
+      "category": "Mn",
+      "char": "󠅱",
+      "code": "U+E0171",
+      "codepoint": 917873,
+      "combining_class": 0,
+      "name": "VARIATION SELECTOR-130",
+      "notes": "variation selector",
+      "tags": [
+        "variation_selector",
+        "variation_selector_supplement"
+      ],
+      "tier": "tier2"
+    },
+    {
+      "bidi_class": "NSM",
+      "category": "Mn",
+      "char": "󠅲",
+      "code": "U+E0172",
+      "codepoint": 917874,
+      "combining_class": 0,
+      "name": "VARIATION SELECTOR-131",
+      "notes": "variation selector",
+      "tags": [
+        "variation_selector",
+        "variation_selector_supplement"
+      ],
+      "tier": "tier2"
+    },
+    {
+      "bidi_class": "NSM",
+      "category": "Mn",
+      "char": "󠅳",
+      "code": "U+E0173",
+      "codepoint": 917875,
+      "combining_class": 0,
+      "name": "VARIATION SELECTOR-132",
+      "notes": "variation selector",
+      "tags": [
+        "variation_selector",
+        "variation_selector_supplement"
+      ],
+      "tier": "tier2"
+    },
+    {
+      "bidi_class": "NSM",
+      "category": "Mn",
+      "char": "󠅴",
+      "code": "U+E0174",
+      "codepoint": 917876,
+      "combining_class": 0,
+      "name": "VARIATION SELECTOR-133",
+      "notes": "variation selector",
+      "tags": [
+        "variation_selector",
+        "variation_selector_supplement"
+      ],
+      "tier": "tier2"
+    },
+    {
+      "bidi_class": "NSM",
+      "category": "Mn",
+      "char": "󠅵",
+      "code": "U+E0175",
+      "codepoint": 917877,
+      "combining_class": 0,
+      "name": "VARIATION SELECTOR-134",
+      "notes": "variation selector",
+      "tags": [
+        "variation_selector",
+        "variation_selector_supplement"
+      ],
+      "tier": "tier2"
+    },
+    {
+      "bidi_class": "NSM",
+      "category": "Mn",
+      "char": "󠅶",
+      "code": "U+E0176",
+      "codepoint": 917878,
+      "combining_class": 0,
+      "name": "VARIATION SELECTOR-135",
+      "notes": "variation selector",
+      "tags": [
+        "variation_selector",
+        "variation_selector_supplement"
+      ],
+      "tier": "tier2"
+    },
+    {
+      "bidi_class": "NSM",
+      "category": "Mn",
+      "char": "󠅷",
+      "code": "U+E0177",
+      "codepoint": 917879,
+      "combining_class": 0,
+      "name": "VARIATION SELECTOR-136",
+      "notes": "variation selector",
+      "tags": [
+        "variation_selector",
+        "variation_selector_supplement"
+      ],
+      "tier": "tier2"
+    },
+    {
+      "bidi_class": "NSM",
+      "category": "Mn",
+      "char": "󠅸",
+      "code": "U+E0178",
+      "codepoint": 917880,
+      "combining_class": 0,
+      "name": "VARIATION SELECTOR-137",
+      "notes": "variation selector",
+      "tags": [
+        "variation_selector",
+        "variation_selector_supplement"
+      ],
+      "tier": "tier2"
+    },
+    {
+      "bidi_class": "NSM",
+      "category": "Mn",
+      "char": "󠅹",
+      "code": "U+E0179",
+      "codepoint": 917881,
+      "combining_class": 0,
+      "name": "VARIATION SELECTOR-138",
+      "notes": "variation selector",
+      "tags": [
+        "variation_selector",
+        "variation_selector_supplement"
+      ],
+      "tier": "tier2"
+    },
+    {
+      "bidi_class": "NSM",
+      "category": "Mn",
+      "char": "󠅺",
+      "code": "U+E017A",
+      "codepoint": 917882,
+      "combining_class": 0,
+      "name": "VARIATION SELECTOR-139",
+      "notes": "variation selector",
+      "tags": [
+        "variation_selector",
+        "variation_selector_supplement"
+      ],
+      "tier": "tier2"
+    },
+    {
+      "bidi_class": "NSM",
+      "category": "Mn",
+      "char": "󠅻",
+      "code": "U+E017B",
+      "codepoint": 917883,
+      "combining_class": 0,
+      "name": "VARIATION SELECTOR-140",
+      "notes": "variation selector",
+      "tags": [
+        "variation_selector",
+        "variation_selector_supplement"
+      ],
+      "tier": "tier2"
+    },
+    {
+      "bidi_class": "NSM",
+      "category": "Mn",
+      "char": "󠅼",
+      "code": "U+E017C",
+      "codepoint": 917884,
+      "combining_class": 0,
+      "name": "VARIATION SELECTOR-141",
+      "notes": "variation selector",
+      "tags": [
+        "variation_selector",
+        "variation_selector_supplement"
+      ],
+      "tier": "tier2"
+    },
+    {
+      "bidi_class": "NSM",
+      "category": "Mn",
+      "char": "󠅽",
+      "code": "U+E017D",
+      "codepoint": 917885,
+      "combining_class": 0,
+      "name": "VARIATION SELECTOR-142",
+      "notes": "variation selector",
+      "tags": [
+        "variation_selector",
+        "variation_selector_supplement"
+      ],
+      "tier": "tier2"
+    },
+    {
+      "bidi_class": "NSM",
+      "category": "Mn",
+      "char": "󠅾",
+      "code": "U+E017E",
+      "codepoint": 917886,
+      "combining_class": 0,
+      "name": "VARIATION SELECTOR-143",
+      "notes": "variation selector",
+      "tags": [
+        "variation_selector",
+        "variation_selector_supplement"
+      ],
+      "tier": "tier2"
+    },
+    {
+      "bidi_class": "NSM",
+      "category": "Mn",
+      "char": "󠅿",
+      "code": "U+E017F",
+      "codepoint": 917887,
+      "combining_class": 0,
+      "name": "VARIATION SELECTOR-144",
+      "notes": "variation selector",
+      "tags": [
+        "variation_selector",
+        "variation_selector_supplement"
+      ],
+      "tier": "tier2"
+    },
+    {
+      "bidi_class": "NSM",
+      "category": "Mn",
+      "char": "󠆀",
+      "code": "U+E0180",
+      "codepoint": 917888,
+      "combining_class": 0,
+      "name": "VARIATION SELECTOR-145",
+      "notes": "variation selector",
+      "tags": [
+        "variation_selector",
+        "variation_selector_supplement"
+      ],
+      "tier": "tier2"
+    },
+    {
+      "bidi_class": "NSM",
+      "category": "Mn",
+      "char": "󠆁",
+      "code": "U+E0181",
+      "codepoint": 917889,
+      "combining_class": 0,
+      "name": "VARIATION SELECTOR-146",
+      "notes": "variation selector",
+      "tags": [
+        "variation_selector",
+        "variation_selector_supplement"
+      ],
+      "tier": "tier2"
+    },
+    {
+      "bidi_class": "NSM",
+      "category": "Mn",
+      "char": "󠆂",
+      "code": "U+E0182",
+      "codepoint": 917890,
+      "combining_class": 0,
+      "name": "VARIATION SELECTOR-147",
+      "notes": "variation selector",
+      "tags": [
+        "variation_selector",
+        "variation_selector_supplement"
+      ],
+      "tier": "tier2"
+    },
+    {
+      "bidi_class": "NSM",
+      "category": "Mn",
+      "char": "󠆃",
+      "code": "U+E0183",
+      "codepoint": 917891,
+      "combining_class": 0,
+      "name": "VARIATION SELECTOR-148",
+      "notes": "variation selector",
+      "tags": [
+        "variation_selector",
+        "variation_selector_supplement"
+      ],
+      "tier": "tier2"
+    },
+    {
+      "bidi_class": "NSM",
+      "category": "Mn",
+      "char": "󠆄",
+      "code": "U+E0184",
+      "codepoint": 917892,
+      "combining_class": 0,
+      "name": "VARIATION SELECTOR-149",
+      "notes": "variation selector",
+      "tags": [
+        "variation_selector",
+        "variation_selector_supplement"
+      ],
+      "tier": "tier2"
+    },
+    {
+      "bidi_class": "NSM",
+      "category": "Mn",
+      "char": "󠆅",
+      "code": "U+E0185",
+      "codepoint": 917893,
+      "combining_class": 0,
+      "name": "VARIATION SELECTOR-150",
+      "notes": "variation selector",
+      "tags": [
+        "variation_selector",
+        "variation_selector_supplement"
+      ],
+      "tier": "tier2"
+    },
+    {
+      "bidi_class": "NSM",
+      "category": "Mn",
+      "char": "󠆆",
+      "code": "U+E0186",
+      "codepoint": 917894,
+      "combining_class": 0,
+      "name": "VARIATION SELECTOR-151",
+      "notes": "variation selector",
+      "tags": [
+        "variation_selector",
+        "variation_selector_supplement"
+      ],
+      "tier": "tier2"
+    },
+    {
+      "bidi_class": "NSM",
+      "category": "Mn",
+      "char": "󠆇",
+      "code": "U+E0187",
+      "codepoint": 917895,
+      "combining_class": 0,
+      "name": "VARIATION SELECTOR-152",
+      "notes": "variation selector",
+      "tags": [
+        "variation_selector",
+        "variation_selector_supplement"
+      ],
+      "tier": "tier2"
+    },
+    {
+      "bidi_class": "NSM",
+      "category": "Mn",
+      "char": "󠆈",
+      "code": "U+E0188",
+      "codepoint": 917896,
+      "combining_class": 0,
+      "name": "VARIATION SELECTOR-153",
+      "notes": "variation selector",
+      "tags": [
+        "variation_selector",
+        "variation_selector_supplement"
+      ],
+      "tier": "tier2"
+    },
+    {
+      "bidi_class": "NSM",
+      "category": "Mn",
+      "char": "󠆉",
+      "code": "U+E0189",
+      "codepoint": 917897,
+      "combining_class": 0,
+      "name": "VARIATION SELECTOR-154",
+      "notes": "variation selector",
+      "tags": [
+        "variation_selector",
+        "variation_selector_supplement"
+      ],
+      "tier": "tier2"
+    },
+    {
+      "bidi_class": "NSM",
+      "category": "Mn",
+      "char": "󠆊",
+      "code": "U+E018A",
+      "codepoint": 917898,
+      "combining_class": 0,
+      "name": "VARIATION SELECTOR-155",
+      "notes": "variation selector",
+      "tags": [
+        "variation_selector",
+        "variation_selector_supplement"
+      ],
+      "tier": "tier2"
+    },
+    {
+      "bidi_class": "NSM",
+      "category": "Mn",
+      "char": "󠆋",
+      "code": "U+E018B",
+      "codepoint": 917899,
+      "combining_class": 0,
+      "name": "VARIATION SELECTOR-156",
+      "notes": "variation selector",
+      "tags": [
+        "variation_selector",
+        "variation_selector_supplement"
+      ],
+      "tier": "tier2"
+    },
+    {
+      "bidi_class": "NSM",
+      "category": "Mn",
+      "char": "󠆌",
+      "code": "U+E018C",
+      "codepoint": 917900,
+      "combining_class": 0,
+      "name": "VARIATION SELECTOR-157",
+      "notes": "variation selector",
+      "tags": [
+        "variation_selector",
+        "variation_selector_supplement"
+      ],
+      "tier": "tier2"
+    },
+    {
+      "bidi_class": "NSM",
+      "category": "Mn",
+      "char": "󠆍",
+      "code": "U+E018D",
+      "codepoint": 917901,
+      "combining_class": 0,
+      "name": "VARIATION SELECTOR-158",
+      "notes": "variation selector",
+      "tags": [
+        "variation_selector",
+        "variation_selector_supplement"
+      ],
+      "tier": "tier2"
+    },
+    {
+      "bidi_class": "NSM",
+      "category": "Mn",
+      "char": "󠆎",
+      "code": "U+E018E",
+      "codepoint": 917902,
+      "combining_class": 0,
+      "name": "VARIATION SELECTOR-159",
+      "notes": "variation selector",
+      "tags": [
+        "variation_selector",
+        "variation_selector_supplement"
+      ],
+      "tier": "tier2"
+    },
+    {
+      "bidi_class": "NSM",
+      "category": "Mn",
+      "char": "󠆏",
+      "code": "U+E018F",
+      "codepoint": 917903,
+      "combining_class": 0,
+      "name": "VARIATION SELECTOR-160",
+      "notes": "variation selector",
+      "tags": [
+        "variation_selector",
+        "variation_selector_supplement"
+      ],
+      "tier": "tier2"
+    },
+    {
+      "bidi_class": "NSM",
+      "category": "Mn",
+      "char": "󠆐",
+      "code": "U+E0190",
+      "codepoint": 917904,
+      "combining_class": 0,
+      "name": "VARIATION SELECTOR-161",
+      "notes": "variation selector",
+      "tags": [
+        "variation_selector",
+        "variation_selector_supplement"
+      ],
+      "tier": "tier2"
+    },
+    {
+      "bidi_class": "NSM",
+      "category": "Mn",
+      "char": "󠆑",
+      "code": "U+E0191",
+      "codepoint": 917905,
+      "combining_class": 0,
+      "name": "VARIATION SELECTOR-162",
+      "notes": "variation selector",
+      "tags": [
+        "variation_selector",
+        "variation_selector_supplement"
+      ],
+      "tier": "tier2"
+    },
+    {
+      "bidi_class": "NSM",
+      "category": "Mn",
+      "char": "󠆒",
+      "code": "U+E0192",
+      "codepoint": 917906,
+      "combining_class": 0,
+      "name": "VARIATION SELECTOR-163",
+      "notes": "variation selector",
+      "tags": [
+        "variation_selector",
+        "variation_selector_supplement"
+      ],
+      "tier": "tier2"
+    },
+    {
+      "bidi_class": "NSM",
+      "category": "Mn",
+      "char": "󠆓",
+      "code": "U+E0193",
+      "codepoint": 917907,
+      "combining_class": 0,
+      "name": "VARIATION SELECTOR-164",
+      "notes": "variation selector",
+      "tags": [
+        "variation_selector",
+        "variation_selector_supplement"
+      ],
+      "tier": "tier2"
+    },
+    {
+      "bidi_class": "NSM",
+      "category": "Mn",
+      "char": "󠆔",
+      "code": "U+E0194",
+      "codepoint": 917908,
+      "combining_class": 0,
+      "name": "VARIATION SELECTOR-165",
+      "notes": "variation selector",
+      "tags": [
+        "variation_selector",
+        "variation_selector_supplement"
+      ],
+      "tier": "tier2"
+    },
+    {
+      "bidi_class": "NSM",
+      "category": "Mn",
+      "char": "󠆕",
+      "code": "U+E0195",
+      "codepoint": 917909,
+      "combining_class": 0,
+      "name": "VARIATION SELECTOR-166",
+      "notes": "variation selector",
+      "tags": [
+        "variation_selector",
+        "variation_selector_supplement"
+      ],
+      "tier": "tier2"
+    },
+    {
+      "bidi_class": "NSM",
+      "category": "Mn",
+      "char": "󠆖",
+      "code": "U+E0196",
+      "codepoint": 917910,
+      "combining_class": 0,
+      "name": "VARIATION SELECTOR-167",
+      "notes": "variation selector",
+      "tags": [
+        "variation_selector",
+        "variation_selector_supplement"
+      ],
+      "tier": "tier2"
+    },
+    {
+      "bidi_class": "NSM",
+      "category": "Mn",
+      "char": "󠆗",
+      "code": "U+E0197",
+      "codepoint": 917911,
+      "combining_class": 0,
+      "name": "VARIATION SELECTOR-168",
+      "notes": "variation selector",
+      "tags": [
+        "variation_selector",
+        "variation_selector_supplement"
+      ],
+      "tier": "tier2"
+    },
+    {
+      "bidi_class": "NSM",
+      "category": "Mn",
+      "char": "󠆘",
+      "code": "U+E0198",
+      "codepoint": 917912,
+      "combining_class": 0,
+      "name": "VARIATION SELECTOR-169",
+      "notes": "variation selector",
+      "tags": [
+        "variation_selector",
+        "variation_selector_supplement"
+      ],
+      "tier": "tier2"
+    },
+    {
+      "bidi_class": "NSM",
+      "category": "Mn",
+      "char": "󠆙",
+      "code": "U+E0199",
+      "codepoint": 917913,
+      "combining_class": 0,
+      "name": "VARIATION SELECTOR-170",
+      "notes": "variation selector",
+      "tags": [
+        "variation_selector",
+        "variation_selector_supplement"
+      ],
+      "tier": "tier2"
+    },
+    {
+      "bidi_class": "NSM",
+      "category": "Mn",
+      "char": "󠆚",
+      "code": "U+E019A",
+      "codepoint": 917914,
+      "combining_class": 0,
+      "name": "VARIATION SELECTOR-171",
+      "notes": "variation selector",
+      "tags": [
+        "variation_selector",
+        "variation_selector_supplement"
+      ],
+      "tier": "tier2"
+    },
+    {
+      "bidi_class": "NSM",
+      "category": "Mn",
+      "char": "󠆛",
+      "code": "U+E019B",
+      "codepoint": 917915,
+      "combining_class": 0,
+      "name": "VARIATION SELECTOR-172",
+      "notes": "variation selector",
+      "tags": [
+        "variation_selector",
+        "variation_selector_supplement"
+      ],
+      "tier": "tier2"
+    },
+    {
+      "bidi_class": "NSM",
+      "category": "Mn",
+      "char": "󠆜",
+      "code": "U+E019C",
+      "codepoint": 917916,
+      "combining_class": 0,
+      "name": "VARIATION SELECTOR-173",
+      "notes": "variation selector",
+      "tags": [
+        "variation_selector",
+        "variation_selector_supplement"
+      ],
+      "tier": "tier2"
+    },
+    {
+      "bidi_class": "NSM",
+      "category": "Mn",
+      "char": "󠆝",
+      "code": "U+E019D",
+      "codepoint": 917917,
+      "combining_class": 0,
+      "name": "VARIATION SELECTOR-174",
+      "notes": "variation selector",
+      "tags": [
+        "variation_selector",
+        "variation_selector_supplement"
+      ],
+      "tier": "tier2"
+    },
+    {
+      "bidi_class": "NSM",
+      "category": "Mn",
+      "char": "󠆞",
+      "code": "U+E019E",
+      "codepoint": 917918,
+      "combining_class": 0,
+      "name": "VARIATION SELECTOR-175",
+      "notes": "variation selector",
+      "tags": [
+        "variation_selector",
+        "variation_selector_supplement"
+      ],
+      "tier": "tier2"
+    },
+    {
+      "bidi_class": "NSM",
+      "category": "Mn",
+      "char": "󠆟",
+      "code": "U+E019F",
+      "codepoint": 917919,
+      "combining_class": 0,
+      "name": "VARIATION SELECTOR-176",
+      "notes": "variation selector",
+      "tags": [
+        "variation_selector",
+        "variation_selector_supplement"
+      ],
+      "tier": "tier2"
+    },
+    {
+      "bidi_class": "NSM",
+      "category": "Mn",
+      "char": "󠆠",
+      "code": "U+E01A0",
+      "codepoint": 917920,
+      "combining_class": 0,
+      "name": "VARIATION SELECTOR-177",
+      "notes": "variation selector",
+      "tags": [
+        "variation_selector",
+        "variation_selector_supplement"
+      ],
+      "tier": "tier2"
+    },
+    {
+      "bidi_class": "NSM",
+      "category": "Mn",
+      "char": "󠆡",
+      "code": "U+E01A1",
+      "codepoint": 917921,
+      "combining_class": 0,
+      "name": "VARIATION SELECTOR-178",
+      "notes": "variation selector",
+      "tags": [
+        "variation_selector",
+        "variation_selector_supplement"
+      ],
+      "tier": "tier2"
+    },
+    {
+      "bidi_class": "NSM",
+      "category": "Mn",
+      "char": "󠆢",
+      "code": "U+E01A2",
+      "codepoint": 917922,
+      "combining_class": 0,
+      "name": "VARIATION SELECTOR-179",
+      "notes": "variation selector",
+      "tags": [
+        "variation_selector",
+        "variation_selector_supplement"
+      ],
+      "tier": "tier2"
+    },
+    {
+      "bidi_class": "NSM",
+      "category": "Mn",
+      "char": "󠆣",
+      "code": "U+E01A3",
+      "codepoint": 917923,
+      "combining_class": 0,
+      "name": "VARIATION SELECTOR-180",
+      "notes": "variation selector",
+      "tags": [
+        "variation_selector",
+        "variation_selector_supplement"
+      ],
+      "tier": "tier2"
+    },
+    {
+      "bidi_class": "NSM",
+      "category": "Mn",
+      "char": "󠆤",
+      "code": "U+E01A4",
+      "codepoint": 917924,
+      "combining_class": 0,
+      "name": "VARIATION SELECTOR-181",
+      "notes": "variation selector",
+      "tags": [
+        "variation_selector",
+        "variation_selector_supplement"
+      ],
+      "tier": "tier2"
+    },
+    {
+      "bidi_class": "NSM",
+      "category": "Mn",
+      "char": "󠆥",
+      "code": "U+E01A5",
+      "codepoint": 917925,
+      "combining_class": 0,
+      "name": "VARIATION SELECTOR-182",
+      "notes": "variation selector",
+      "tags": [
+        "variation_selector",
+        "variation_selector_supplement"
+      ],
+      "tier": "tier2"
+    },
+    {
+      "bidi_class": "NSM",
+      "category": "Mn",
+      "char": "󠆦",
+      "code": "U+E01A6",
+      "codepoint": 917926,
+      "combining_class": 0,
+      "name": "VARIATION SELECTOR-183",
+      "notes": "variation selector",
+      "tags": [
+        "variation_selector",
+        "variation_selector_supplement"
+      ],
+      "tier": "tier2"
+    },
+    {
+      "bidi_class": "NSM",
+      "category": "Mn",
+      "char": "󠆧",
+      "code": "U+E01A7",
+      "codepoint": 917927,
+      "combining_class": 0,
+      "name": "VARIATION SELECTOR-184",
+      "notes": "variation selector",
+      "tags": [
+        "variation_selector",
+        "variation_selector_supplement"
+      ],
+      "tier": "tier2"
+    },
+    {
+      "bidi_class": "NSM",
+      "category": "Mn",
+      "char": "󠆨",
+      "code": "U+E01A8",
+      "codepoint": 917928,
+      "combining_class": 0,
+      "name": "VARIATION SELECTOR-185",
+      "notes": "variation selector",
+      "tags": [
+        "variation_selector",
+        "variation_selector_supplement"
+      ],
+      "tier": "tier2"
+    },
+    {
+      "bidi_class": "NSM",
+      "category": "Mn",
+      "char": "󠆩",
+      "code": "U+E01A9",
+      "codepoint": 917929,
+      "combining_class": 0,
+      "name": "VARIATION SELECTOR-186",
+      "notes": "variation selector",
+      "tags": [
+        "variation_selector",
+        "variation_selector_supplement"
+      ],
+      "tier": "tier2"
+    },
+    {
+      "bidi_class": "NSM",
+      "category": "Mn",
+      "char": "󠆪",
+      "code": "U+E01AA",
+      "codepoint": 917930,
+      "combining_class": 0,
+      "name": "VARIATION SELECTOR-187",
+      "notes": "variation selector",
+      "tags": [
+        "variation_selector",
+        "variation_selector_supplement"
+      ],
+      "tier": "tier2"
+    },
+    {
+      "bidi_class": "NSM",
+      "category": "Mn",
+      "char": "󠆫",
+      "code": "U+E01AB",
+      "codepoint": 917931,
+      "combining_class": 0,
+      "name": "VARIATION SELECTOR-188",
+      "notes": "variation selector",
+      "tags": [
+        "variation_selector",
+        "variation_selector_supplement"
+      ],
+      "tier": "tier2"
+    },
+    {
+      "bidi_class": "NSM",
+      "category": "Mn",
+      "char": "󠆬",
+      "code": "U+E01AC",
+      "codepoint": 917932,
+      "combining_class": 0,
+      "name": "VARIATION SELECTOR-189",
+      "notes": "variation selector",
+      "tags": [
+        "variation_selector",
+        "variation_selector_supplement"
+      ],
+      "tier": "tier2"
+    },
+    {
+      "bidi_class": "NSM",
+      "category": "Mn",
+      "char": "󠆭",
+      "code": "U+E01AD",
+      "codepoint": 917933,
+      "combining_class": 0,
+      "name": "VARIATION SELECTOR-190",
+      "notes": "variation selector",
+      "tags": [
+        "variation_selector",
+        "variation_selector_supplement"
+      ],
+      "tier": "tier2"
+    },
+    {
+      "bidi_class": "NSM",
+      "category": "Mn",
+      "char": "󠆮",
+      "code": "U+E01AE",
+      "codepoint": 917934,
+      "combining_class": 0,
+      "name": "VARIATION SELECTOR-191",
+      "notes": "variation selector",
+      "tags": [
+        "variation_selector",
+        "variation_selector_supplement"
+      ],
+      "tier": "tier2"
+    },
+    {
+      "bidi_class": "NSM",
+      "category": "Mn",
+      "char": "󠆯",
+      "code": "U+E01AF",
+      "codepoint": 917935,
+      "combining_class": 0,
+      "name": "VARIATION SELECTOR-192",
+      "notes": "variation selector",
+      "tags": [
+        "variation_selector",
+        "variation_selector_supplement"
+      ],
+      "tier": "tier2"
+    },
+    {
+      "bidi_class": "NSM",
+      "category": "Mn",
+      "char": "󠆰",
+      "code": "U+E01B0",
+      "codepoint": 917936,
+      "combining_class": 0,
+      "name": "VARIATION SELECTOR-193",
+      "notes": "variation selector",
+      "tags": [
+        "variation_selector",
+        "variation_selector_supplement"
+      ],
+      "tier": "tier2"
+    },
+    {
+      "bidi_class": "NSM",
+      "category": "Mn",
+      "char": "󠆱",
+      "code": "U+E01B1",
+      "codepoint": 917937,
+      "combining_class": 0,
+      "name": "VARIATION SELECTOR-194",
+      "notes": "variation selector",
+      "tags": [
+        "variation_selector",
+        "variation_selector_supplement"
+      ],
+      "tier": "tier2"
+    },
+    {
+      "bidi_class": "NSM",
+      "category": "Mn",
+      "char": "󠆲",
+      "code": "U+E01B2",
+      "codepoint": 917938,
+      "combining_class": 0,
+      "name": "VARIATION SELECTOR-195",
+      "notes": "variation selector",
+      "tags": [
+        "variation_selector",
+        "variation_selector_supplement"
+      ],
+      "tier": "tier2"
+    },
+    {
+      "bidi_class": "NSM",
+      "category": "Mn",
+      "char": "󠆳",
+      "code": "U+E01B3",
+      "codepoint": 917939,
+      "combining_class": 0,
+      "name": "VARIATION SELECTOR-196",
+      "notes": "variation selector",
+      "tags": [
+        "variation_selector",
+        "variation_selector_supplement"
+      ],
+      "tier": "tier2"
+    },
+    {
+      "bidi_class": "NSM",
+      "category": "Mn",
+      "char": "󠆴",
+      "code": "U+E01B4",
+      "codepoint": 917940,
+      "combining_class": 0,
+      "name": "VARIATION SELECTOR-197",
+      "notes": "variation selector",
+      "tags": [
+        "variation_selector",
+        "variation_selector_supplement"
+      ],
+      "tier": "tier2"
+    },
+    {
+      "bidi_class": "NSM",
+      "category": "Mn",
+      "char": "󠆵",
+      "code": "U+E01B5",
+      "codepoint": 917941,
+      "combining_class": 0,
+      "name": "VARIATION SELECTOR-198",
+      "notes": "variation selector",
+      "tags": [
+        "variation_selector",
+        "variation_selector_supplement"
+      ],
+      "tier": "tier2"
+    },
+    {
+      "bidi_class": "NSM",
+      "category": "Mn",
+      "char": "󠆶",
+      "code": "U+E01B6",
+      "codepoint": 917942,
+      "combining_class": 0,
+      "name": "VARIATION SELECTOR-199",
+      "notes": "variation selector",
+      "tags": [
+        "variation_selector",
+        "variation_selector_supplement"
+      ],
+      "tier": "tier2"
+    },
+    {
+      "bidi_class": "NSM",
+      "category": "Mn",
+      "char": "󠆷",
+      "code": "U+E01B7",
+      "codepoint": 917943,
+      "combining_class": 0,
+      "name": "VARIATION SELECTOR-200",
+      "notes": "variation selector",
+      "tags": [
+        "variation_selector",
+        "variation_selector_supplement"
+      ],
+      "tier": "tier2"
+    },
+    {
+      "bidi_class": "NSM",
+      "category": "Mn",
+      "char": "󠆸",
+      "code": "U+E01B8",
+      "codepoint": 917944,
+      "combining_class": 0,
+      "name": "VARIATION SELECTOR-201",
+      "notes": "variation selector",
+      "tags": [
+        "variation_selector",
+        "variation_selector_supplement"
+      ],
+      "tier": "tier2"
+    },
+    {
+      "bidi_class": "NSM",
+      "category": "Mn",
+      "char": "󠆹",
+      "code": "U+E01B9",
+      "codepoint": 917945,
+      "combining_class": 0,
+      "name": "VARIATION SELECTOR-202",
+      "notes": "variation selector",
+      "tags": [
+        "variation_selector",
+        "variation_selector_supplement"
+      ],
+      "tier": "tier2"
+    },
+    {
+      "bidi_class": "NSM",
+      "category": "Mn",
+      "char": "󠆺",
+      "code": "U+E01BA",
+      "codepoint": 917946,
+      "combining_class": 0,
+      "name": "VARIATION SELECTOR-203",
+      "notes": "variation selector",
+      "tags": [
+        "variation_selector",
+        "variation_selector_supplement"
+      ],
+      "tier": "tier2"
+    },
+    {
+      "bidi_class": "NSM",
+      "category": "Mn",
+      "char": "󠆻",
+      "code": "U+E01BB",
+      "codepoint": 917947,
+      "combining_class": 0,
+      "name": "VARIATION SELECTOR-204",
+      "notes": "variation selector",
+      "tags": [
+        "variation_selector",
+        "variation_selector_supplement"
+      ],
+      "tier": "tier2"
+    },
+    {
+      "bidi_class": "NSM",
+      "category": "Mn",
+      "char": "󠆼",
+      "code": "U+E01BC",
+      "codepoint": 917948,
+      "combining_class": 0,
+      "name": "VARIATION SELECTOR-205",
+      "notes": "variation selector",
+      "tags": [
+        "variation_selector",
+        "variation_selector_supplement"
+      ],
+      "tier": "tier2"
+    },
+    {
+      "bidi_class": "NSM",
+      "category": "Mn",
+      "char": "󠆽",
+      "code": "U+E01BD",
+      "codepoint": 917949,
+      "combining_class": 0,
+      "name": "VARIATION SELECTOR-206",
+      "notes": "variation selector",
+      "tags": [
+        "variation_selector",
+        "variation_selector_supplement"
+      ],
+      "tier": "tier2"
+    },
+    {
+      "bidi_class": "NSM",
+      "category": "Mn",
+      "char": "󠆾",
+      "code": "U+E01BE",
+      "codepoint": 917950,
+      "combining_class": 0,
+      "name": "VARIATION SELECTOR-207",
+      "notes": "variation selector",
+      "tags": [
+        "variation_selector",
+        "variation_selector_supplement"
+      ],
+      "tier": "tier2"
+    },
+    {
+      "bidi_class": "NSM",
+      "category": "Mn",
+      "char": "󠆿",
+      "code": "U+E01BF",
+      "codepoint": 917951,
+      "combining_class": 0,
+      "name": "VARIATION SELECTOR-208",
+      "notes": "variation selector",
+      "tags": [
+        "variation_selector",
+        "variation_selector_supplement"
+      ],
+      "tier": "tier2"
+    },
+    {
+      "bidi_class": "NSM",
+      "category": "Mn",
+      "char": "󠇀",
+      "code": "U+E01C0",
+      "codepoint": 917952,
+      "combining_class": 0,
+      "name": "VARIATION SELECTOR-209",
+      "notes": "variation selector",
+      "tags": [
+        "variation_selector",
+        "variation_selector_supplement"
+      ],
+      "tier": "tier2"
+    },
+    {
+      "bidi_class": "NSM",
+      "category": "Mn",
+      "char": "󠇁",
+      "code": "U+E01C1",
+      "codepoint": 917953,
+      "combining_class": 0,
+      "name": "VARIATION SELECTOR-210",
+      "notes": "variation selector",
+      "tags": [
+        "variation_selector",
+        "variation_selector_supplement"
+      ],
+      "tier": "tier2"
+    },
+    {
+      "bidi_class": "NSM",
+      "category": "Mn",
+      "char": "󠇂",
+      "code": "U+E01C2",
+      "codepoint": 917954,
+      "combining_class": 0,
+      "name": "VARIATION SELECTOR-211",
+      "notes": "variation selector",
+      "tags": [
+        "variation_selector",
+        "variation_selector_supplement"
+      ],
+      "tier": "tier2"
+    },
+    {
+      "bidi_class": "NSM",
+      "category": "Mn",
+      "char": "󠇃",
+      "code": "U+E01C3",
+      "codepoint": 917955,
+      "combining_class": 0,
+      "name": "VARIATION SELECTOR-212",
+      "notes": "variation selector",
+      "tags": [
+        "variation_selector",
+        "variation_selector_supplement"
+      ],
+      "tier": "tier2"
+    },
+    {
+      "bidi_class": "NSM",
+      "category": "Mn",
+      "char": "󠇄",
+      "code": "U+E01C4",
+      "codepoint": 917956,
+      "combining_class": 0,
+      "name": "VARIATION SELECTOR-213",
+      "notes": "variation selector",
+      "tags": [
+        "variation_selector",
+        "variation_selector_supplement"
+      ],
+      "tier": "tier2"
+    },
+    {
+      "bidi_class": "NSM",
+      "category": "Mn",
+      "char": "󠇅",
+      "code": "U+E01C5",
+      "codepoint": 917957,
+      "combining_class": 0,
+      "name": "VARIATION SELECTOR-214",
+      "notes": "variation selector",
+      "tags": [
+        "variation_selector",
+        "variation_selector_supplement"
+      ],
+      "tier": "tier2"
+    },
+    {
+      "bidi_class": "NSM",
+      "category": "Mn",
+      "char": "󠇆",
+      "code": "U+E01C6",
+      "codepoint": 917958,
+      "combining_class": 0,
+      "name": "VARIATION SELECTOR-215",
+      "notes": "variation selector",
+      "tags": [
+        "variation_selector",
+        "variation_selector_supplement"
+      ],
+      "tier": "tier2"
+    },
+    {
+      "bidi_class": "NSM",
+      "category": "Mn",
+      "char": "󠇇",
+      "code": "U+E01C7",
+      "codepoint": 917959,
+      "combining_class": 0,
+      "name": "VARIATION SELECTOR-216",
+      "notes": "variation selector",
+      "tags": [
+        "variation_selector",
+        "variation_selector_supplement"
+      ],
+      "tier": "tier2"
+    },
+    {
+      "bidi_class": "NSM",
+      "category": "Mn",
+      "char": "󠇈",
+      "code": "U+E01C8",
+      "codepoint": 917960,
+      "combining_class": 0,
+      "name": "VARIATION SELECTOR-217",
+      "notes": "variation selector",
+      "tags": [
+        "variation_selector",
+        "variation_selector_supplement"
+      ],
+      "tier": "tier2"
+    },
+    {
+      "bidi_class": "NSM",
+      "category": "Mn",
+      "char": "󠇉",
+      "code": "U+E01C9",
+      "codepoint": 917961,
+      "combining_class": 0,
+      "name": "VARIATION SELECTOR-218",
+      "notes": "variation selector",
+      "tags": [
+        "variation_selector",
+        "variation_selector_supplement"
+      ],
+      "tier": "tier2"
+    },
+    {
+      "bidi_class": "NSM",
+      "category": "Mn",
+      "char": "󠇊",
+      "code": "U+E01CA",
+      "codepoint": 917962,
+      "combining_class": 0,
+      "name": "VARIATION SELECTOR-219",
+      "notes": "variation selector",
+      "tags": [
+        "variation_selector",
+        "variation_selector_supplement"
+      ],
+      "tier": "tier2"
+    },
+    {
+      "bidi_class": "NSM",
+      "category": "Mn",
+      "char": "󠇋",
+      "code": "U+E01CB",
+      "codepoint": 917963,
+      "combining_class": 0,
+      "name": "VARIATION SELECTOR-220",
+      "notes": "variation selector",
+      "tags": [
+        "variation_selector",
+        "variation_selector_supplement"
+      ],
+      "tier": "tier2"
+    },
+    {
+      "bidi_class": "NSM",
+      "category": "Mn",
+      "char": "󠇌",
+      "code": "U+E01CC",
+      "codepoint": 917964,
+      "combining_class": 0,
+      "name": "VARIATION SELECTOR-221",
+      "notes": "variation selector",
+      "tags": [
+        "variation_selector",
+        "variation_selector_supplement"
+      ],
+      "tier": "tier2"
+    },
+    {
+      "bidi_class": "NSM",
+      "category": "Mn",
+      "char": "󠇍",
+      "code": "U+E01CD",
+      "codepoint": 917965,
+      "combining_class": 0,
+      "name": "VARIATION SELECTOR-222",
+      "notes": "variation selector",
+      "tags": [
+        "variation_selector",
+        "variation_selector_supplement"
+      ],
+      "tier": "tier2"
+    },
+    {
+      "bidi_class": "NSM",
+      "category": "Mn",
+      "char": "󠇎",
+      "code": "U+E01CE",
+      "codepoint": 917966,
+      "combining_class": 0,
+      "name": "VARIATION SELECTOR-223",
+      "notes": "variation selector",
+      "tags": [
+        "variation_selector",
+        "variation_selector_supplement"
+      ],
+      "tier": "tier2"
+    },
+    {
+      "bidi_class": "NSM",
+      "category": "Mn",
+      "char": "󠇏",
+      "code": "U+E01CF",
+      "codepoint": 917967,
+      "combining_class": 0,
+      "name": "VARIATION SELECTOR-224",
+      "notes": "variation selector",
+      "tags": [
+        "variation_selector",
+        "variation_selector_supplement"
+      ],
+      "tier": "tier2"
+    },
+    {
+      "bidi_class": "NSM",
+      "category": "Mn",
+      "char": "󠇐",
+      "code": "U+E01D0",
+      "codepoint": 917968,
+      "combining_class": 0,
+      "name": "VARIATION SELECTOR-225",
+      "notes": "variation selector",
+      "tags": [
+        "variation_selector",
+        "variation_selector_supplement"
+      ],
+      "tier": "tier2"
+    },
+    {
+      "bidi_class": "NSM",
+      "category": "Mn",
+      "char": "󠇑",
+      "code": "U+E01D1",
+      "codepoint": 917969,
+      "combining_class": 0,
+      "name": "VARIATION SELECTOR-226",
+      "notes": "variation selector",
+      "tags": [
+        "variation_selector",
+        "variation_selector_supplement"
+      ],
+      "tier": "tier2"
+    },
+    {
+      "bidi_class": "NSM",
+      "category": "Mn",
+      "char": "󠇒",
+      "code": "U+E01D2",
+      "codepoint": 917970,
+      "combining_class": 0,
+      "name": "VARIATION SELECTOR-227",
+      "notes": "variation selector",
+      "tags": [
+        "variation_selector",
+        "variation_selector_supplement"
+      ],
+      "tier": "tier2"
+    },
+    {
+      "bidi_class": "NSM",
+      "category": "Mn",
+      "char": "󠇓",
+      "code": "U+E01D3",
+      "codepoint": 917971,
+      "combining_class": 0,
+      "name": "VARIATION SELECTOR-228",
+      "notes": "variation selector",
+      "tags": [
+        "variation_selector",
+        "variation_selector_supplement"
+      ],
+      "tier": "tier2"
+    },
+    {
+      "bidi_class": "NSM",
+      "category": "Mn",
+      "char": "󠇔",
+      "code": "U+E01D4",
+      "codepoint": 917972,
+      "combining_class": 0,
+      "name": "VARIATION SELECTOR-229",
+      "notes": "variation selector",
+      "tags": [
+        "variation_selector",
+        "variation_selector_supplement"
+      ],
+      "tier": "tier2"
+    },
+    {
+      "bidi_class": "NSM",
+      "category": "Mn",
+      "char": "󠇕",
+      "code": "U+E01D5",
+      "codepoint": 917973,
+      "combining_class": 0,
+      "name": "VARIATION SELECTOR-230",
+      "notes": "variation selector",
+      "tags": [
+        "variation_selector",
+        "variation_selector_supplement"
+      ],
+      "tier": "tier2"
+    },
+    {
+      "bidi_class": "NSM",
+      "category": "Mn",
+      "char": "󠇖",
+      "code": "U+E01D6",
+      "codepoint": 917974,
+      "combining_class": 0,
+      "name": "VARIATION SELECTOR-231",
+      "notes": "variation selector",
+      "tags": [
+        "variation_selector",
+        "variation_selector_supplement"
+      ],
+      "tier": "tier2"
+    },
+    {
+      "bidi_class": "NSM",
+      "category": "Mn",
+      "char": "󠇗",
+      "code": "U+E01D7",
+      "codepoint": 917975,
+      "combining_class": 0,
+      "name": "VARIATION SELECTOR-232",
+      "notes": "variation selector",
+      "tags": [
+        "variation_selector",
+        "variation_selector_supplement"
+      ],
+      "tier": "tier2"
+    },
+    {
+      "bidi_class": "NSM",
+      "category": "Mn",
+      "char": "󠇘",
+      "code": "U+E01D8",
+      "codepoint": 917976,
+      "combining_class": 0,
+      "name": "VARIATION SELECTOR-233",
+      "notes": "variation selector",
+      "tags": [
+        "variation_selector",
+        "variation_selector_supplement"
+      ],
+      "tier": "tier2"
+    },
+    {
+      "bidi_class": "NSM",
+      "category": "Mn",
+      "char": "󠇙",
+      "code": "U+E01D9",
+      "codepoint": 917977,
+      "combining_class": 0,
+      "name": "VARIATION SELECTOR-234",
+      "notes": "variation selector",
+      "tags": [
+        "variation_selector",
+        "variation_selector_supplement"
+      ],
+      "tier": "tier2"
+    },
+    {
+      "bidi_class": "NSM",
+      "category": "Mn",
+      "char": "󠇚",
+      "code": "U+E01DA",
+      "codepoint": 917978,
+      "combining_class": 0,
+      "name": "VARIATION SELECTOR-235",
+      "notes": "variation selector",
+      "tags": [
+        "variation_selector",
+        "variation_selector_supplement"
+      ],
+      "tier": "tier2"
+    },
+    {
+      "bidi_class": "NSM",
+      "category": "Mn",
+      "char": "󠇛",
+      "code": "U+E01DB",
+      "codepoint": 917979,
+      "combining_class": 0,
+      "name": "VARIATION SELECTOR-236",
+      "notes": "variation selector",
+      "tags": [
+        "variation_selector",
+        "variation_selector_supplement"
+      ],
+      "tier": "tier2"
+    },
+    {
+      "bidi_class": "NSM",
+      "category": "Mn",
+      "char": "󠇜",
+      "code": "U+E01DC",
+      "codepoint": 917980,
+      "combining_class": 0,
+      "name": "VARIATION SELECTOR-237",
+      "notes": "variation selector",
+      "tags": [
+        "variation_selector",
+        "variation_selector_supplement"
+      ],
+      "tier": "tier2"
+    },
+    {
+      "bidi_class": "NSM",
+      "category": "Mn",
+      "char": "󠇝",
+      "code": "U+E01DD",
+      "codepoint": 917981,
+      "combining_class": 0,
+      "name": "VARIATION SELECTOR-238",
+      "notes": "variation selector",
+      "tags": [
+        "variation_selector",
+        "variation_selector_supplement"
+      ],
+      "tier": "tier2"
+    },
+    {
+      "bidi_class": "NSM",
+      "category": "Mn",
+      "char": "󠇞",
+      "code": "U+E01DE",
+      "codepoint": 917982,
+      "combining_class": 0,
+      "name": "VARIATION SELECTOR-239",
+      "notes": "variation selector",
+      "tags": [
+        "variation_selector",
+        "variation_selector_supplement"
+      ],
+      "tier": "tier2"
+    },
+    {
+      "bidi_class": "NSM",
+      "category": "Mn",
+      "char": "󠇟",
+      "code": "U+E01DF",
+      "codepoint": 917983,
+      "combining_class": 0,
+      "name": "VARIATION SELECTOR-240",
+      "notes": "variation selector",
+      "tags": [
+        "variation_selector",
+        "variation_selector_supplement"
+      ],
+      "tier": "tier2"
+    },
+    {
+      "bidi_class": "NSM",
+      "category": "Mn",
+      "char": "󠇠",
+      "code": "U+E01E0",
+      "codepoint": 917984,
+      "combining_class": 0,
+      "name": "VARIATION SELECTOR-241",
+      "notes": "variation selector",
+      "tags": [
+        "variation_selector",
+        "variation_selector_supplement"
+      ],
+      "tier": "tier2"
+    },
+    {
+      "bidi_class": "NSM",
+      "category": "Mn",
+      "char": "󠇡",
+      "code": "U+E01E1",
+      "codepoint": 917985,
+      "combining_class": 0,
+      "name": "VARIATION SELECTOR-242",
+      "notes": "variation selector",
+      "tags": [
+        "variation_selector",
+        "variation_selector_supplement"
+      ],
+      "tier": "tier2"
+    },
+    {
+      "bidi_class": "NSM",
+      "category": "Mn",
+      "char": "󠇢",
+      "code": "U+E01E2",
+      "codepoint": 917986,
+      "combining_class": 0,
+      "name": "VARIATION SELECTOR-243",
+      "notes": "variation selector",
+      "tags": [
+        "variation_selector",
+        "variation_selector_supplement"
+      ],
+      "tier": "tier2"
+    },
+    {
+      "bidi_class": "NSM",
+      "category": "Mn",
+      "char": "󠇣",
+      "code": "U+E01E3",
+      "codepoint": 917987,
+      "combining_class": 0,
+      "name": "VARIATION SELECTOR-244",
+      "notes": "variation selector",
+      "tags": [
+        "variation_selector",
+        "variation_selector_supplement"
+      ],
+      "tier": "tier2"
+    },
+    {
+      "bidi_class": "NSM",
+      "category": "Mn",
+      "char": "󠇤",
+      "code": "U+E01E4",
+      "codepoint": 917988,
+      "combining_class": 0,
+      "name": "VARIATION SELECTOR-245",
+      "notes": "variation selector",
+      "tags": [
+        "variation_selector",
+        "variation_selector_supplement"
+      ],
+      "tier": "tier2"
+    },
+    {
+      "bidi_class": "NSM",
+      "category": "Mn",
+      "char": "󠇥",
+      "code": "U+E01E5",
+      "codepoint": 917989,
+      "combining_class": 0,
+      "name": "VARIATION SELECTOR-246",
+      "notes": "variation selector",
+      "tags": [
+        "variation_selector",
+        "variation_selector_supplement"
+      ],
+      "tier": "tier2"
+    },
+    {
+      "bidi_class": "NSM",
+      "category": "Mn",
+      "char": "󠇦",
+      "code": "U+E01E6",
+      "codepoint": 917990,
+      "combining_class": 0,
+      "name": "VARIATION SELECTOR-247",
+      "notes": "variation selector",
+      "tags": [
+        "variation_selector",
+        "variation_selector_supplement"
+      ],
+      "tier": "tier2"
+    },
+    {
+      "bidi_class": "NSM",
+      "category": "Mn",
+      "char": "󠇧",
+      "code": "U+E01E7",
+      "codepoint": 917991,
+      "combining_class": 0,
+      "name": "VARIATION SELECTOR-248",
+      "notes": "variation selector",
+      "tags": [
+        "variation_selector",
+        "variation_selector_supplement"
+      ],
+      "tier": "tier2"
+    },
+    {
+      "bidi_class": "NSM",
+      "category": "Mn",
+      "char": "󠇨",
+      "code": "U+E01E8",
+      "codepoint": 917992,
+      "combining_class": 0,
+      "name": "VARIATION SELECTOR-249",
+      "notes": "variation selector",
+      "tags": [
+        "variation_selector",
+        "variation_selector_supplement"
+      ],
+      "tier": "tier2"
+    },
+    {
+      "bidi_class": "NSM",
+      "category": "Mn",
+      "char": "󠇩",
+      "code": "U+E01E9",
+      "codepoint": 917993,
+      "combining_class": 0,
+      "name": "VARIATION SELECTOR-250",
+      "notes": "variation selector",
+      "tags": [
+        "variation_selector",
+        "variation_selector_supplement"
+      ],
+      "tier": "tier2"
+    },
+    {
+      "bidi_class": "NSM",
+      "category": "Mn",
+      "char": "󠇪",
+      "code": "U+E01EA",
+      "codepoint": 917994,
+      "combining_class": 0,
+      "name": "VARIATION SELECTOR-251",
+      "notes": "variation selector",
+      "tags": [
+        "variation_selector",
+        "variation_selector_supplement"
+      ],
+      "tier": "tier2"
+    },
+    {
+      "bidi_class": "NSM",
+      "category": "Mn",
+      "char": "󠇫",
+      "code": "U+E01EB",
+      "codepoint": 917995,
+      "combining_class": 0,
+      "name": "VARIATION SELECTOR-252",
+      "notes": "variation selector",
+      "tags": [
+        "variation_selector",
+        "variation_selector_supplement"
+      ],
+      "tier": "tier2"
+    },
+    {
+      "bidi_class": "NSM",
+      "category": "Mn",
+      "char": "󠇬",
+      "code": "U+E01EC",
+      "codepoint": 917996,
+      "combining_class": 0,
+      "name": "VARIATION SELECTOR-253",
+      "notes": "variation selector",
+      "tags": [
+        "variation_selector",
+        "variation_selector_supplement"
+      ],
+      "tier": "tier2"
+    },
+    {
+      "bidi_class": "NSM",
+      "category": "Mn",
+      "char": "󠇭",
+      "code": "U+E01ED",
+      "codepoint": 917997,
+      "combining_class": 0,
+      "name": "VARIATION SELECTOR-254",
+      "notes": "variation selector",
+      "tags": [
+        "variation_selector",
+        "variation_selector_supplement"
+      ],
+      "tier": "tier2"
+    },
+    {
+      "bidi_class": "NSM",
+      "category": "Mn",
+      "char": "󠇮",
+      "code": "U+E01EE",
+      "codepoint": 917998,
+      "combining_class": 0,
+      "name": "VARIATION SELECTOR-255",
+      "notes": "variation selector",
+      "tags": [
+        "variation_selector",
+        "variation_selector_supplement"
+      ],
+      "tier": "tier2"
+    },
+    {
+      "bidi_class": "NSM",
+      "category": "Mn",
+      "char": "󠇯",
+      "code": "U+E01EF",
+      "codepoint": 917999,
+      "combining_class": 0,
+      "name": "VARIATION SELECTOR-256",
+      "notes": "variation selector",
+      "tags": [
+        "variation_selector",
+        "variation_selector_supplement"
+      ],
+      "tier": "tier2"
+    }
+  ],
+  "unicode_version": "13.0.0"
+}

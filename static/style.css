@@ -232,48 +232,53 @@ h3 {
 }
 .tool-status-list {
   display: grid;
-  grid-template-columns: repeat(auto-fit, minmax(100px, 1fr));
-  gap: 6px;
+  grid-template-columns: repeat(auto-fit, minmax(140px, 140px));
+  gap: 8px;
   margin: 8px 0;
   width: 100%;
   min-height: 90px;
   align-items: start;
+  justify-content: start;
+  overflow-x: auto;
 }
 .tool-pill {
   display: flex;
   flex-direction: column;
   align-items: flex-start;
   gap: 4px;
-  padding: 6px 8px;
+  padding: 5px 6px;
   border: 1px solid var(--border);
   border-radius: 10px;
   background: var(--card);
   color: var(--text);
-  font-size: 11px;
+  font-size: 10px;
   line-height: 1.3;
   min-height: 54px;
 }
 .tool-top {
-  display: inline-flex;
+  display: flex;
   align-items: center;
   gap: 6px;
+  flex-wrap: wrap;
+  row-gap: 4px;
 }
-.tool-icon { font-size: 14px; }
+.tool-icon { font-size: 12px; }
 .tool-name {
-  font-size: 13px;
+  font-size: 11px;
   font-weight: 700;
+  overflow-wrap: anywhere;
 }
 .tool-path {
   display: block;
   width: 100%;
-  font-size: 10px;
+  font-size: 9px;
   color: var(--muted);
   word-break: break-all;
 }
 .tool-pill .ok { color: var(--primary); }
 .tool-pill .missing { color: #ff8a80; }
 .tool-mode {
-  font-size: 9px;
+  font-size: 8px;
   text-transform: uppercase;
   letter-spacing: 0.08em;
   padding: 2px 6px;
@@ -281,6 +286,8 @@ h3 {
   border: 1px solid var(--border);
   background: rgba(255, 255, 255, 0.04);
   color: var(--muted);
+  margin-left: auto;
+  white-space: nowrap;
 }
 .tool-mode.auto { color: var(--muted); }
 .tool-mode.deep { color: #ffd166; border-color: rgba(255, 209, 102, 0.4); }
@@ -353,6 +360,7 @@ h3 {
     grid-template-columns: 1fr;
   }
   #simple-plane-field,
+  #encode-method-options,
   #advanced-grid,
   #encode-form .action-cell,
   #decode-form .action-cell {
@@ -371,7 +379,7 @@ input, select, textarea, button {
   font-family: inherit;
 }
 
-input[type="file"], input[type="text"], select, textarea {
+input[type="file"], input[type="text"], input[type="password"], select, textarea {
   background: rgba(255, 255, 255, 0.03);
   border: 1px solid var(--border);
   color: var(--text);
@@ -379,6 +387,13 @@ input[type="file"], input[type="text"], select, textarea {
   border-radius: 10px;
   accent-color: var(--accent);
   text-transform: lowercase;
+}
+.decode-option-select {
+  text-transform: none;
+}
+.decode-option-row {
+  flex-wrap: wrap;
+  gap: 10px;
 }
 input[type="file"] {
   display: none;
@@ -443,6 +458,29 @@ textarea { resize: vertical; }
   flex-direction: column;
   gap: 8px;
 }
+.hidden {
+  display: none !important;
+}
+.unicode-options {
+  display: none;
+  flex-direction: column;
+  gap: 6px;
+  padding-left: 18px;
+}
+.unicode-options.visible {
+  display: flex;
+}
+.unicode-options .inline {
+  font-size: 12px;
+}
+.unicode-options select {
+  min-width: 140px;
+}
+.unicode-options .input-hint {
+  margin-top: 2px;
+  font-size: 10px;
+  text-transform: none;
+}
 .password-row {
   width: 100%;
   visibility: hidden;
@@ -468,6 +506,41 @@ textarea { resize: vertical; }
   display: flex;
   flex-direction: column;
   gap: 8px;
+}
+.payload-toggle {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 12px;
+}
+.payload-panel {
+  width: 100%;
+}
+.method-field {
+  grid-column: 2 / -1;
+}
+.method-panel {
+  display: flex;
+  flex-direction: column;
+  gap: 10px;
+}
+.option-row {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 12px;
+}
+.option-group {
+  display: flex;
+  flex-direction: column;
+  gap: 6px;
+  min-width: 170px;
+}
+.option-group > span {
+  color: var(--muted);
+  font-size: 12px;
+  text-transform: lowercase;
+}
+.option-group.full {
+  flex: 1 1 100%;
 }
 .simple-mode-label {
   color: var(--muted);
@@ -631,6 +704,22 @@ textarea { resize: vertical; }
 .tag { padding: 4px 8px; border-radius: 8px; font-size: 12px; text-transform: uppercase; letter-spacing: 0.04em; }
 .tag.ok { background: rgba(29, 211, 176, 0.12); color: var(--primary); }
 .tag.error { background: rgba(255, 87, 87, 0.12); color: #ff5757; }
+.tag.warn { background: rgba(255, 193, 7, 0.12); color: #f2c94c; }
+.tag.mode { background: rgba(255, 255, 255, 0.08); color: var(--muted); }
+.tag.mode.auto { color: var(--muted); }
+.tag.mode.deep { color: #ffd166; }
+.tag.mode.manual { color: #ffb6c1; }
+.result-card-head {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  gap: 8px;
+}
+.tag-row {
+  display: inline-flex;
+  align-items: center;
+  gap: 6px;
+}
 
 pre {
   background: rgba(255, 255, 255, 0.03);

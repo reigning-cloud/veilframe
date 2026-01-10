@@ -144,63 +144,120 @@ modeButtons.forEach((btn) => {
   });
 });
 
-const modeRadios = document.querySelectorAll('input[name="encodeMode"]');
+const encodeMethodSelect = document.getElementById('encode-method');
 const simplePlaneField = document.getElementById('simple-plane-field');
 const advancedGrid = document.getElementById('advanced-grid');
 const jpegFormatRadio = document.querySelector('input[name="outputFormat"][value="jpeg"]');
 const pngFormatRadio = document.querySelector('input[name="outputFormat"][value="png"]');
+const methodPanels = document.querySelectorAll('[data-encode-method]');
+const methodOptionsField = document.getElementById('encode-method-options');
+const payloadModeRadios = document.querySelectorAll('input[name="payloadMode"]');
+const payloadTextPanel = document.getElementById('payload-text-panel');
+const payloadFilePanel = document.getElementById('payload-file-panel');
+const payloadFileInput = document.getElementById('payload-file-input');
+const payloadFileName = document.getElementById('payload-file-name');
+const payloadTextArea = document.querySelector('#payload-text-panel textarea[name="text"]');
 
-function syncOutputFormatForMode(advanced) {
-  if (!jpegFormatRadio) return;
-  jpegFormatRadio.disabled = advanced;
-  if (advanced && pngFormatRadio) {
+function syncOutputFormatForMethod(method) {
+  if (!jpegFormatRadio || !pngFormatRadio) return;
+  let force = '';
+  if (['advanced_lsb', 'palette', 'png_chunks'].includes(method)) {
+    force = 'png';
+  }
+  if (['f5', 'dct'].includes(method)) {
+    force = 'jpeg';
+  }
+  if (!force) {
+    jpegFormatRadio.disabled = false;
+    pngFormatRadio.disabled = false;
+    return;
+  }
+  if (force === 'png') {
     pngFormatRadio.checked = true;
+    pngFormatRadio.disabled = false;
+    jpegFormatRadio.disabled = true;
+  } else {
+    jpegFormatRadio.checked = true;
+    jpegFormatRadio.disabled = false;
+    pngFormatRadio.disabled = true;
   }
 }
-const setModeUI = () => {
-  const val = document.querySelector('input[name="encodeMode"]:checked').value;
-  const advanced = val === 'advanced';
+
+function getPayloadMode() {
+  const selected = document.querySelector('input[name="payloadMode"]:checked');
+  return selected ? selected.value : 'text';
+}
+
+function setPayloadModeUI() {
+  const mode = getPayloadMode();
+  const useFile = mode === 'file';
+  if (payloadTextPanel) payloadTextPanel.classList.toggle('hidden', useFile);
+  if (payloadFilePanel) payloadFilePanel.classList.toggle('hidden', !useFile);
+  if (payloadTextArea) payloadTextArea.disabled = useFile;
+  if (payloadFileInput) payloadFileInput.disabled = !useFile;
+}
+
+function setEncodeMethodUI() {
+  const method = encodeMethodSelect ? encodeMethodSelect.value : 'simple_lsb';
+  const advanced = method === 'advanced_lsb';
   if (simplePlaneField) simplePlaneField.style.display = advanced ? 'none' : 'flex';
   if (advancedGrid) advancedGrid.style.display = advanced ? 'grid' : 'none';
-  syncOutputFormatForMode(advanced);
-};
-modeRadios.forEach((radio) => {
-  radio.addEventListener('change', () => {
-    const val = document.querySelector('input[name="encodeMode"]:checked').value;
-    const advanced = val === 'advanced';
-    localStorage.setItem('encodeMode', val);
-    setModeUI();
+  let hasActivePanel = false;
+  methodPanels.forEach((panel) => {
+    const active = panel.dataset.encodeMethod === method;
+    panel.classList.toggle('hidden', !active);
+    panel.querySelectorAll('input, select, textarea').forEach((el) => {
+      el.disabled = !active;
+    });
+    if (active) hasActivePanel = true;
   });
-});
-const savedMode = localStorage.getItem('encodeMode');
-if (savedMode === 'advanced') {
-  document.querySelector('input[name="encodeMode"][value="advanced"]').checked = true;
+  if (methodOptionsField) {
+    methodOptionsField.style.display = hasActivePanel ? 'flex' : 'none';
+  }
+  syncOutputFormatForMethod(method);
+  setPayloadModeUI();
+  localStorage.setItem('encodeMethod', method);
 }
+
+const savedMethod = localStorage.getItem('encodeMethod');
+const legacyMode = localStorage.getItem('encodeMode');
+if (encodeMethodSelect) {
+  if (savedMethod) {
+    encodeMethodSelect.value = savedMethod;
+  } else if (legacyMode === 'advanced') {
+    encodeMethodSelect.value = 'advanced_lsb';
+  }
+}
+if (encodeMethodSelect) {
+  encodeMethodSelect.addEventListener('change', setEncodeMethodUI);
+}
+payloadModeRadios.forEach((radio) => {
+  radio.addEventListener('change', setPayloadModeUI);
+});
 
 const carrierInput = document.getElementById('carrier-image');
 const carrierFilename = document.getElementById('carrier-filename');
-
-setModeUI();
+setEncodeMethodUI();
 const initialPanel = savedPanel === 'decode-panel' || savedPanel === 'encode-panel' ? savedPanel : 'encode-panel';
 showPanel(initialPanel, false);
 
-if (carrierInput && carrierFilename) {
-  carrierInput.addEventListener('change', () => {
-    const file = carrierInput.files && carrierInput.files[0] ? carrierInput.files[0] : null;
-    const name = file ? `${file.name} (${formatMb(file.size)})` : stylizeText('no photo chosen');
-    carrierFilename.textContent = name;
-  });
-}
-
 const analyzeInput = document.getElementById('analyze-image');
 const analyzeFilename = document.getElementById('analyze-filename');
-if (analyzeInput && analyzeFilename) {
-  analyzeInput.addEventListener('change', () => {
-    const file = analyzeInput.files && analyzeInput.files[0] ? analyzeInput.files[0] : null;
-    const name = file ? `${file.name} (${formatMb(file.size)})` : stylizeText('no photo chosen');
-    analyzeFilename.textContent = name;
-  });
+
+function bindFileLabel(inputEl, labelEl, emptyLabel) {
+  if (!inputEl || !labelEl) return;
+  const update = () => {
+    const file = inputEl.files && inputEl.files[0] ? inputEl.files[0] : null;
+    const name = file ? `${file.name} (${formatMb(file.size)})` : stylizeText(emptyLabel);
+    labelEl.textContent = name;
+  };
+  inputEl.addEventListener('change', update);
+  update();
 }
+
+bindFileLabel(carrierInput, carrierFilename, 'no photo chosen');
+bindFileLabel(analyzeInput, analyzeFilename, 'no photo chosen');
+bindFileLabel(payloadFileInput, payloadFileName, 'no file');
 
 function toggleChannelBodies() {
   document.querySelectorAll('#advanced-grid .channel-card').forEach((card) => {
@@ -284,12 +341,26 @@ encodeForm.addEventListener('submit', async (e) => {
   }
   encodeOutput.innerHTML = `<div class="status-line">${stylizeText('Encoding...')}</div>`;
 
+  const encodeMethod = encodeMethodSelect ? encodeMethodSelect.value : 'simple_lsb';
+  const payloadMode = getPayloadMode();
+  const payloadFile = payloadFileInput && payloadFileInput.files ? payloadFileInput.files[0] : null;
+  const payloadText = payloadTextArea ? payloadTextArea.value.trim() : '';
+  if (encodeMethod !== 'advanced_lsb') {
+    if (payloadMode === 'file' && !payloadFile) {
+      encodeOutput.innerHTML = `<div class="status-line error">${stylizeText('Choose a payload file first.')}</div>`;
+      return;
+    }
+    if (payloadMode === 'text' && !payloadText) {
+      encodeOutput.innerHTML = `<div class="status-line error">${stylizeText('Enter a payload message first.')}</div>`;
+      return;
+    }
+  }
+
   const fd = new FormData(encodeForm);
-  fd.append('mode', 'text'); // simple defaults to text
-  const encodeMode = document.querySelector('input[name="encodeMode"]:checked').value;
+  fd.append('encodeMethod', encodeMethod);
 
   try {
-    if (encodeMode === 'advanced') {
+    if (encodeMethod === 'advanced_lsb') {
       const channels = {};
       document.querySelectorAll('#advanced-grid .channel-card').forEach((card) => {
         const ch = card.dataset.channel;
@@ -307,8 +378,8 @@ encodeForm.addEventListener('submit', async (e) => {
         }
       });
       fd.append('channels', JSON.stringify(channels));
-    } else {
-      fd.append('text', document.querySelector('textarea[name="text"]').value || '');
+    } else if (encodeMethod === 'simple_lsb') {
+      fd.append('mode', payloadMode === 'file' ? 'zlib' : 'text');
     }
 
     const res = await fetch('/api/encode', { method: 'POST', body: fd });
@@ -347,15 +418,36 @@ const decodeForm = document.getElementById('decode-form');
 const decodeOutput = document.getElementById('decode-output');
 const deepToggle = document.querySelector('input[name="deep"]');
 const outguessPasswordField = document.getElementById('outguess-password-field');
+const spreadToggle = document.querySelector('input[name="spreadSpectrum"]');
+const unicodeToggle = document.querySelector('input[name="unicodeSweep"]');
+const unicodeOptions = document.getElementById('unicode-options');
 
 function syncOutguessPassword() {
   if (!outguessPasswordField) return;
   const enabled = deepToggle && deepToggle.checked;
-  outguessPasswordField.classList.toggle('visible', !!enabled);
+  const needsPassword = spreadToggle && spreadToggle.checked;
+  outguessPasswordField.classList.toggle('visible', !!(enabled || needsPassword));
 }
 if (deepToggle) {
   deepToggle.addEventListener('change', syncOutguessPassword);
   syncOutguessPassword();
+}
+if (spreadToggle) {
+  spreadToggle.addEventListener('change', syncOutguessPassword);
+  syncOutguessPassword();
+}
+
+function syncUnicodeOptions() {
+  if (!unicodeOptions) return;
+  const enabled = unicodeToggle && unicodeToggle.checked;
+  unicodeOptions.classList.toggle('visible', !!enabled);
+  unicodeOptions.querySelectorAll('input, select').forEach((el) => {
+    el.disabled = !enabled;
+  });
+}
+if (unicodeToggle) {
+  unicodeToggle.addEventListener('change', syncUnicodeOptions);
+  syncUnicodeOptions();
 }
 decodeForm.addEventListener('submit', async (e) => {
   e.preventDefault();
@@ -389,10 +481,28 @@ decodeForm.addEventListener('submit', async (e) => {
 
 function renderDecodeResult(data) {
   const { results = {}, artifacts = { images: [], archives: [] } } = data;
-  const priority = ["simple_rgb", "red_plane", "green_plane", "blue_plane", "alpha_plane"];
+  const planeKeys = ["simple_rgb", "red_plane", "green_plane", "blue_plane", "alpha_plane"];
   const stringsKey = "strings";
+  const decodeOptionKeys = [
+    "auto_detect",
+    "lsb",
+    "pvd",
+    "dct",
+    "f5",
+    "spread_spectrum",
+    "palette",
+    "chroma",
+    "png_chunks",
+  ];
+  const unicodeDecodeKey = "invisible_unicode_decode";
+  const autoDetectKey = "auto_detect";
   const restOrder = [
     "simple_zlib",
+    "stegg",
+    "zero_width",
+    "invisible_unicode",
+    "randomizer_decode",
+    "xor_flag_sweep",
     "binwalk",
     "foremost",
     "exiftool",
@@ -400,6 +510,7 @@ function renderDecodeResult(data) {
     "outguess",
     "zsteg",
     "decomposer",
+    "plane_carver",
     "identify",
     "convert",
     "jpeginfo",
@@ -450,13 +561,47 @@ function renderDecodeResult(data) {
     "openstego",
   ];
 
-  const cardsPriority = priority
+  const cardsPlanes = planeKeys
     .filter((k) => results[k])
     .map((k) => renderTool(k, results[k]))
     .join('');
 
+  const unicodeDecodeCard = results[unicodeDecodeKey]
+    ? renderTool(unicodeDecodeKey, results[unicodeDecodeKey])
+    : '';
+
+  const autoDetectCard = results[autoDetectKey]
+    ? renderTool(autoDetectKey, results[autoDetectKey])
+    : '';
+
+  const candidates = (results[autoDetectKey]?.details?.candidates || []).slice();
+  candidates.sort((a, b) => (b.confidence || 0) - (a.confidence || 0));
+  const rankedKeys = [];
+  const rankedSet = new Set();
+  candidates.forEach((candidate) => {
+    const key = candidate.option_id;
+    if (!key || rankedSet.has(key)) return;
+    if (!results[key]) return;
+    rankedSet.add(key);
+    rankedKeys.push(key);
+  });
+
+  const cardsTop = rankedKeys.map((k) => renderTool(k, results[k])).join('');
+
+  const cardsOtherDecode = decodeOptionKeys
+    .filter((k) => k !== autoDetectKey && results[k] && !rankedSet.has(k))
+    .map((k) => renderTool(k, results[k]))
+    .join('');
+
   const cardsRest = restOrder
-    .filter((k) => results[k] && !priority.includes(k) && k !== stringsKey)
+    .filter(
+      (k) =>
+        results[k] &&
+        !planeKeys.includes(k) &&
+        !decodeOptionKeys.includes(k) &&
+        k !== stringsKey &&
+        k !== unicodeDecodeKey
+    )
     .map((k) => renderTool(k, results[k]))
     .join('');
 
@@ -471,12 +616,16 @@ function renderDecodeResult(data) {
     .join('');
 
   decodeOutput.innerHTML = `
-    <div class="result-grid priority-grid">${cardsPriority || ''}</div>
+    <div class="result-grid priority-grid">${cardsPlanes || ''}</div>
+    ${unicodeDecodeCard ? `<div class="result-grid">${unicodeDecodeCard}</div>` : ''}
+    ${autoDetectCard ? `<div class="result-grid">${autoDetectCard}</div>` : ''}
+    ${cardsTop ? `<div class="result-grid">${cardsTop}</div>` : ''}
+    ${cardsOtherDecode ? `<div class="result-grid">${cardsOtherDecode}</div>` : ''}
     ${gallery ? `<h3 class="gallery-title">${stylizeText('Bit-plane gallery')}</h3><div class="gallery">${gallery}</div>` : ''}
     <div class="result-grid">${cardsRest || ''}</div>
     ${downloads ? `<div class="downloads" style="margin-top:12px;">${downloads}</div>` : ''}
     ${cardsStrings ? `<div class="result-grid strings-block">${cardsStrings}</div>` : ''}
-  `;
+`;
 }
 
 function renderTool(tool, payload, wide = false) {
@@ -484,20 +633,26 @@ function renderTool(tool, payload, wide = false) {
     return '';
   }
   const status = payload.status || 'unknown';
-  const tagClass = status === 'ok' ? 'ok' : status === 'error' ? 'error' : '';
-  const displayTool = stylizeText(tool);
+  const tagClass =
+    status === 'ok' ? 'ok' : status === 'error' ? 'error' : status === 'no_signal' || status === 'skipped' ? 'warn' : '';
+  const displayTool = payload.label ? payload.label : stylizeText(tool);
   const displayStatus = stylizeText(status);
+  const modeBadge = payload.mode ? `<span class="tag mode ${payload.mode}">${stylizeText(payload.mode)}</span>` : '';
+  const isSchema = Object.prototype.hasOwnProperty.call(payload, 'summary');
   const hasOutput = Object.prototype.hasOwnProperty.call(payload, 'output');
-  const content = formatPayload(
-    hasOutput ? payload.output : (payload.error || payload.reason || payload)
-  );
+  const content = isSchema
+    ? formatSchemaPayload(payload)
+    : formatPayload(hasOutput ? payload.output : (payload.error || payload.reason || payload));
   const style = wide ? 'style="grid-column: 1 / -1;"' : '';
 
   return `
     <div class="result-card" ${style}>
-      <div style="display:flex;justify-content:space-between;align-items:center;gap:8px;">
+      <div class="result-card-head">
         <h3>${displayTool}</h3>
-        <span class="tag ${tagClass}">${displayStatus}</span>
+        <div class="tag-row">
+          ${modeBadge}
+          <span class="tag ${tagClass}">${displayStatus}</span>
+        </div>
       </div>
       ${content}
     </div>
@@ -512,6 +667,26 @@ function formatPayload(val) {
     return `<pre>${JSON.stringify(val, null, 2)}</pre>`;
   }
   return `<pre>${val}</pre>`;
+}
+
+function formatSchemaPayload(payload) {
+  const lines = [];
+  if (payload.summary) {
+    lines.push(`<div class="status-line">${payload.summary}</div>`);
+  }
+  if (typeof payload.confidence === 'number') {
+    lines.push(`<div class="status-line">confidence: ${payload.confidence}</div>`);
+  }
+  if (payload.details && Object.keys(payload.details).length) {
+    lines.push(`<pre>${JSON.stringify(payload.details, null, 2)}</pre>`);
+  }
+  if (payload.artifacts && payload.artifacts.length) {
+    lines.push(`<pre>${JSON.stringify(payload.artifacts, null, 2)}</pre>`);
+  }
+  if (!lines.length) {
+    lines.push('<pre>no details</pre>');
+  }
+  return lines.join('');
 }
 
 // Tooling status
